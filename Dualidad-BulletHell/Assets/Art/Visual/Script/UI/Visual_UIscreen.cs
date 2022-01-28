@@ -50,6 +50,6 @@ public class Visual_UIscreen : MonoBehaviour
     }
     public void ChangeSnapshot()
     {
-        //AudioManager.main.ChangeSnapshot("StateGame", toSnapshot);
+        AudioManager.main.ChangeSnapshot("StateGame", toSnapshot);
     }
 }
