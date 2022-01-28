@@ -48,8 +48,5 @@ public class Visual_UIscreen : MonoBehaviour
         //SFX_sound sfxPlay = System.Array.Find(sfxClip, sfx => sfx.name == SFXName);
         //if (sfxPlay != null) sfxPlay.Play();
     }
-    public void ChangeSnapshot()
-    {
-        AudioManager.main.ChangeSnapshot("StateGame", toSnapshot);
-    }
+    public void ChangeSnapshot() { AudioManager.main.ChangeSnapshot("StateGame", toSnapshot); }
 }
