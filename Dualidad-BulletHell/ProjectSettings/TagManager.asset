@@ -41,3 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 3947045495
+    locked: 0
+  - name: UI_back
+    uniqueID: 2813623003
+    locked: 0
+  - name: Bullet
+    uniqueID: 235023567
+    locked: 0
+  - name: Element
+    uniqueID: 3693279067
+    locked: 0
+  - name: Effect
+    uniqueID: 4119812979
+    locked: 0
+  - name: UI_fore
+    uniqueID: 1931351591
+    locked: 0
