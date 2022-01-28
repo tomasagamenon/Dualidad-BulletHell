@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UIscreen_GameOver
+  m_Controller: {fileID: 9100000, guid: a262f05ba9b6f2743945d620ecef1d65, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 141a30dcda8492a4d80c77aec6f29e40, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6b5e8dfb2df70364b82d12da7a773a7f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b9288bcaba79e1a4bb795d9245ddd724, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e317b7b377763aa4cb800c19b112303d, type: 2}

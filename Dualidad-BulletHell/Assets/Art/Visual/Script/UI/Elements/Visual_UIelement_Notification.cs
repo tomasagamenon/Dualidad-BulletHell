@@ -1,18 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
-public class Visual_UIelement_Notification : MonoBehaviour
+public class Visual_UIelement_Notification : Visual_UIelement
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    [SerializeField] float correctorSpeed;
+    [SerializeField] TextMeshProUGUI text_Notif;
+
+    public void SetNotification(float speed, string text) {
+
+        anim.gameObject.SetActive(true);
+
+        text_Notif.SetText(text);
+
+        SetAnimator("Spawn");
+        SetAnimator(correctorSpeed * speed, "Speed");
+
+        Invoke("Hide", correctorSpeed * speed);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    void Hide() { anim.gameObject.SetActive(false); }
 }

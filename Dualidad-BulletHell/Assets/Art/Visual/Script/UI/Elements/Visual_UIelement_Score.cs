@@ -1,18 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
-public class Visual_UIelement_Score : MonoBehaviour
+public class Visual_UIelement_Score : Visual_UIelement
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] TextMeshProUGUI text_Score;
+    [SerializeField] string addText, addZero;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public void SetScoreText(int value) { text_Score.SetText(addText + "\n" + value.ToString(addZero)); }
+
 }

@@ -1,18 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
-public class Visual_UIelement_Life : MonoBehaviour
+public class Visual_UIelement_Life : Visual_UIelement
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] TextMeshProUGUI text_Life;
+    [SerializeField] string addText;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public void SetLife(int value) { text_Life.SetText(addText + value.ToString()); }
 }
