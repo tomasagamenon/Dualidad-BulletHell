@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : Entity
 {
     private Transform _target;
     public float radius;
@@ -89,18 +89,21 @@ public class Enemy : MonoBehaviour
 
     IEnumerator Shoot(int a)
     {
-        for(int i = 0; i < number_of_shoots; i++)
+        yield return new WaitForSeconds(0.5f);
+        for (int i = 0; i < number_of_shoots; i++)
         {
             for(int e = 0; e < number_of_bullets; e++)
             {
                 Bullet bullet = bulletsPool.PullOut();
                 bullet.transform.position = transform.position;
-                var rot = bullet.transform.position;
+                Vector3 rot = Vector3.zero;
                 if (distance_between_bullets > 0)
                     rot.z += distance_between_bullets * e;
                 else rot.z += (360 / number_of_bullets) * e;
                 rot.z += rot_per_shoot * i * a;
+                rot.z += Mathf.Abs(transform.rotation.eulerAngles.z);
                 bullet.transform.rotation = Quaternion.Euler(0, 0, rot.z);
+                bullet.dir = bullet.transform.up;
             }
             yield return new WaitForSeconds(time_between_bullets);
         }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Entity
 {
     public float speed;
     public float rotation_speed;
@@ -27,6 +27,5 @@ public class Player : MonoBehaviour
             Quaternion newRotation = Quaternion.LookRotation(transform.forward, lookAtPos);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, newRotation, Time.deltaTime * rotation_speed);
         }
-
     }
 }
