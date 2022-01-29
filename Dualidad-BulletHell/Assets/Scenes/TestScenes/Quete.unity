@@ -622,6 +622,7 @@ GameObject:
   m_Component:
   - component: {fileID: 886560340}
   - component: {fileID: 886560341}
+  - component: {fileID: 886560342}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -696,6 +697,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &886560342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886560339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0256f813a53595441833b3880c234d41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  rotation_speed: 720
 --- !u!1001 &1070979657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -936,7 +951,7 @@ GameObject:
   - component: {fileID: 1660229258}
   - component: {fileID: 1660229257}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -957,6 +972,7 @@ MonoBehaviour:
   _target: {fileID: 886560340}
   radius: 5
   speed: 3
+  rotation_speed: 700
   number_of_shoots: 30
   number_of_bullets: 4
   time_between_bullets: 0.5

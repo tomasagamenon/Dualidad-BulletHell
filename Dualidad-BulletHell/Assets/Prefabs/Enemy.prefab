@@ -507,6 +507,7 @@ GameObject:
   - component: {fileID: 2348778217920157102}
   - component: {fileID: 2348778217920157073}
   - component: {fileID: 2348778217920157072}
+  - component: {fileID: -8975188249946522581}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -584,6 +585,27 @@ MonoBehaviour:
   - {fileID: 2348778218197686546}
   - {fileID: 2348778217173977473}
   colorEnemy: {r: 0.6039216, g: 0.5058824, b: 0.18039216, a: 1}
+--- !u!114 &-8975188249946522581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2348778217920157103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 024debc212fbb7d4eb3b20e6c59492a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 5
+  speed: 3
+  rotation_speed: 700
+  number_of_shoots: 30
+  number_of_bullets: 4
+  time_between_bullets: 0.5
+  distance_between_bullets: 0
+  rot_per_shoot: 10
+  mirrored: 1
 --- !u!1 &2348778218195916210
 GameObject:
   m_ObjectHideFlags: 0

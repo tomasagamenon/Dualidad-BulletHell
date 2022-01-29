@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public Transform _target;
+    private Transform _target;
     public float radius;
     public float speed;
     public float rotation_speed;
@@ -23,9 +23,10 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _pos_to_go = RandomPointOnCircleEdge(radius);
         bulletsPool = FindObjectOfType<BulletsPool>();
         player = FindObjectOfType<Player>();
+        _target = player.transform;
+        _pos_to_go = RandomPointOnCircleEdge(radius);
     }
 
     // Update is called once per frame
