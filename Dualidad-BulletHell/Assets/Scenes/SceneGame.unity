@@ -8099,7 +8099,7 @@ MonoBehaviour:
   transf: {fileID: 2410866305458476718}
   transfText: {fileID: 5058408471762262073}
   addOffset: {x: 0, y: 0.8, z: 0}
-  textHp: {fileID: 0}
+  textHp: {fileID: 5058408471762262072}
   addText: 
   spr:
   - {fileID: 2410866305719130642}

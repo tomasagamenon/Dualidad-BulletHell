@@ -14,6 +14,7 @@ public class ScoreSystem : MonoBehaviour
         score = 0;
     }
 
+
     public void AddScore(int newScore)
     {
         score += newScore ;
@@ -22,6 +23,7 @@ public class ScoreSystem : MonoBehaviour
 
         Visual_UImanager.main.SetScore(score);
     }
+    public void ResetScore() { score = 0; Visual_UImanager.main.SetScore(score); }
 
 
     [Header("SFX")] [SerializeField] SFX_sound[] sfxClip;
