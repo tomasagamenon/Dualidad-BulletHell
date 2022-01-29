@@ -66,8 +66,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cb54ba9675a9a74c9d9224e7500c4be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 8058007224040849740}
+  sfxClip:
+  - name: Spawn
+    nameDataBase: 
+  - name: Contact
+    nameDataBase: 
   colorBullet: {r: 0.15686275, g: 0.4784314, b: 0.6156863, a: 1}
-  colorReflect: {r: 0.29803923, g: 0.058823533, b: 0.058823533, a: 1}
   size: 1
   transf: {fileID: 8058007224040849738}
   spr: {fileID: 8058007225442793327}

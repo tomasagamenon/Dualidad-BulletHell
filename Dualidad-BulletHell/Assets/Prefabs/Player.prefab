@@ -67,6 +67,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e59ea8e5220b82e4880a93f483522fdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 351270912069686235}
+  sfxClip:
+  - name: Spawn
+    nameDataBase: 
+  - name: Death
+    nameDataBase: 
+  - name: Hit
+    nameDataBase: 
+  - name: Parry_good
+    nameDataBase: 
+  - name: Parry_bad
+    nameDataBase: 
+  - name: Parry_none
+    nameDataBase: 
+  - name: Inactive
+    nameDataBase: 
+  - name: Active
+    nameDataBase: 
+  screenShakes:
+  - name: Hit
+    intensity: 1.25
+    vector: {x: 0.5, y: 0.5}
+    rotation: 10
+    timer: 0.15
+  - name: Parry_good
+    intensity: 1
+    vector: {x: 0.25, y: 0.5}
+    rotation: 2
+    timer: 0.1
+  - name: Parry_bad
+    intensity: 0.25
+    vector: {x: 0.5, y: 0.25}
+    rotation: 0
+    timer: 0.1
 --- !u!1 &351270912326571000
 GameObject:
   m_ObjectHideFlags: 0

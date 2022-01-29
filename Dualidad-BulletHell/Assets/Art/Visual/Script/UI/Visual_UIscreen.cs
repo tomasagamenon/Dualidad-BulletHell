@@ -12,10 +12,12 @@ public class Visual_UIscreen : MonoBehaviour
     [SerializeField, Range(0, 1)] float HideSecond;
 
     public string toSnapshot;
+    [SerializeField, Range(0, 1)] float timeScale_Intro, timeScale_End;
 
     public virtual void StartScreen()
     {
         ChangeSnapshot();
+        ChangeTime(timeScale_Intro);
         if (anim == true)
         {
             anim.gameObject.SetActive(true);
@@ -25,6 +27,7 @@ public class Visual_UIscreen : MonoBehaviour
     }
     public virtual void EndScreen()
     {
+        ChangeTime(timeScale_End);
         if (anim == true)
         {
             anim.SetBool("Active", false);
@@ -43,10 +46,11 @@ public class Visual_UIscreen : MonoBehaviour
     IEnumerator Screen(bool state) { if (state) { yield return new WaitForSecondsRealtime(waitTime); StartScreen(); } else EndScreen(); }
 
 
-    public void PlaySFX(string SFXName)
+    void PlaySFX(string SFXName)
     {
         //SFX_sound sfxPlay = System.Array.Find(sfxClip, sfx => sfx.name == SFXName);
         //if (sfxPlay != null) sfxPlay.Play();
     }
-    public void ChangeSnapshot() { AudioManager.main.ChangeSnapshot("StateGame", toSnapshot); }
+    void ChangeSnapshot() { AudioManager.main.ChangeSnapshot("StateGame", toSnapshot); }
+    void ChangeTime(float time) { Time.timeScale = time; }
 }

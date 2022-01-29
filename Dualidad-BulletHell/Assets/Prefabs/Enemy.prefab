@@ -563,6 +563,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81639df319bc02d4d8e53f8659bf4f39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 2348778217920157073}
+  sfxClip:
+  - name: Spawn
+    nameDataBase: 
+  - name: Death
+    nameDataBase: 
+  - name: Hit
+    nameDataBase: 
+  - name: Shoot
+    nameDataBase: 
+  - name: Active
+    nameDataBase: 
+  - name: Inactive
+    nameDataBase: 
+  transf: {fileID: 2348778217920157102}
+  transfText: {fileID: 5178722640591231801}
+  addOffset: {x: 0, y: 0.8, z: 0}
+  spr:
+  - {fileID: 2348778218197686546}
+  - {fileID: 2348778217173977473}
+  colorEnemy: {r: 0.6039216, g: 0.5058824, b: 0.18039216, a: 1}
 --- !u!1 &2348778218195916210
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,7 +743,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2348778218676648180}
   m_Layer: 0
-  m_Name: Information
+  m_Name: RadioParry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

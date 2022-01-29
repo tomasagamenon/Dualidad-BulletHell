@@ -7,8 +7,6 @@ public class Visual_UImanager : MonoBehaviour
     public static Visual_UImanager main;
     private void Awake() { if (main == null) main = this; else Destroy(this.gameObject); }
 
-
-
     [SerializeField] Visual_UIelement_Life scrLife;
     [SerializeField] Visual_UIelement_Score scrScore;
     [SerializeField] Visual_UIelement_Dialogue scrDialogue;
@@ -21,7 +19,6 @@ public class Visual_UImanager : MonoBehaviour
     [SerializeField] Visual_UIscreenManager scrScreen;
 
 
-    #region PUBLICs
     public void SetScore(int value) { scrScore.SetScoreText(value); }
     public void SetLife(int value) { scrLife.SetLife(value); }
 
@@ -34,6 +31,5 @@ public class Visual_UImanager : MonoBehaviour
     public void SetLevelup(bool active) { scrLevelUp.SetActive(active); }
 
     public void SetScreen(TypeScreen screen) { scrScreen.ChangeScreen(screen); }
-    #endregion
 
 }

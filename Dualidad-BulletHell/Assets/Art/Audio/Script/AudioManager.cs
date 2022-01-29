@@ -151,9 +151,6 @@ public class Audio
 {
     public string name;
     public string nameDataBase;
-    public void Play()
-    {
-        AudioManager.main.PlaySFX(nameDataBase);
-    }
+    public void Play() { AudioManager.main.PlaySFX(nameDataBase); }
 }
 #endregion
