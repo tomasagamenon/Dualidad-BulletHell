@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Visual_Bullets : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] Color colorBullet;
+    [SerializeField, Range(0, 2)] float size;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    [SerializeField] Transform transf;
+    [SerializeField] SpriteRenderer spr;
+
+    private void Start() { SetBullet(colorBullet, size); }
+
+    public void SetBullet(Color color, float modSize) {
+        spr.color = color;
+        transf.localScale = Vector3.one * size * modSize;
     }
 }
