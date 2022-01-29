@@ -127,7 +127,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3007107998505304901}
   - component: {fileID: 3007107998505304899}
-  - component: {fileID: 3007107998505304898}
   - component: {fileID: 3007107998505304897}
   m_Layer: 0
   m_Name: Portal
@@ -172,28 +171,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3007107998505304898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3007107998505304900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cb54ba9675a9a74c9d9224e7500c4be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 3007107998505304899}
-  sfxClip:
-  - name: Spawn
-    nameDataBase: 
-  - name: Contact
-    nameDataBase: 
-  colorBullet: {r: 0.15686275, g: 0.4784314, b: 0.6156863, a: 1}
-  size: 1
-  transf: {fileID: 3007107998505304901}
-  spr: {fileID: 3007107997099226464}
 --- !u!114 &3007107998505304897
 MonoBehaviour:
   m_ObjectHideFlags: 0
