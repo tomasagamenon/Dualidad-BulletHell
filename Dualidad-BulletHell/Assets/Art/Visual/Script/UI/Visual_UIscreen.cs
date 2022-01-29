@@ -12,6 +12,7 @@ public class Visual_UIscreen : MonoBehaviour
     [SerializeField, Range(0, 1)] float HideSecond;
 
     public string toSnapshot;
+    public string toMusicClip;
     [SerializeField, Range(0, 1)] float timeScale_Intro, timeScale_End;
 
     public virtual void StartScreen()

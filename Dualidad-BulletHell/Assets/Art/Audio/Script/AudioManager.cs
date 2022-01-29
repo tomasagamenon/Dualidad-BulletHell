@@ -51,10 +51,12 @@ public class AudioManager : MonoBehaviour
         SFX sfx_ = Array.Find(sfx, sound => sound.name == nameAudio);
         if (sfx_ != null) sfx_.PlayAudio();
     }
+    MUSIC currentMusic;
     public void PlayMUSIC(string nameAudio)
     {
         MUSIC music_ = Array.Find(music, sound => sound.name == nameAudio);
-        if (music_ != null) music_.PlayAudio();
+        if (music_ != null) { if (music_ != currentMusic) { currentMusic = music_; music_.PlayAudio(); } }
+        else { Array.Find(sources, source => source.name == "MUSIC").source.Stop(); }
     }
     #endregion
     #region EFFECTS
@@ -82,8 +84,7 @@ public class AudioManager : MonoBehaviour
 
 }
 
-[Serializable]
-public class EFFECT
+[Serializable] public class EFFECT
 {
     public string name;
     public AudioMixer mixer;
@@ -91,8 +92,7 @@ public class EFFECT
 
     public void SetActive(string nameSnapshot) { Array.Find(snapshots, snapshot => snapshot.name == nameSnapshot).ToTransition(); }
 }
-[Serializable]
-public class SNAPSHOT
+[Serializable] public class SNAPSHOT
 {
     public string name;
     [Range(0, 1)] public float timeToReach;
@@ -101,8 +101,7 @@ public class SNAPSHOT
     public void ToTransition() { snapshots.TransitionTo(timeToReach); }
 }
 
-[Serializable]
-public class Source
+[Serializable] public class Source
 {
     public string name;
     public AudioMixerGroup mixer;

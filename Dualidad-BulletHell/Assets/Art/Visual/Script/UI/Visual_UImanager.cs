@@ -19,7 +19,7 @@ public class Visual_UImanager : MonoBehaviour
     [SerializeField] Visual_UIscreenManager scrScreen;
 
 
-    public void SetScore(int value) { scrScore.SetScoreText(value); }
+    public void SetScore(int score) { scrScore.SetScoreText(score); }
     public void SetLife(int value) { scrLife.SetLife(value); }
 
     public void SetDialogue(Sprite spr, string text) { scrDialogue.SetDialogue(spr, text); }

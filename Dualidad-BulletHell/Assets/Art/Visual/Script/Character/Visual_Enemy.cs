@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class Visual_Enemy : Visual_ElementWorld
 {
@@ -30,7 +28,8 @@ public class Visual_Enemy : Visual_ElementWorld
     }
 
 
-    public void SetColor(Color color) {
+    public void SetColor(Color color)
+    {
         colorEnemy = color;
         foreach (SpriteRenderer spr_ in spr) { spr_.color = colorEnemy; }
     }

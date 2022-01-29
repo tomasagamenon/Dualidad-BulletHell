@@ -36,6 +36,12 @@ public enum TypeScreen { MainMenu, Gameplay, Pause, GameOver, Cutscene }
     public TypeScreen type;
     public Visual_UIscreen screen;
 
+    public string toMusicClip;
 
-    public void State(bool state) { if (screen != null) screen.StateScreen(state, 1); }
+    void ChangeMusic() { AudioManager.main.PlayMUSIC(toMusicClip); }
+
+    public void State(bool state) {
+        if (screen != null) screen.StateScreen(state, 1);
+        if (state) { ChangeMusic(); }
+    }
 }
