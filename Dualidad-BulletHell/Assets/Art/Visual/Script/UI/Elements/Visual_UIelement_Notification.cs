@@ -11,6 +11,8 @@ public class Visual_UIelement_Notification : Visual_UIelement
 
         anim.gameObject.SetActive(true);
 
+        PlaySFX("Show");
+
         text_Notif.SetText(text);
 
         SetAnimator("Spawn");

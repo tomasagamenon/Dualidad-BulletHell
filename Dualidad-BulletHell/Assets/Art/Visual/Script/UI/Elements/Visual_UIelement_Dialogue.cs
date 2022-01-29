@@ -12,6 +12,8 @@ public class Visual_UIelement_Dialogue : Visual_UIelement
 
     [SerializeField, Range(0,1)] float speedChar, timeToclose;
 
+    public bool inDialogue;
+
     Sprite currentFace;
     string currentText;
 
@@ -35,23 +37,34 @@ public class Visual_UIelement_Dialogue : Visual_UIelement
 
     IEnumerator StartDialogue(string text) {
 
+        inDialogue = true;
         SetAnimator(true, "Active");
         text_Dialogue.SetText("");
+
+        PlaySFX("Show");
 
         foreach (char character in text.ToCharArray()) {
 
             text_Dialogue.SetText(text_Dialogue.text + character);
+            PlaySFX("Char");
 
             yield return new WaitForSeconds(speedChar);
         }
 
         yield return new WaitForSeconds(timeToclose);
 
+        inDialogue = false;
+
+        DialogueSystem.main.RemoveDialogue_First();
+        DialogueSystem.main.CheckDialogue();
+
         SetAnimator(false, "Active");
-        Invoke("Hide", 1);
+        PlaySFX("Hide");
+
+        StartCoroutine(Hide());
     }
 
-    void Hide() { anim.gameObject.SetActive(false); }
+    IEnumerator Hide() { yield return new WaitForSeconds(1); anim.gameObject.SetActive(false); }
 }
 
 
