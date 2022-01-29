@@ -1,11 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Visual_Enemy : Visual_ElementWorld
 {
     [SerializeField] Transform transf, transfText;
     [SerializeField] Vector3 addOffset;
+
+    [SerializeField] TextMeshPro textHp;
+    [SerializeField] string addText;
 
     [SerializeField] SpriteRenderer[] spr;
     [SerializeField] Color colorEnemy;
@@ -26,11 +28,13 @@ public class Visual_Enemy : Visual_ElementWorld
     }
 
 
-    public void SetColor(Color color) {
+    public void SetColor(Color color)
+    {
         colorEnemy = color;
         foreach (SpriteRenderer spr_ in spr) { spr_.color = colorEnemy; }
     }
 
+    public void SetLife(int hp) { textHp.SetText(addText + hp.ToString()); }
 
     public void Move(Vector2 direction)
     {

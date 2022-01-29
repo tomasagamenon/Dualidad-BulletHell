@@ -13,7 +13,7 @@ public class Visual_Camera : MonoBehaviour
     [SerializeField] Visual_FollowObjects scrTarget;
     [SerializeField] float viewBase;
 
-    CinemachineVirtualCamera virtualCamera;
+    [SerializeField] CinemachineVirtualCamera virtualCamera;
 
     private void Start() { Initializer(); }
 

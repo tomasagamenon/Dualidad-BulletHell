@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Visual_Bullets : Visual_ElementWorld
@@ -11,8 +9,9 @@ public class Visual_Bullets : Visual_ElementWorld
     [SerializeField] SpriteRenderer spr;
 
     private void Start() { SetBullet(colorBullet, size); }
-    
-    public void SetBullet(Color color, float modSize) {
+
+    public void SetBullet(Color color, float modSize)
+    {
         spr.color = color;
         transf.localScale = Vector3.one * size * modSize;
     }
