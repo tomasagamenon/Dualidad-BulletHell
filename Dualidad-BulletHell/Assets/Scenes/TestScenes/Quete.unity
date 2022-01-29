@@ -969,13 +969,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 024debc212fbb7d4eb3b20e6c59492a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 886560340}
   radius: 5
   speed: 3
   rotation_speed: 700
-  number_of_shoots: 30
-  number_of_bullets: 4
-  time_between_bullets: 0.5
+  number_of_shoots: 37
+  number_of_bullets: 3
+  time_between_bullets: 0.1
   distance_between_bullets: 0
   rot_per_shoot: 10
   mirrored: 1
