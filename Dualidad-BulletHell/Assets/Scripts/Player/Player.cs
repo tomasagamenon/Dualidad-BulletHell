@@ -6,11 +6,15 @@ public class Player : Entity
 {
     public float speed;
     public float rotation_speed;
+    public Deffensive[] defensive;
+    public Offensive[] offensive;
 
     void Update()
     {
-        float translationy = Input.GetAxis("Vertical") * speed;
-        float translationx = Input.GetAxis("Horizontal") * speed;
+        float translationy = Input.GetAxis("Vertical") * (speed + defensive[LevelSystem.main.GetLv_Defensive()].speed);
+        float translationx = Input.GetAxis("Horizontal") * (speed + defensive[LevelSystem.main.GetLv_Defensive()].speed);
+        max_life = defensive[LevelSystem.main.GetLv_Defensive()].life;
+        life = defensive[LevelSystem.main.GetLv_Defensive()].life;
 
         translationy *= Time.deltaTime;
         translationx *= Time.deltaTime;
@@ -33,4 +37,19 @@ public class Player : Entity
                 FindObjectOfType<BulletsPool>().PullIn(bullet);
         Visual_UImanager.main.SetLife(life);
     }
+}
+
+[System.Serializable]
+public class Deffensive
+{
+    public int life;
+    public float speed;
+}
+
+[System.Serializable]
+public class Offensive
+{
+    public float cooldown;
+    public int damage;
+    public float parry_duration;
 }

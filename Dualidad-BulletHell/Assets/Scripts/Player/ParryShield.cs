@@ -9,10 +9,11 @@ public class ParryShield : MonoBehaviour
     public bool _is_in_parry = false;
     public float time_in_parry;
     public float speed_rot;
+    private Offensive[] offensive;
 
     void Start()
     {
-        
+        offensive = GetComponentInParent<Player>().offensive;
     }
 
     void Update()
@@ -34,14 +35,14 @@ public class ParryShield : MonoBehaviour
 
     IEnumerator InCooldown()
     {
-        yield return new WaitForSeconds(cooldown);
+        yield return new WaitForSeconds(cooldown - offensive[LevelSystem.main.GetLv_Offensive()].cooldown);
         _is_in_cooldown = false;
     }
 
     IEnumerator Parry()
     {
         _is_in_parry = true;
-        yield return new WaitForSeconds(time_in_parry);
+        yield return new WaitForSeconds(time_in_parry + offensive[LevelSystem.main.GetLv_Offensive()].parry_duration);
         _is_in_parry = false;
         _is_in_cooldown = true;
         StartCoroutine(InCooldown());
@@ -55,6 +56,7 @@ public class ParryShield : MonoBehaviour
             v3 = Camera.main.ScreenToWorldPoint(v3);
             v3.z = 0;
             collision.GetComponent<Bullet>().Reflect(v3);
+            collision.GetComponent<Bullet>().damage = offensive[LevelSystem.main.GetLv_Offensive()].damage;
         }
     }
 }
