@@ -602,15 +602,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 0
-  max_life: 0
+  max_life: 1
   radius: 5
   speed: 3
   rotation_speed: 700
-  number_of_shoots: 30
+  number_of_shoots: 4
   number_of_bullets: 4
   time_between_bullets: 0.5
   distance_between_bullets: 0
-  rot_per_shoot: 10
+  rot_per_shoot: 45
   mirrored: 1
 --- !u!50 &-8054202643055163244
 Rigidbody2D:

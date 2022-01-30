@@ -93,10 +93,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81466686d3c3c1a4eb2ad802f4d3fbdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 6
   dist_from_player: 20
   damage: 1
   dir: {x: 0, y: 0, z: 0}
+  reflected: 0
 --- !u!58 &8074687240971427164
 CircleCollider2D:
   m_ObjectHideFlags: 0
