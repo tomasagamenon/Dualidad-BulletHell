@@ -6679,7 +6679,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: NO AMMO
+  m_text: NO BULLETS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a9251a529bb56f24ba511cf965a63252, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 36ef997cdd6c3ed4bb5d2cb2bbe8cbaa, type: 2}
@@ -9278,7 +9278,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.45}
   m_AnchorMax: {x: 1.25, y: 0.725}
-  m_AnchoredPosition: {x: 27.5, y: 0}
+  m_AnchoredPosition: {x: 27.500008, y: 0}
   m_SizeDelta: {x: -55, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2009829552
