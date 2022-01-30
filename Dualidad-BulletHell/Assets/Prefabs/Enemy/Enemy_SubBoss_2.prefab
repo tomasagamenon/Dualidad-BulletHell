@@ -907,9 +907,9 @@ MonoBehaviour:
     time_between_bullets: 0.1
     distance_between_bullets: 10
     rot_per_shoot: 3
-    ofset_player: 0
-    mirrored: 1
-  score: 0
+    ofset_player: -15
+    mirrored: 0
+  score: 50
 --- !u!50 &1284401646226156230
 Rigidbody2D:
   serializedVersion: 4

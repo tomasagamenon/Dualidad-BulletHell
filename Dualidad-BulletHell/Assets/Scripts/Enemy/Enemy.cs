@@ -26,14 +26,12 @@ public class Enemy : Entity
         player = FindObjectOfType<Player>();
         _target = player.transform;
         _pos_to_go = transform.position;
-        StartCoroutine(Shoot(1, null));
+        StartCoroutine(Shoot(1, null, 1));
         visual = GetComponent<Visual_Enemy>();
     }
 
     protected virtual void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-            Death();
         if ((player.transform.position - transform.position).magnitude < radius * 5)
         {
             Vector3 dir = Vector3.zero;
@@ -67,7 +65,7 @@ public class Enemy : Entity
             if (0.1f >= (_pos_to_go - transform.position).magnitude && _ready_to_go)
             {
                 transform.position = _pos_to_go;
-                StartCoroutine(Shoot(1, null));
+                StartCoroutine(Shoot(1, null, 1));
                 _ready_to_go = false;
             }
         }
@@ -87,16 +85,16 @@ public class Enemy : Entity
         return vector3;
     }
 
-    protected IEnumerator Shoot(int a, Paterns patern)
+    protected IEnumerator Shoot(int a, Paterns patern, float time)
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(time);
         if (patern == null)
         {
             if (paterns.Count > 1)
                 patern = paterns[Random.Range(0, paterns.Count)];
             else patern = paterns[0];
             if (patern.mirrored)
-                StartCoroutine(Shoot(-1, patern));
+                StartCoroutine(Shoot(-1, patern, 0));
         }
         for (int i = 0; i < patern.number_of_shoots; i++)
         {
