@@ -35,10 +35,4 @@ public class Novato : Enemy
         StartCoroutine(Shoot(1, null));
         visual = GetComponent<Visual_Enemy>();
     }
-
-    protected override void Death()
-    {
-        Visual_UImanager.main.SetLevelup(true);
-        base.Death();
-    }
 }

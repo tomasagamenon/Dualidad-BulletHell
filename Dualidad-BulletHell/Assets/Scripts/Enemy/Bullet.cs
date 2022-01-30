@@ -42,7 +42,7 @@ public class Bullet : MonoBehaviour
             collision.GetComponent<Player>().GetDamage(damage);
             FindObjectOfType<BulletsPool>().PullIn(this);
         }
-        if((collision.GetComponent<Enemy>() || collision.GetComponent<Novato>()) && reflected)
+        if(collision.GetComponent<Enemy>() && reflected)
         {
             collision.GetComponent<Enemy>().GetDamage(damage);
             reflected = false;
