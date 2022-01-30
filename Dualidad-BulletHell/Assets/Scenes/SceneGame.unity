@@ -2485,7 +2485,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Score:
 
-    <#982E2E>00000000</color>25'
+    00000000</color>25'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 332b75585a82bad40b7a76b6a6946dee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 1f6754ca40e742948b95c4b8512faabd, type: 2}
@@ -2494,8 +2494,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4281150872
+  m_fontColor: {r: 0.59607846, g: 0.1764706, b: 0.1764706, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3934,8 +3934,8 @@ MonoBehaviour:
   anim: {fileID: 0}
   sfxClip: []
   text_Score: {fileID: 580916492}
-  addText: 'Score:'
-  addZero: 0000000000
+  addText: <#fff>Score:</color>
+  addZero: 10
 --- !u!114 &1054904847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7398,6 +7398,7 @@ GameObject:
   - component: {fileID: 1950322665}
   - component: {fileID: 1950322666}
   - component: {fileID: 1950322667}
+  - component: {fileID: 1950322668}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -7494,6 +7495,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves: []
   end: []
+--- !u!114 &1950322668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950322661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde42271273e2be4eaf7ec0a81d914d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1972874177
 GameObject:
   m_ObjectHideFlags: 0

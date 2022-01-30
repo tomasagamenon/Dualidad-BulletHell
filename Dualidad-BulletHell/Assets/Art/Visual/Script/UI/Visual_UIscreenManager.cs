@@ -18,12 +18,6 @@ public class Visual_UIscreenManager : MonoBehaviour
 
     }
 
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A)) { Effect_Manager.main.InstantiateEffect_PopUp(Vector3.zero, "-100", Color.white); }
-    }
-
 }
 
 public enum TypeScreen { MainMenu, Gameplay, Pause, GameOver, Cutscene }
