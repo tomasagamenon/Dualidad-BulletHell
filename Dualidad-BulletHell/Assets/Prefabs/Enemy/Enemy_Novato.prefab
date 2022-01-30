@@ -905,7 +905,7 @@ GameObject:
   - component: {fileID: -1115482832845297656}
   - component: {fileID: -1034332375670284731}
   - component: {fileID: -3303200437056956076}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemy_Novato
   m_TagString: Untagged
   m_Icon: {fileID: 0}

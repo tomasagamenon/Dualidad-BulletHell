@@ -798,7 +798,7 @@ GameObject:
   - component: {fileID: 2965310142944442976}
   - component: {fileID: 1284401646226156230}
   - component: {fileID: 1082410639081444107}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemy_SubBoss_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
