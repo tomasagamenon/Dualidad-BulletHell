@@ -7,6 +7,7 @@ public class EnemyWaves : MonoBehaviour
     public List<Waves> waves;
     private int _num_wave;
     public List<GameObject> end;
+    public List<Vector2> endPos;
     public int num_of_enemies;
     private int _general_score;
 
@@ -18,8 +19,11 @@ public class EnemyWaves : MonoBehaviour
     void Update()
     {
         if (_num_wave >= waves.Count)
-            foreach (GameObject gameObject in end)
-                gameObject.SetActive(true);
+            for (int i = 0; i < end.Count; i++) 
+            {
+                var pos = FindObjectOfType<Player>().transform.position + new Vector3(endPos[i].x, endPos[i].y, 0);
+                Instantiate(end[i], pos, transform.rotation);
+            }
     }
 
     IEnumerator Spawn()
