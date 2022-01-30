@@ -902,10 +902,10 @@ GameObject:
   - component: {fileID: 4822682417543345126}
   - component: {fileID: 4822682417543345113}
   - component: {fileID: 4822682417543345112}
-  - component: {fileID: 6990902281643383395}
   - component: {fileID: -1115482832845297656}
   - component: {fileID: -1034332375670284731}
-  m_Layer: 0
+  - component: {fileID: -3303200437056956076}
+  m_Layer: 3
   m_Name: Enemy_Novato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -984,32 +984,6 @@ MonoBehaviour:
   - {fileID: 4822682417819434842}
   - {fileID: 4822682416695717833}
   colorEnemy: {r: 1, g: 1, b: 1, a: 1}
---- !u!114 &6990902281643383395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4822682417543345127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 024debc212fbb7d4eb3b20e6c59492a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  life: 0
-  max_life: 0
-  radius: 5
-  speed: 3
-  rotation_speed: 700
-  paterns:
-  - number_of_shoots: 0
-    number_of_bullets: 0
-    time_between_bullets: 0
-    distance_between_bullets: 0
-    rot_per_shoot: 0
-    ofset_player: 0
-    mirrored: 0
-  score: 0
 --- !u!50 &-1115482832845297656
 Rigidbody2D:
   serializedVersion: 4
@@ -1047,6 +1021,43 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &-3303200437056956076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4822682417543345127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9700d9b51bb4631448db092a13b99395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 1
+  max_life: 1
+  radius: 5
+  speed: 3
+  rotation_speed: 700
+  paterns:
+  - number_of_shoots: 0
+    number_of_bullets: 0
+    time_between_bullets: 0
+    distance_between_bullets: 0
+    rot_per_shoot: 0
+    ofset_player: 0
+    mirrored: 0
+  score: 0
+  dialogues:
+  - sprite: {fileID: 0}
+    text: Hola
+    speedDialogue: 0
+  - sprite: {fileID: 0}
+    text: Chau
+    speedDialogue: 0
+  - sprite: {fileID: 0}
+    text: Andateeeee
+    speedDialogue: 0
+  time: 2
 --- !u!1 &4822682417819434840
 GameObject:
   m_ObjectHideFlags: 0

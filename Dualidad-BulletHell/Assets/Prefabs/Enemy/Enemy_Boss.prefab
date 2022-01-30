@@ -641,7 +641,7 @@ GameObject:
   - component: {fileID: 900977390397197480}
   - component: {fileID: -161311835982089143}
   - component: {fileID: 3770628309800535139}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemy_Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -737,12 +737,8 @@ MonoBehaviour:
   radius: 5
   speed: 3
   rotation_speed: 700
-  number_of_shoots: 30
-  number_of_bullets: 4
-  time_between_bullets: 0.5
-  distance_between_bullets: 0
-  rot_per_shoot: 10
-  mirrored: 1
+  paterns: []
+  score: 0
 --- !u!50 &-161311835982089143
 Rigidbody2D:
   serializedVersion: 4
