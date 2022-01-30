@@ -2881,7 +2881,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Score:
 
-    00000000</color>25'
+    00000000</color>00'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 332b75585a82bad40b7a76b6a6946dee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 1f6754ca40e742948b95c4b8512faabd, type: 2}
@@ -6400,7 +6400,8 @@ MonoBehaviour:
       snapshots: {fileID: 3175326794467485230, guid: 41ced7a784c4a4846b6362e3c8b1ee65, type: 2}
   sfx:
   - name: Player_Parry
-    clip: []
+    clip:
+    - {fileID: 8300000, guid: 1711cd9835c7e2245add1c5189e8d510, type: 3}
     source: {fileID: 106219095}
     volume: 1
     pitch: 1
@@ -6412,25 +6413,29 @@ MonoBehaviour:
     pitch: 1
     randomizerPitch: 0
   - name: Player_Hit
-    clip: []
+    clip:
+    - {fileID: 8300000, guid: 0f98a8e436925b843aac2a236872ac24, type: 3}
     source: {fileID: 106219095}
     volume: 1
     pitch: 1
     randomizerPitch: 0
   - name: Player_Death
-    clip: []
+    clip:
+    - {fileID: 8300000, guid: 49e97d832e2ce5d4aa3e25fe4493f4a0, type: 3}
     source: {fileID: 106219095}
     volume: 1
     pitch: 1
     randomizerPitch: 0
   - name: Player_LevelUp_Ofensive
-    clip: []
+    clip:
+    - {fileID: 8300000, guid: a490dbf633b556b4286bd87dc20a4c80, type: 3}
     source: {fileID: 106219095}
     volume: 1
     pitch: 1
     randomizerPitch: 0
   - name: Player_LevelUp_Defensive
-    clip: []
+    clip:
+    - {fileID: 8300000, guid: a490dbf633b556b4286bd87dc20a4c80, type: 3}
     source: {fileID: 106219095}
     volume: 1
     pitch: 1
@@ -6442,19 +6447,22 @@ MonoBehaviour:
     pitch: 1
     randomizerPitch: 0
   - name: Enemy_Hit
-    clip: []
+    clip:
+    - {fileID: 8300000, guid: d7235f39f11589d4c8f7c139b5ec51a1, type: 3}
     source: {fileID: 106219095}
     volume: 1
     pitch: 1
     randomizerPitch: 0
   - name: Enemy_Death
-    clip: []
+    clip:
+    - {fileID: 8300000, guid: 3331da983fc9a004ca390805aa4cf634, type: 3}
     source: {fileID: 106219095}
     volume: 1
     pitch: 1
     randomizerPitch: 0
   - name: Enemy_Shoot
-    clip: []
+    clip:
+    - {fileID: 8300000, guid: 25db753bdfe3f3649b70047123378090, type: 3}
     source: {fileID: 106219095}
     volume: 1
     pitch: 1
@@ -6478,19 +6486,22 @@ MonoBehaviour:
     pitch: 1
     randomizerPitch: 0
   - name: EnemyBoss_Hit
-    clip: []
+    clip:
+    - {fileID: 8300000, guid: d7235f39f11589d4c8f7c139b5ec51a1, type: 3}
     source: {fileID: 106219095}
     volume: 1
     pitch: 1
     randomizerPitch: 0
   - name: EnemyBoss_Death
-    clip: []
+    clip:
+    - {fileID: 8300000, guid: 3331da983fc9a004ca390805aa4cf634, type: 3}
     source: {fileID: 106219095}
     volume: 1
     pitch: 1
     randomizerPitch: 0
   - name: EnemyBoss_Shoot
-    clip: []
+    clip:
+    - {fileID: 8300000, guid: 25db753bdfe3f3649b70047123378090, type: 3}
     source: {fileID: 106219095}
     volume: 1
     pitch: 1

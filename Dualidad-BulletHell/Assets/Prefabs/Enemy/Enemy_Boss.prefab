@@ -759,7 +759,7 @@ MonoBehaviour:
     rot_per_shoot: 30
     ofset_player: 0
     mirrored: 0
-  score: 0
+  score: 100
 --- !u!50 &-161311835982089143
 Rigidbody2D:
   serializedVersion: 4
