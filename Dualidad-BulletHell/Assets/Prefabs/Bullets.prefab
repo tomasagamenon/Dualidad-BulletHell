@@ -76,7 +76,7 @@ MonoBehaviour:
   - name: Contact
     nameDataBase: 
   colorBullet: {r: 0.15686275, g: 0.4784314, b: 0.6156863, a: 1}
-  size: 1
+  size: 0.75
   transf: {fileID: 8058007224040849738}
   spr: {fileID: 8058007225442793327}
 --- !u!114 &8210171813436159703

@@ -11,13 +11,11 @@ public class Visual_UIscreen : MonoBehaviour
     [SerializeField, Range(0, 5)] float correctionWait;
     [SerializeField, Range(0, 1)] float HideSecond;
 
-    public string toSnapshot;
     public string toMusicClip;
     [SerializeField, Range(0, 1)] float timeScale_Intro, timeScale_End;
 
     public virtual void StartScreen()
     {
-        ChangeSnapshot();
         ChangeTime(timeScale_Intro);
         if (anim == true)
         {
@@ -52,6 +50,5 @@ public class Visual_UIscreen : MonoBehaviour
         //SFX_sound sfxPlay = System.Array.Find(sfxClip, sfx => sfx.name == SFXName);
         //if (sfxPlay != null) sfxPlay.Play();
     }
-    void ChangeSnapshot() { AudioManager.main.ChangeSnapshot("StateGame", toSnapshot); }
     void ChangeTime(float time) { Time.timeScale = time; }
 }

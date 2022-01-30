@@ -177,7 +177,6 @@ MonoBehaviour:
   WaitSecond: 0
   correctionWait: 1
   HideSecond: 0.25
-  toSnapshot: Pause
   toMusicClip: 
   timeScale_Intro: 0
   timeScale_End: 1
@@ -245,7 +244,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.618018, y: 1}
+    m_SensorSize: {x: 1.3090587, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2435,7 +2434,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Score:
 
-    x2 <#982E2E>00000000</color>25'
+    <#982E2E>00000000</color>25'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 332b75585a82bad40b7a76b6a6946dee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 1f6754ca40e742948b95c4b8512faabd, type: 2}
@@ -2566,7 +2565,6 @@ MonoBehaviour:
   WaitSecond: 0
   correctionWait: 1
   HideSecond: 0.25
-  toSnapshot: Gameplay
   toMusicClip: Music_MainMenu
   timeScale_Intro: 1
   timeScale_End: 1
@@ -2856,7 +2854,7 @@ AudioSource:
   m_GameObject: {fileID: 700543588}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 5276961751995623257, guid: 41ced7a784c4a4846b6362e3c8b1ee65, type: 2}
+  OutputAudioMixerGroup: {fileID: -7748334674083293736, guid: 41ced7a784c4a4846b6362e3c8b1ee65, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -3672,7 +3670,6 @@ MonoBehaviour:
   WaitSecond: 0
   correctionWait: 1
   HideSecond: 0.25
-  toSnapshot: Gameplay
   toMusicClip: 
   timeScale_Intro: 1
   timeScale_End: 1
@@ -4423,18 +4420,22 @@ MonoBehaviour:
   - name: MainMenu
     type: 0
     screen: {fileID: 587411213}
+    toSnapshot: Gameplay
     toMusicClip: Music_MainMenu
   - name: Gameplay
     type: 1
     screen: {fileID: 0}
+    toSnapshot: Gameplay
     toMusicClip: Music_Gameplay
   - name: Pause
     type: 2
     screen: {fileID: 48656377}
+    toSnapshot: Pause
     toMusicClip: Music_Gameplay
   - name: GameOver
     type: 3
     screen: {fileID: 1050747355}
+    toSnapshot: Gameplay
     toMusicClip: 
 --- !u!1001 &1174052981
 PrefabInstance:
@@ -5535,7 +5536,7 @@ MonoBehaviour:
     source: {fileID: 106219095}
     playing: 0
   - name: MUSIC
-    mixer: {fileID: 5276961751995623257, guid: 41ced7a784c4a4846b6362e3c8b1ee65, type: 2}
+    mixer: {fileID: -7748334674083293736, guid: 41ced7a784c4a4846b6362e3c8b1ee65, type: 2}
     source: {fileID: 700543590}
     playing: 0
   effects:
@@ -7603,7 +7604,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.45}
   m_AnchorMax: {x: 1.25, y: 0.725}
-  m_AnchoredPosition: {x: 27.5, y: 0}
+  m_AnchoredPosition: {x: 27.499992, y: 0}
   m_SizeDelta: {x: -55, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2009829552
