@@ -6,12 +6,7 @@ public class Player : Entity
 {
     public float speed;
     public float rotation_speed;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         float translationy = Input.GetAxis("Vertical") * speed;

@@ -9,7 +9,7 @@ public class Enemy : Entity
     public float speed;
     public float rotation_speed;
     private Vector3 _pos_to_go;
-    private bool _ready_to_go = true;
+    private bool _ready_to_go = false;
 
 
     public int number_of_shoots;
@@ -17,21 +17,24 @@ public class Enemy : Entity
     public float time_between_bullets;
     public float distance_between_bullets;
     public float rot_per_shoot;
+    public float ofset_player;
     public bool mirrored;
     private BulletsPool bulletsPool;
     private Player player;
 
     public int score;
-    // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         bulletsPool = FindObjectOfType<BulletsPool>();
         player = FindObjectOfType<Player>();
         _target = player.transform;
-        _pos_to_go = RandomPointOnCircleEdge(radius);
+        _pos_to_go = transform.position;
+        StartCoroutine(Shoot(1));
+        if (mirrored)
+            StartCoroutine(Shoot(-1));
     }
 
-    // Update is called once per frame
     void Update()
     {
         if ((player.transform.position - transform.position).magnitude < radius * 5)
@@ -91,7 +94,7 @@ public class Enemy : Entity
 
     IEnumerator Shoot(int a)
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         for (int i = 0; i < number_of_shoots; i++)
         {
             for(int e = 0; e < number_of_bullets; e++)
@@ -103,6 +106,7 @@ public class Enemy : Entity
                     rot.z += distance_between_bullets * e;
                 else rot.z += (360 / number_of_bullets) * e;
                 rot.z += rot_per_shoot * i * a;
+                rot.z += ofset_player;
                 rot.z += Mathf.Abs(transform.rotation.eulerAngles.z);
                 bullet.transform.rotation = Quaternion.Euler(0, 0, rot.z);
                 bullet.dir = bullet.transform.up;
@@ -116,5 +120,6 @@ public class Enemy : Entity
     {
         base.Death();
         FindObjectOfType<EnemyWaves>().EnemyDeath(score);
+        Destroy(gameObject);
     }
 }

@@ -24,21 +24,12 @@ public class ParryShield : MonoBehaviour
         var v3 = Input.mousePosition;
         v3 = Camera.main.ScreenToWorldPoint(v3);
         v3.z = 0;
-        if (v3.x < transform.parent.position.x)
-        {
-            if (v3.y < parent.transform.position.y)
-                rotate.z = 140;
-            if (v3.y > parent.transform.position.y)
-                rotate.z = 50;
-        }
-        else if (v3.x > parent.transform.position.x)
-        {
-            if (v3.y < parent.transform.position.y)
-                rotate.z = 230;
-            if (v3.y > parent.transform.position.y)
-                rotate.z = 320;
-        }
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, rotate.z), Time.deltaTime * speed_rot);
+
+
+        var dir = (v3 - transform.position).normalized;
+        Quaternion newRotation = Quaternion.LookRotation(transform.forward, dir);
+        transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, Time.deltaTime * speed_rot);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, rotate.z), Time.deltaTime * speed_rot);
     }
 
     IEnumerator InCooldown()

@@ -244,7 +244,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.190991, y: 1}
+    m_SensorSize: {x: 1.4162163, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -7623,34 +7623,34 @@ MonoBehaviour:
     - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
     - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
     spawns:
-    - {x: 0, y: 3, z: 0}
-    - {x: 0, y: -3, z: 0}
+    - {x: 0, y: 3}
+    - {x: 0, y: -3}
   - enemies:
     - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
     - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
     spawns:
-    - {x: 0, y: 3, z: 0}
-    - {x: 0, y: -3, z: 9.96e-43}
+    - {x: 0, y: 3}
+    - {x: 0, y: -3}
   - enemies:
     - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
     - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
     - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
     - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
     spawns:
-    - {x: 0, y: 3, z: 0}
-    - {x: 0, y: -3, z: 9.96e-43}
-    - {x: -4, y: 0, z: -1.3657055e-33}
-    - {x: 4, y: 0, z: 1e-42}
+    - {x: 0, y: 3}
+    - {x: 0, y: -3}
+    - {x: -4, y: 0}
+    - {x: 4, y: 0}
   - enemies:
     - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
     - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
     - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
     - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
     spawns:
-    - {x: 0, y: 3, z: 0}
-    - {x: 0, y: -3, z: 9.96e-43}
-    - {x: -3, y: -2.5, z: -1.3657055e-33}
-    - {x: 3, y: -2.5, z: 1e-42}
+    - {x: 0, y: 3}
+    - {x: 0, y: -3}
+    - {x: -3, y: -2.5}
+    - {x: 3, y: -2.5}
   - enemies:
     - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
     - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
@@ -7661,20 +7661,20 @@ MonoBehaviour:
     - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
     - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
     spawns:
-    - {x: 4, y: 0, z: 0}
-    - {x: 4, y: 4, z: 9.96e-43}
-    - {x: 4, y: -4, z: -1.3657055e-33}
-    - {x: -4, y: 4, z: 1e-42}
-    - {x: -4, y: -4, z: 6.9e-44}
-    - {x: -4, y: 0, z: 9.99e-43}
-    - {x: 0, y: 4, z: 4.397747e-19}
-    - {x: 0, y: -4, z: 0}
+    - {x: 4, y: 0}
+    - {x: 4, y: 4}
+    - {x: 4, y: -4}
+    - {x: -4, y: 4}
+    - {x: -4, y: -4}
+    - {x: -4, y: 0}
+    - {x: 0, y: 4}
+    - {x: 0, y: -4}
   - enemies:
     - {fileID: -8975188249946522581, guid: f0e4ba1e40c578f4b9534f5c0cafb9b0, type: 3}
     - {fileID: -8975188249946522581, guid: f0e4ba1e40c578f4b9534f5c0cafb9b0, type: 3}
     spawns:
-    - {x: 0, y: 3, z: 0}
-    - {x: 0, y: -3, z: 9.96e-43}
+    - {x: 0, y: 3}
+    - {x: 0, y: -3}
   end: []
   num_of_enemies: 0
 --- !u!114 &1950322668

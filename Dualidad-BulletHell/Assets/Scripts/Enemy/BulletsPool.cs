@@ -28,6 +28,7 @@ public class BulletsPool : MonoBehaviour
             bullets_not_in_use.Remove(bullet);
             bullets_in_use.Add(bullet);
             bullet.gameObject.SetActive(true);
+            bullet.reflected = false;
         } else
         {
             bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
