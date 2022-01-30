@@ -6,10 +6,16 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     TypeScreen screen;
-    void Start()
+
+    private void Awake()
     {
         Visual_UImanager.main.SetScreen(TypeScreen.MainMenu);
         screen = TypeScreen.MainMenu;
+    }
+
+    void Start()
+    {
+
     }
 
     void Update()

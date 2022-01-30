@@ -27,7 +27,9 @@ public class EnemyWaves : MonoBehaviour
         {
             for(int i = 0; i < wave.enemies.Count; i++)
             {
-                Instantiate(wave.enemies[i], FindObjectOfType<Player>().transform.position += new Vector3(wave.spawns[i].x, wave.spawns[i].y, 0), transform.rotation);
+                Debug.Log(wave.spawns[i]);
+                var pos = FindObjectOfType<Player>().transform.position + wave.spawns[i];
+                Instantiate(wave.enemies[i], pos, transform.rotation);
                 yield return new WaitForSeconds(10);
                 num_of_enemies++;
             }
@@ -53,5 +55,5 @@ public class EnemyWaves : MonoBehaviour
 public class Waves
 {
     public List<Entity> enemies;
-    public List<Vector2> spawns;
+    public List<Vector3> spawns;
 }
