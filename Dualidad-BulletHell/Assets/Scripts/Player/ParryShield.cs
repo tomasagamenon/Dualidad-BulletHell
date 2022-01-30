@@ -9,10 +9,11 @@ public class ParryShield : MonoBehaviour
     public bool _is_in_parry = false;
     public float time_in_parry;
     public float speed_rot;
+    private Offensive[] offensive;
 
     void Start()
     {
-        
+        offensive = GetComponentInParent<Player>().offensive;
     }
 
     void Update()
@@ -24,33 +25,24 @@ public class ParryShield : MonoBehaviour
         var v3 = Input.mousePosition;
         v3 = Camera.main.ScreenToWorldPoint(v3);
         v3.z = 0;
-        if (v3.x < transform.parent.position.x)
-        {
-            if (v3.y < parent.transform.position.y)
-                rotate.z = 140;
-            if (v3.y > parent.transform.position.y)
-                rotate.z = 50;
-        }
-        else if (v3.x > parent.transform.position.x)
-        {
-            if (v3.y < parent.transform.position.y)
-                rotate.z = 230;
-            if (v3.y > parent.transform.position.y)
-                rotate.z = 320;
-        }
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, rotate.z), Time.deltaTime * speed_rot);
+
+
+        var dir = (v3 - transform.position).normalized;
+        Quaternion newRotation = Quaternion.LookRotation(transform.forward, dir);
+        transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, Time.deltaTime * speed_rot);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, rotate.z), Time.deltaTime * speed_rot);
     }
 
     IEnumerator InCooldown()
     {
-        yield return new WaitForSeconds(cooldown);
+        yield return new WaitForSeconds(cooldown - offensive[LevelSystem.main.GetLv_Offensive()].cooldown);
         _is_in_cooldown = false;
     }
 
     IEnumerator Parry()
     {
         _is_in_parry = true;
-        yield return new WaitForSeconds(time_in_parry);
+        yield return new WaitForSeconds(time_in_parry + offensive[LevelSystem.main.GetLv_Offensive()].parry_duration);
         _is_in_parry = false;
         _is_in_cooldown = true;
         StartCoroutine(InCooldown());
@@ -64,6 +56,7 @@ public class ParryShield : MonoBehaviour
             v3 = Camera.main.ScreenToWorldPoint(v3);
             v3.z = 0;
             collision.GetComponent<Bullet>().Reflect(v3);
+            collision.GetComponent<Bullet>().damage = offensive[LevelSystem.main.GetLv_Offensive()].damage;
         }
     }
 }
