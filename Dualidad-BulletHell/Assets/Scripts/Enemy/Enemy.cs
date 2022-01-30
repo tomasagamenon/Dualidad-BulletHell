@@ -32,8 +32,6 @@ public class Enemy : Entity
 
     protected virtual void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-            Death();
         if ((player.transform.position - transform.position).magnitude < radius * 5)
         {
             Vector3 dir = Vector3.zero;
