@@ -15,7 +15,7 @@ public class Entity : MonoBehaviour
     public virtual void GetDamage(int damage)
     {
         life -= damage;
-        Debug.Log(life);
+        Debug.Log(damage);
         if (life <= 0)
             Death();
     }

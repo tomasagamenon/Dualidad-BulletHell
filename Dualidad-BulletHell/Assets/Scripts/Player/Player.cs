@@ -4,28 +4,34 @@ using UnityEngine;
 
 public class Player : Entity
 {
-    public float speed;
+    //public float speed;
     public float rotation_speed;
     public Deffensive[] defensive;
     public Offensive[] offensive;
+    public Visual_Player visual;
+
+    private void Start()
+    {
+        visual = GetComponent<Visual_Player>();
+    }
 
     void Update()
     {
-        float translationy = Input.GetAxis("Vertical") * (speed + defensive[LevelSystem.main.GetLv_Defensive()].speed);
-        float translationx = Input.GetAxis("Horizontal") * (speed + defensive[LevelSystem.main.GetLv_Defensive()].speed);
-        max_life = defensive[LevelSystem.main.GetLv_Defensive()].life;
-        life = defensive[LevelSystem.main.GetLv_Defensive()].life;
+        float translationy = Input.GetAxis("Vertical");
+        float translationx = Input.GetAxis("Horizontal");
 
-        translationy *= Time.deltaTime;
-        translationx *= Time.deltaTime;
+        visual.Move(new Vector2(-translationx, translationy));
+
+        translationy *= Time.deltaTime * (defensive[LevelSystem.main.GetLv_Defensive()].speed);
+        translationx *= Time.deltaTime * (defensive[LevelSystem.main.GetLv_Defensive()].speed);
 
         transform.Translate(translationx, translationy, 0, Space.World);
-        Vector3 lookAtPos = new Vector3(translationx, translationy, 0);
-        if(lookAtPos.magnitude > 0)
-        {
-            Quaternion newRotation = Quaternion.LookRotation(transform.forward, lookAtPos);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, newRotation, Time.deltaTime * rotation_speed);
-        }
+        //Vector3 lookAtPos = new Vector3(translationx, translationy, 0);
+        //if(lookAtPos.magnitude > 0)
+        //{
+        //    Quaternion newRotation = Quaternion.LookRotation(transform.forward, lookAtPos);
+        //    transform.rotation = Quaternion.RotateTowards(transform.rotation, newRotation, Time.deltaTime * rotation_speed);
+        //}
     }
 
     public override void GetDamage(int damage)
@@ -36,6 +42,9 @@ public class Player : Entity
             if (!bullet.reflected)
                 FindObjectOfType<BulletsPool>().PullIn(bullet);
         Visual_UImanager.main.SetLife(life);
+        if (life <= 0)
+            visual.Hit(true);
+        else visual.Hit(false);
     }
 }
 
