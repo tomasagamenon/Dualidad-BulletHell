@@ -12,10 +12,11 @@ public class EnemyWaves : MonoBehaviour
     public int num_of_enemies;
     private int _general_score;
     public float notification_time;
+    public bool next_level;
 
     void Start()
     {
-        StartCoroutine(Spawn());
+        StartCoroutine(Level());
     }
 
     void Update()
@@ -23,7 +24,17 @@ public class EnemyWaves : MonoBehaviour
 
     }
 
-    IEnumerator Spawn()
+    IEnumerator Level()
+    {
+        foreach(Levels level in levels)
+        {
+            StartCoroutine(Spawn(level.waves));
+            yield return new WaitUntil(() => next_level);
+            next_level = false;
+        }
+    }
+
+    IEnumerator Spawn(List<Waves> waves)
     {
         foreach(Waves wave in waves)
         {
@@ -70,6 +81,7 @@ public class Levels
 {
     public List<Waves> waves;
 }
+
 [System.Serializable]
 public class Waves
 {

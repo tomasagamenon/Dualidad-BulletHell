@@ -17,6 +17,8 @@ public class Enemy : Entity
     private Player player;
 
     public int score;
+
+    private Visual_Enemy visual;
     protected override void Start()
     {
         base.Start();
@@ -25,6 +27,7 @@ public class Enemy : Entity
         _target = player.transform;
         _pos_to_go = transform.position;
         StartCoroutine(Shoot(1, null));
+        visual = GetComponent<Visual_Enemy>();
     }
 
     void Update()
