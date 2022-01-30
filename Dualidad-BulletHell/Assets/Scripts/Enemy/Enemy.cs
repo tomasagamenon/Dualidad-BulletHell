@@ -12,13 +12,7 @@ public class Enemy : Entity
     private bool _ready_to_go = false;
 
 
-    public int number_of_shoots;
-    public int number_of_bullets;
-    public float time_between_bullets;
-    public float distance_between_bullets;
-    public float rot_per_shoot;
-    public float ofset_player;
-    public bool mirrored;
+    public List<Paterns> paterns;
     private BulletsPool bulletsPool;
     private Player player;
 
@@ -31,8 +25,6 @@ public class Enemy : Entity
         _target = player.transform;
         _pos_to_go = transform.position;
         StartCoroutine(Shoot(1));
-        if (mirrored)
-            StartCoroutine(Shoot(-1));
     }
 
     void Update()
@@ -71,8 +63,6 @@ public class Enemy : Entity
             {
                 transform.position = _pos_to_go;
                 StartCoroutine(Shoot(1));
-                if (mirrored)
-                    StartCoroutine(Shoot(-1));
                 _ready_to_go = false;
             }
         }
@@ -95,23 +85,29 @@ public class Enemy : Entity
     IEnumerator Shoot(int a)
     {
         yield return new WaitForSeconds(1f);
-        for (int i = 0; i < number_of_shoots; i++)
+        Paterns patern;
+        if (paterns.Count > 1)
+            patern = paterns[Random.Range(0, paterns.Count)];
+        else patern = paterns[0];
+        if (patern.mirrored)
+            StartCoroutine(Shoot(-1));
+        for (int i = 0; i < patern.number_of_shoots; i++)
         {
-            for(int e = 0; e < number_of_bullets; e++)
+            for (int e = 0; e < patern.number_of_bullets; e++)
             {
                 Bullet bullet = bulletsPool.PullOut();
                 bullet.transform.position = transform.position;
                 Vector3 rot = Vector3.zero;
-                if (distance_between_bullets > 0)
-                    rot.z += distance_between_bullets * e;
-                else rot.z += (360 / number_of_bullets) * e;
-                rot.z += rot_per_shoot * i * a;
-                rot.z += ofset_player;
+                if (patern.distance_between_bullets > 0)
+                    rot.z += patern.distance_between_bullets * e;
+                else rot.z += (360 / patern.number_of_bullets) * e;
+                rot.z += patern.rot_per_shoot * i * a;
+                rot.z += patern.ofset_player;
                 rot.z += Mathf.Abs(transform.rotation.eulerAngles.z);
                 bullet.transform.rotation = Quaternion.Euler(0, 0, rot.z);
                 bullet.dir = bullet.transform.up;
             }
-            yield return new WaitForSeconds(time_between_bullets);
+            yield return new WaitForSeconds(patern.time_between_bullets);
         }
         StartCoroutine(Move());
     }
@@ -122,4 +118,16 @@ public class Enemy : Entity
         FindObjectOfType<EnemyWaves>().EnemyDeath(score);
         Destroy(gameObject);
     }
+}
+
+[System.Serializable]
+public class Paterns
+{
+    public int number_of_shoots;
+    public int number_of_bullets;
+    public float time_between_bullets;
+    public float distance_between_bullets;
+    public float rot_per_shoot;
+    public float ofset_player;
+    public bool mirrored;
 }
