@@ -130,6 +130,7 @@ public class Audio
 
     public override void PlayAudio()
     {
+        if (clip.Length == 0) return;
         source.clip = clip[UnityEngine.Random.Range(0, clip.Length)];
         source.volume = volume * volume;
         source.pitch = pitch + UnityEngine.Random.Range(-randomizerPitch, randomizerPitch);
