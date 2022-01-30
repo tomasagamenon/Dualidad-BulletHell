@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyWaves : MonoBehaviour
 {
-    public List<Waves> waves;
     public List<Levels> levels;
     private int _num_wave;
     public List<GameObject> end;
@@ -54,17 +53,6 @@ public class EnemyWaves : MonoBehaviour
                 var pos = FindObjectOfType<Player>().transform.position + new Vector3(endPos[i].x, endPos[i].y, 0);
                 Instantiate(end[i], pos, transform.rotation);
             }
-    }
-    void OnDrawGizmosSelected()
-    {
-        foreach(Waves wave in waves)
-        {
-            foreach (Vector2 vector2 in wave.spawns)
-            {
-                Gizmos.color = Color.yellow;
-                Gizmos.DrawSphere(vector2, 0.3f);
-            }
-        }
     }
 
     public void EnemyDeath(int score)

@@ -12,7 +12,7 @@ public class Visual_UIelement_Levelup : Visual_UIelement
             Invoke("Hide", 1);
             PlaySFX("Hide");
         }
-        SetActive(state);       
+        SetAnimator(state, "Active");
     }
     void Hide() { anim.gameObject.SetActive(false); }
 }
