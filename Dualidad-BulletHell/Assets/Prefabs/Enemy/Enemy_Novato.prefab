@@ -964,17 +964,17 @@ MonoBehaviour:
   anim: {fileID: 4822682417543345113}
   sfxClip:
   - name: Spawn
-    nameDataBase: 
+    nameDataBase: Enemy_Spawn
   - name: Death
-    nameDataBase: 
+    nameDataBase: Enemy_Death
   - name: Hit
-    nameDataBase: 
+    nameDataBase: Enemy_Hit
   - name: Shoot
-    nameDataBase: 
+    nameDataBase: Enemy_Shoot
   - name: Active
-    nameDataBase: 
+    nameDataBase: Enemy_Active
   - name: Inactive
-    nameDataBase: 
+    nameDataBase: Enemy_Inactive
   transf: {fileID: 4822682417543345126}
   transfText: {fileID: 2714423242105929073}
   addOffset: {x: 0, y: 0.8, z: 0}
