@@ -8927,6 +8927,11 @@ MonoBehaviour:
       spawns:
       - {x: 0, y: 3}
       - {x: 0, y: -3}
+    - name: Wave 7
+      enemies:
+      - {fileID: 2965310142944442976, guid: c555a37403f1d6c4c8a473bd9290eb6e, type: 3}
+      spawns:
+      - {x: 0, y: 3}
   - waves:
     - name: Wave 1
       enemies:
@@ -8981,6 +8986,14 @@ MonoBehaviour:
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
+      spawns:
+      - {x: 0, y: 3}
+      - {x: -4, y: -2.5}
+      - {x: 4, y: -2.5}
+      - {x: 0, y: -3}
+    - name: Wave 7
+      enemies:
+      - {fileID: 2965310142944442976, guid: 011d27738b80a0d409f0547ab85f285a, type: 3}
       spawns:
       - {x: 0, y: 3}
       - {x: -4, y: -2.5}
