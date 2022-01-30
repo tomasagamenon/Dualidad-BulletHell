@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyWaves : MonoBehaviour
 {
     public List<Waves> waves;
+    public List<Levels> levels;
     private int _num_wave;
     public List<GameObject> end;
     public List<Vector2> endPos;
@@ -19,12 +20,7 @@ public class EnemyWaves : MonoBehaviour
 
     void Update()
     {
-        if (_num_wave >= waves.Count)
-            for (int i = 0; i < end.Count; i++) 
-            {
-                var pos = FindObjectOfType<Player>().transform.position + new Vector3(endPos[i].x, endPos[i].y, 0);
-                Instantiate(end[i], pos, transform.rotation);
-            }
+
     }
 
     IEnumerator Spawn()
@@ -38,9 +34,15 @@ public class EnemyWaves : MonoBehaviour
                 Instantiate(wave.enemies[i], pos, transform.rotation);
                 num_of_enemies++;
             }
-            _num_wave++;
             yield return new WaitUntil(() => num_of_enemies <= 0);
+            _num_wave++;
         }
+        if (_num_wave >= waves.Count)
+            for (int i = 0; i < end.Count; i++)
+            {
+                var pos = FindObjectOfType<Player>().transform.position + new Vector3(endPos[i].x, endPos[i].y, 0);
+                Instantiate(end[i], pos, transform.rotation);
+            }
     }
     void OnDrawGizmosSelected()
     {
@@ -63,6 +65,11 @@ public class EnemyWaves : MonoBehaviour
 }
 
 
+[System.Serializable]
+public class Levels
+{
+    public List<Waves> waves;
+}
 [System.Serializable]
 public class Waves
 {
