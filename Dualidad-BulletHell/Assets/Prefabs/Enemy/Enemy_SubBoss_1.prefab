@@ -894,12 +894,22 @@ MonoBehaviour:
   radius: 5
   speed: 3
   rotation_speed: 700
-  number_of_shoots: 30
-  number_of_bullets: 4
-  time_between_bullets: 0.5
-  distance_between_bullets: 0
-  rot_per_shoot: 10
-  mirrored: 1
+  paterns:
+  - number_of_shoots: 72
+    number_of_bullets: 1
+    time_between_bullets: 0.05
+    distance_between_bullets: 0
+    rot_per_shoot: 10
+    ofset_player: 0
+    mirrored: 0
+  - number_of_shoots: 8
+    number_of_bullets: 16
+    time_between_bullets: 1
+    distance_between_bullets: 22.5
+    rot_per_shoot: 15
+    ofset_player: 0
+    mirrored: 0
+  score: 0
 --- !u!50 &1284401646226156230
 Rigidbody2D:
   serializedVersion: 4
