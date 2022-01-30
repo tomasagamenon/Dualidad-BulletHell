@@ -20,7 +20,7 @@ public class Visual_UIscreenManager : MonoBehaviour
 
 }
 
-public enum TypeScreen { MainMenu, Gameplay, Pause, GameOver, Cutscene }
+public enum TypeScreen { MainMenu, Gameplay, Pause, GameOver, Cutscene, Win }
 [System.Serializable] public class GameScreen
 {
     public string name;

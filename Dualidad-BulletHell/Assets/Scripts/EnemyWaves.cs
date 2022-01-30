@@ -27,13 +27,13 @@ public class EnemyWaves : MonoBehaviour
     {
         foreach(Levels level in levels)
         {
-            StartCoroutine(Spawn(level.waves));
+            StartCoroutine(Spawn(level.waves, level));
             yield return new WaitUntil(() => next_level);
             next_level = false;
         }
     }
 
-    IEnumerator Spawn(List<Waves> waves)
+    IEnumerator Spawn(List<Waves> waves, Levels level)
     {
         foreach(Waves wave in waves)
         {
@@ -48,11 +48,16 @@ public class EnemyWaves : MonoBehaviour
             _num_wave++;
         }
         if (_num_wave >= waves.Count)
-            for (int i = 0; i < end.Count; i++)
-            {
-                var pos = FindObjectOfType<Player>().transform.position + new Vector3(endPos[i].x, endPos[i].y, 0);
-                Instantiate(end[i], pos, transform.rotation);
-            }
+        {
+            if(level == levels[levels.Count])
+                Visual_UImanager.main.SetScreen(TypeScreen.GameOver);
+            else
+                for (int i = 0; i < end.Count; i++)
+                {
+                    var pos = FindObjectOfType<Player>().transform.position + new Vector3(endPos[i].x, endPos[i].y, 0);
+                    Instantiate(end[i], pos, transform.rotation);
+                }
+        }
     }
 
     public void EnemyDeath(int score)
