@@ -11,7 +11,7 @@ public class Visual_ElementWorld : MonoBehaviour
         if (sfxPlay != null) sfxPlay.Play();
     }
 
-    public void SetAnimator(string action, bool state) { anim.SetBool(action, state); }
-    public void SetAnimator(string action, float value) { anim.SetFloat(action, value); }
-    public void SetAnimator(string action) { anim.SetTrigger(action); }
+    public void SetAnimator(string action, bool state) { if(anim) anim.SetBool(action, state); }
+    public void SetAnimator(string action, float value) { if (anim) anim.SetFloat(action, value); }
+    public void SetAnimator(string action) { if (anim) anim.SetTrigger(action); }
 }

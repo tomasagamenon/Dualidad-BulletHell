@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BulletsPool : MonoBehaviour
 {
+    public Transform parent;
+
     public Bullet bulletPrefab;
     public List<Bullet> bullets_in_use;
     public List<Bullet> bullets_not_in_use;
@@ -29,6 +31,7 @@ public class BulletsPool : MonoBehaviour
         } else
         {
             bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+            bullet.transform.SetParent(parent);
             bullets_in_use.Add(bullet);
         }
         return bullet;
