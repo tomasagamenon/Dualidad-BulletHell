@@ -13,6 +13,7 @@ public class Player : Entity
     private void Start()
     {
         visual = GetComponent<Visual_Player>();
+        Visual_UImanager.main.SetLife(life);
     }
 
     void Update()
@@ -43,7 +44,10 @@ public class Player : Entity
                 FindObjectOfType<BulletsPool>().PullIn(bullet);
         Visual_UImanager.main.SetLife(life);
         if (life <= 0)
+        {
             visual.Hit(true);
+            Visual_UImanager.main.SetScreen(TypeScreen.GameOver);
+        }
         else visual.Hit(false);
     }
 }
