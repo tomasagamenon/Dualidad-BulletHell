@@ -1039,9 +1039,9 @@ MonoBehaviour:
   speed: 3
   rotation_speed: 700
   paterns:
-  - number_of_shoots: 0
-    number_of_bullets: 0
-    time_between_bullets: 0
+  - number_of_shoots: 1
+    number_of_bullets: 1
+    time_between_bullets: 1
     distance_between_bullets: 0
     rot_per_shoot: 0
     ofset_player: 0

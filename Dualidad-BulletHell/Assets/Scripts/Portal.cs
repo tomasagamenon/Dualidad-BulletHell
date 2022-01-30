@@ -10,7 +10,9 @@ public class Portal : MonoBehaviour
         {
             FindObjectOfType<EnemyWaves>().next_level = true;
             GetComponent<Visual_Portal>().Contact();
-            Destroy(FindObjectOfType<Novato>().gameObject);
+            if (FindObjectOfType<Novato>())
+                Destroy(FindObjectOfType<Novato>().gameObject);
+            Visual_UImanager.main.SetLevelup(false);
             Destroy(this);
         }
     }

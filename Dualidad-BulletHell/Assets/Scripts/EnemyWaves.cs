@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyWaves : MonoBehaviour
 {
-    public List<Waves> waves;
     public List<Levels> levels;
     private int _num_wave;
     public List<GameObject> end;
@@ -28,13 +27,13 @@ public class EnemyWaves : MonoBehaviour
     {
         foreach(Levels level in levels)
         {
-            StartCoroutine(Spawn(level.waves));
+            StartCoroutine(Spawn(level.waves, level));
             yield return new WaitUntil(() => next_level);
             next_level = false;
         }
     }
 
-    IEnumerator Spawn(List<Waves> waves)
+    IEnumerator Spawn(List<Waves> waves, Levels level)
     {
         foreach(Waves wave in waves)
         {
@@ -49,21 +48,15 @@ public class EnemyWaves : MonoBehaviour
             _num_wave++;
         }
         if (_num_wave >= waves.Count)
-            for (int i = 0; i < end.Count; i++)
-            {
-                var pos = FindObjectOfType<Player>().transform.position + new Vector3(endPos[i].x, endPos[i].y, 0);
-                Instantiate(end[i], pos, transform.rotation);
-            }
-    }
-    void OnDrawGizmosSelected()
-    {
-        foreach(Waves wave in waves)
         {
-            foreach (Vector2 vector2 in wave.spawns)
-            {
-                Gizmos.color = Color.yellow;
-                Gizmos.DrawSphere(vector2, 0.3f);
-            }
+            if(level == levels[levels.Count])
+                Visual_UImanager.main.SetScreen(TypeScreen.GameOver);
+            else
+                for (int i = 0; i < end.Count; i++)
+                {
+                    var pos = FindObjectOfType<Player>().transform.position + new Vector3(endPos[i].x, endPos[i].y, 0);
+                    Instantiate(end[i], pos, transform.rotation);
+                }
         }
     }
 
