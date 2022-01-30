@@ -27,7 +27,7 @@ public class EnemyWaves : MonoBehaviour
         {
             for(int i = 0; i < wave.enemies.Count; i++)
             {
-                Instantiate(wave.enemies[i], wave.spawns[i], transform.rotation);
+                Instantiate(wave.enemies[i], FindObjectOfType<Player>().transform.position += new Vector3(wave.spawns[i].x, wave.spawns[i].y, 0), transform.rotation);
                 yield return new WaitForSeconds(10);
                 num_of_enemies++;
             }
