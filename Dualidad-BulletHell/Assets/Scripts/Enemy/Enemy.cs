@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class Enemy : Entity
 {
-    private Transform _target;
+    protected Transform _target;
     public float radius;
     public float speed;
     public float rotation_speed;
-    private Vector3 _pos_to_go;
-    private bool _ready_to_go = false;
+    protected Vector3 _pos_to_go;
+    protected bool _ready_to_go = false;
 
 
     public List<Paterns> paterns;
-    private BulletsPool bulletsPool;
-    private Player player;
+    protected BulletsPool bulletsPool;
+    protected Player player;
 
     public int score;
 
-    private Visual_Enemy visual;
+    protected Visual_Enemy visual;
     protected override void Start()
     {
         base.Start();
@@ -30,7 +30,7 @@ public class Enemy : Entity
         visual = GetComponent<Visual_Enemy>();
     }
 
-    void Update()
+    protected virtual void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
             Death();
@@ -87,7 +87,7 @@ public class Enemy : Entity
         return vector3;
     }
 
-    IEnumerator Shoot(int a, Paterns patern)
+    protected IEnumerator Shoot(int a, Paterns patern)
     {
         yield return new WaitForSeconds(1f);
         if (patern == null)
@@ -102,6 +102,7 @@ public class Enemy : Entity
         {
             for (int e = 0; e < patern.number_of_bullets; e++)
             {
+                visual.Shoot();
                 Bullet bullet = bulletsPool.PullOut();
                 bullet.transform.position = transform.position;
                 Vector3 rot = Vector3.zero;
@@ -117,6 +118,16 @@ public class Enemy : Entity
             yield return new WaitForSeconds(patern.time_between_bullets);
         }
         StartCoroutine(Move());
+    }
+
+    public override void GetDamage(int damage)
+    {
+        base.GetDamage(damage);
+        visual.SetLife(life);
+        if (life <= 0)
+            visual.Hit(true);
+        else
+            visual.Hit(false);
     }
 
     protected override void Death()

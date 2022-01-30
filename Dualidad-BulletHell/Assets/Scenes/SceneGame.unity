@@ -6841,6 +6841,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2348778217920157102, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
   m_PrefabInstance: {fileID: 184472298}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1706044950 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
+  m_PrefabInstance: {fileID: 184472298}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 024debc212fbb7d4eb3b20e6c59492a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1718591912
 GameObject:
   m_ObjectHideFlags: 0
@@ -8086,7 +8097,70 @@ MonoBehaviour:
     spawns:
     - {x: 0, y: 3}
     - {x: 0, y: -3}
-  levels: []
+  levels:
+  - waves:
+    - name: 
+      enemies:
+      - {fileID: 1677114722}
+      - {fileID: 1677114722}
+      spawns:
+      - {x: 0, y: 3}
+      - {x: 0, y: -3}
+    - name: 
+      enemies:
+      - {fileID: 1677114722}
+      - {fileID: 1706044950}
+      spawns:
+      - {x: 0, y: 3}
+      - {x: 0, y: -3}
+    - name: 
+      enemies:
+      - {fileID: 1677114722}
+      - {fileID: 1677114722}
+      - {fileID: 1706044950}
+      - {fileID: 1706044950}
+      spawns:
+      - {x: 0, y: 3}
+      - {x: 0, y: -3}
+      - {x: -4, y: 0}
+      - {x: 4, y: 0}
+    - name: 
+      enemies:
+      - {fileID: 1677114722}
+      - {fileID: 1706044950}
+      - {fileID: 1677114722}
+      - {fileID: 1677114722}
+      spawns:
+      - {x: 0, y: 3}
+      - {x: 0, y: -3}
+      - {x: -3, y: -2.5}
+      - {x: 3, y: -2.5}
+    - name: 
+      enemies:
+      - {fileID: 1706044950}
+      - {fileID: 1706044950}
+      - {fileID: 1706044950}
+      - {fileID: 1706044950}
+      - {fileID: 1706044950}
+      - {fileID: 1706044950}
+      - {fileID: 1706044950}
+      - {fileID: 1706044950}
+      spawns:
+      - {x: 4, y: 0}
+      - {x: 4, y: 4}
+      - {x: 4, y: -4}
+      - {x: -4, y: 4}
+      - {x: -4, y: -4}
+      - {x: -4, y: 0}
+      - {x: 0, y: 4}
+      - {x: 0, y: -4}
+    - name: 
+      enemies:
+      - {fileID: 2028002652}
+      - {fileID: 2028002652}
+      spawns:
+      - {x: 0, y: 3}
+      - {x: 0, y: -3}
   end:
   - {fileID: 4822682417543345127, guid: 862d41039dd723f4b9ca245eb59d8eba, type: 3}
   - {fileID: 1061919116}
@@ -8095,6 +8169,7 @@ MonoBehaviour:
   - {x: 3, y: 0}
   num_of_enemies: 0
   notification_time: 0.75
+  next_level: 0
 --- !u!114 &1950322668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8406,6 +8481,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2348778217920157102, guid: f0e4ba1e40c578f4b9534f5c0cafb9b0, type: 3}
   m_PrefabInstance: {fileID: 85330990}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2028002652 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -8975188249946522581, guid: f0e4ba1e40c578f4b9534f5c0cafb9b0, type: 3}
+  m_PrefabInstance: {fileID: 85330990}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 024debc212fbb7d4eb3b20e6c59492a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2032661400
 GameObject:
   m_ObjectHideFlags: 0
