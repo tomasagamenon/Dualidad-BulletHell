@@ -3216,7 +3216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrTarget: {fileID: 1098717591}
-  viewBase: 5
+  viewBase: 7
   virtualCamera: {fileID: 72625403}
 --- !u!1 &634217700
 GameObject:
@@ -9628,34 +9628,6 @@ PrefabInstance:
     - target: {fileID: 351270912069686245, guid: 6179b7689e71eae4cb3ca8059df518a4, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4451874526549848903, guid: 6179b7689e71eae4cb3ca8059df518a4, type: 3}
-      propertyPath: defensive.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4451874526549848903, guid: 6179b7689e71eae4cb3ca8059df518a4, type: 3}
-      propertyPath: offensive.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4451874526549848903, guid: 6179b7689e71eae4cb3ca8059df518a4, type: 3}
-      propertyPath: defensive.Array.data[0].life
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4451874526549848903, guid: 6179b7689e71eae4cb3ca8059df518a4, type: 3}
-      propertyPath: defensive.Array.data[0].speed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4451874526549848903, guid: 6179b7689e71eae4cb3ca8059df518a4, type: 3}
-      propertyPath: offensive.Array.data[0].damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4451874526549848903, guid: 6179b7689e71eae4cb3ca8059df518a4, type: 3}
-      propertyPath: offensive.Array.data[0].cooldown
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4451874526549848903, guid: 6179b7689e71eae4cb3ca8059df518a4, type: 3}
-      propertyPath: offensive.Array.data[0].parry_duration
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6179b7689e71eae4cb3ca8059df518a4, type: 3}
