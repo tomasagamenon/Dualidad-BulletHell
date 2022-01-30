@@ -7,6 +7,7 @@ public class EnemyWaves : MonoBehaviour
     public List<Waves> waves;
     private int _num_wave;
     public List<GameObject> end;
+    public int num_of_enemies;
 
     void Start()
     {
@@ -24,13 +25,26 @@ public class EnemyWaves : MonoBehaviour
     {
         foreach(Waves wave in waves)
         {
-            foreach(Entity enemy in wave.enemies)
+            for(int i = 0; i < wave.enemies.Count; i++)
             {
-                Instantiate(enemy, transform);
+                Instantiate(wave.enemies[i], wave.spawns[i], transform.rotation);
+                yield return new WaitForSeconds(10);
+                num_of_enemies++;
             }
             _num_wave++;
+            yield return new WaitUntil(() => num_of_enemies <= 0);
         }
-        yield return new WaitForSeconds(10);
+    }
+    void OnDrawGizmosSelected()
+    {
+        foreach(Waves wave in waves)
+        {
+            foreach (Vector2 vector2 in wave.spawns)
+            {
+                Gizmos.color = Color.yellow;
+                Gizmos.DrawSphere(vector2, 0.3f);
+            }
+        }
     }
 }
 
@@ -39,4 +53,5 @@ public class EnemyWaves : MonoBehaviour
 public class Waves
 {
     public List<Entity> enemies;
+    public List<Vector2> spawns;
 }

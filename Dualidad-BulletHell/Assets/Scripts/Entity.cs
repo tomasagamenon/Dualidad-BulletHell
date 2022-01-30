@@ -6,7 +6,7 @@ public class Entity : MonoBehaviour
 {
     public int life;
     public int max_life;
-    public void GetDamage(int damage)
+    public virtual void GetDamage(int damage)
     {
         life -= damage;
         Debug.Log(life);

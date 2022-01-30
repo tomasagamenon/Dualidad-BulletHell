@@ -28,4 +28,13 @@ public class Player : Entity
             transform.rotation = Quaternion.RotateTowards(transform.rotation, newRotation, Time.deltaTime * rotation_speed);
         }
     }
+
+    public override void GetDamage(int damage)
+    {
+        base.GetDamage(damage);
+        var bullets = FindObjectsOfType<Bullet>();
+        foreach (Bullet bullet in bullets)
+            if (!bullet.reflected)
+                FindObjectOfType<BulletsPool>().PullIn(bullet);
+    }
 }
