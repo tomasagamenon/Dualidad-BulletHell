@@ -24,7 +24,7 @@ public class Enemy : Entity
         player = FindObjectOfType<Player>();
         _target = player.transform;
         _pos_to_go = transform.position;
-        StartCoroutine(Shoot(1));
+        StartCoroutine(Shoot(1, null));
     }
 
     void Update()
@@ -62,7 +62,7 @@ public class Enemy : Entity
             if (0.1f >= (_pos_to_go - transform.position).magnitude && _ready_to_go)
             {
                 transform.position = _pos_to_go;
-                StartCoroutine(Shoot(1));
+                StartCoroutine(Shoot(1, null));
                 _ready_to_go = false;
             }
         }
@@ -82,15 +82,17 @@ public class Enemy : Entity
         return vector3;
     }
 
-    IEnumerator Shoot(int a)
+    IEnumerator Shoot(int a, Paterns patern)
     {
         yield return new WaitForSeconds(1f);
-        Paterns patern;
-        if (paterns.Count > 1)
-            patern = paterns[Random.Range(0, paterns.Count)];
-        else patern = paterns[0];
-        if (patern.mirrored)
-            StartCoroutine(Shoot(-1));
+        if (patern == null)
+        {
+            if (paterns.Count > 1)
+                patern = paterns[Random.Range(0, paterns.Count)];
+            else patern = paterns[0];
+            if (patern.mirrored)
+                StartCoroutine(Shoot(-1, patern));
+        }
         for (int i = 0; i < patern.number_of_shoots; i++)
         {
             for (int e = 0; e < patern.number_of_bullets; e++)

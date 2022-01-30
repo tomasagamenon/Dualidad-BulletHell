@@ -10,6 +10,7 @@ public class EnemyWaves : MonoBehaviour
     public List<Vector2> endPos;
     public int num_of_enemies;
     private int _general_score;
+    public float notification_time;
 
     void Start()
     {
@@ -30,7 +31,8 @@ public class EnemyWaves : MonoBehaviour
     {
         foreach(Waves wave in waves)
         {
-            for(int i = 0; i < wave.enemies.Count; i++)
+            Visual_UImanager.main.SetNotification(notification_time, wave.name);
+            for (int i = 0; i < wave.enemies.Count; i++)
             {
                 var pos = FindObjectOfType<Player>().transform.position + new Vector3(wave.spawns[i].x, wave.spawns[i].y, 0);
                 Instantiate(wave.enemies[i], pos, transform.rotation);
@@ -64,6 +66,7 @@ public class EnemyWaves : MonoBehaviour
 [System.Serializable]
 public class Waves
 {
+    public string name;
     public List<Entity> enemies;
     public List<Vector2> spawns;
 }
