@@ -88,6 +88,7 @@ MonoBehaviour:
     nameDataBase: 
   - name: Active
     nameDataBase: 
+  pivotRot: {fileID: 351270912326571007}
   screenShakes:
   - name: Hit
     intensity: 1.25
@@ -117,6 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 5
+  max_life: 0
   speed: 5
   rotation_speed: 720
 --- !u!58 &513282368370110542
@@ -240,7 +242,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!114 &8737595660940106695
 MonoBehaviour:
   m_ObjectHideFlags: 0

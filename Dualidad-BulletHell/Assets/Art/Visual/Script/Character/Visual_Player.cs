@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class Visual_Player : Visual_ElementWorld
 {
+    [SerializeField] Transform pivotRot;
+    private void Update() { pivotRot.localPosition = Vector3.zero; }
+
+
     [SerializeField] ScreenShakes[] screenShakes;
     public void PlayShake(string nameShake)
     {
