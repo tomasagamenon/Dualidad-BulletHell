@@ -36,5 +36,6 @@ public class Player : Entity
         foreach (Bullet bullet in bullets)
             if (!bullet.reflected)
                 FindObjectOfType<BulletsPool>().PullIn(bullet);
+        Visual_UImanager.main.SetLife(life);
     }
 }

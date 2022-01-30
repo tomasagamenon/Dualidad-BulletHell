@@ -14,7 +14,7 @@ public class Entity : MonoBehaviour
             Death();
     }
 
-    void Death()
+    protected virtual void Death()
     {
 
     }

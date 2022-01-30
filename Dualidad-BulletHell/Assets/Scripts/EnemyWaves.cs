@@ -8,6 +8,7 @@ public class EnemyWaves : MonoBehaviour
     private int _num_wave;
     public List<GameObject> end;
     public int num_of_enemies;
+    private int _general_score;
 
     void Start()
     {
@@ -27,10 +28,8 @@ public class EnemyWaves : MonoBehaviour
         {
             for(int i = 0; i < wave.enemies.Count; i++)
             {
-                Debug.Log(wave.spawns[i]);
-                var pos = FindObjectOfType<Player>().transform.position + wave.spawns[i];
+                var pos = FindObjectOfType<Player>().transform.position + new Vector3(wave.spawns[i].x, wave.spawns[i].y, 0);
                 Instantiate(wave.enemies[i], pos, transform.rotation);
-                yield return new WaitForSeconds(10);
                 num_of_enemies++;
             }
             _num_wave++;
@@ -48,6 +47,13 @@ public class EnemyWaves : MonoBehaviour
             }
         }
     }
+
+    public void EnemyDeath(int score)
+    {
+        num_of_enemies--;
+        _general_score += score;
+        Visual_UImanager.main.SetScore(_general_score);
+    }
 }
 
 
@@ -55,5 +61,5 @@ public class EnemyWaves : MonoBehaviour
 public class Waves
 {
     public List<Entity> enemies;
-    public List<Vector3> spawns;
+    public List<Vector2> spawns;
 }

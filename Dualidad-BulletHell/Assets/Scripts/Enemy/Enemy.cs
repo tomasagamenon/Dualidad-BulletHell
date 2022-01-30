@@ -20,6 +20,8 @@ public class Enemy : Entity
     public bool mirrored;
     private BulletsPool bulletsPool;
     private Player player;
+
+    public int score;
     // Start is called before the first frame update
     void Start()
     {
@@ -108,5 +110,11 @@ public class Enemy : Entity
             yield return new WaitForSeconds(time_between_bullets);
         }
         StartCoroutine(Move());
+    }
+
+    protected override void Death()
+    {
+        base.Death();
+        FindObjectOfType<EnemyWaves>().EnemyDeath(score);
     }
 }
