@@ -21,10 +21,7 @@ public class Visual_UIscreenManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A)) { ChangeScreen(TypeScreen.MainMenu); }
-        if (Input.GetKeyDown(KeyCode.S)) { ChangeScreen(TypeScreen.Gameplay); }
-        if (Input.GetKeyDown(KeyCode.D)) { ChangeScreen(TypeScreen.Pause); }
-        if (Input.GetKeyDown(KeyCode.F)) { ChangeScreen(TypeScreen.GameOver); }
+        if (Input.GetKeyDown(KeyCode.A)) { Effect_Manager.main.InstantiateEffect_PopUp(Vector3.zero, "-100", Color.white); }
     }
 
 }
