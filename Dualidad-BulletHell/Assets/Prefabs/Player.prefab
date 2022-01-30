@@ -136,7 +136,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.45
 --- !u!50 &8519439079894844392
 Rigidbody2D:
   serializedVersion: 4
@@ -259,7 +259,7 @@ MonoBehaviour:
   _is_in_cooldown: 0
   _is_in_parry: 0
   time_in_parry: 1
-  speed_rot: 60
+  speed_rot: 30
 --- !u!1 &351270912328212314
 GameObject:
   m_ObjectHideFlags: 0

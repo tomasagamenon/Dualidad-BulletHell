@@ -38,7 +38,7 @@ public class ParryShield : MonoBehaviour
             if (v3.y > parent.transform.position.y)
                 rotate.z = 320;
         }
-        transform.rotation = Quaternion.Euler(0, 0, Mathf.Lerp(transform.rotation.eulerAngles.z, rotate.z, Time.deltaTime * speed_rot));
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, rotate.z), Time.deltaTime * speed_rot);
     }
 
     IEnumerator InCooldown()
