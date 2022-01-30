@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Visual_UImanager : MonoBehaviour
@@ -24,7 +22,7 @@ public class Visual_UImanager : MonoBehaviour
 
     public void SetDialogue(Sprite spr, string text) { scrDialogue.SetDialogue(spr, text); }
 
-    public void SetNotification(float speed, string text ) { scrNotification.SetNotification(speed, text); }
+    public void SetNotification(float speed, string text) { scrNotification.SetNotification(speed, text); }
     public void SetMisions(string[] texts) { scrMision.SetMision(texts); }
 
 
