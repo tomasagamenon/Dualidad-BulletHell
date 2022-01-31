@@ -118,16 +118,20 @@ public class Enemy : Entity
         }
         if (patern.repeatPaterns.paterns.Length > 0)
         {
-            foreach(Paterns paterns in patern.repeatPaterns.paterns)
+            foreach (Paterns paterns in patern.repeatPaterns.paterns)
             {
                 yield return new WaitForSeconds(patern.repeatPaterns.time_inter_paterns);
                 Paterns patern_to_do = paterns;
                 if (paterns.number_of_shoots == 0)
                     patern_to_do = patern;
-                StartCoroutine(Shoot(1, patern_to_do, 0, true));
+                bool end = true;
+                if (paterns == patern.repeatPaterns.paterns[patern.repeatPaterns.paterns.Length])
+                    end = false;
+                StartCoroutine(Shoot(1, patern_to_do, 0, end));
             }
         }
-        StartCoroutine(Move());
+        else if (!repeat)
+            StartCoroutine(Move());
     }
 
     public override void GetDamage(int damage)
