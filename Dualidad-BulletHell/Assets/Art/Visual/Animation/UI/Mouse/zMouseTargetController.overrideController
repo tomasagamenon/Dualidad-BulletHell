@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: zMouseTargetController
+  m_Controller: {fileID: 9100000, guid: 33817bb621700ee429d8781c3570970b, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 3911e2bcfe43cd84d83fd9a57981a032, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3911e2bcfe43cd84d83fd9a57981a032, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4f00afe0fbee2c444a90466c0f1fe0e0, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4f00afe0fbee2c444a90466c0f1fe0e0, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 99feefc44fac35744801f08321d40d85, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 99feefc44fac35744801f08321d40d85, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 8bb02f0e6d5f2da4f8e5c186a35583f7, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8bb02f0e6d5f2da4f8e5c186a35583f7, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 242ac68a0289ef04c9aee9392f71bd04, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 242ac68a0289ef04c9aee9392f71bd04, type: 2}
