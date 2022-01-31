@@ -88,15 +88,17 @@ public class Enemy : Entity
     protected IEnumerator Shoot(int a, Paterns patern, float time, bool repeat, bool end)
     {
         yield return new WaitForSeconds(time);
+        if (patern != null && repeat)
+            if (patern.mirrored)
+                StartCoroutine(Shoot(-1, patern, 0, false, false));
         if (patern == null)
         {
             if (paterns.Count > 1)
                 patern = paterns[Random.Range(0, paterns.Count)];
             else patern = paterns[0];
-        }
-        if (patern == null || repeat)
             if (patern.mirrored)
-                StartCoroutine(Shoot(-1, patern, 0, repeat, false));
+                StartCoroutine(Shoot(-1, patern, 0, false, false));
+        }
         for (int i = 0; i < patern.number_of_shoots; i++)
         {
             for (int e = 0; e < patern.number_of_bullets; e++)
