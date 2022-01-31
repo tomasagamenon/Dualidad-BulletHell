@@ -5,12 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    TypeScreen screen;
+    public static TypeScreen screen;
 
     private void Awake()
     {
-        Visual_UImanager.main.SetScreen(TypeScreen.MainMenu);
-        screen = TypeScreen.MainMenu;
+        Visual_UImanager.main.SetScreen(screen);
     }
 
     void Start()
@@ -20,7 +19,7 @@ public class MenuManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && (screen == TypeScreen.Gameplay || screen == TypeScreen.Pause))
         {
             if (screen != TypeScreen.Pause)
             {
@@ -42,11 +41,19 @@ public class MenuManager : MonoBehaviour
 
     public void Retry()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        screen = TypeScreen.Gameplay;
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
     }
 
     public void Exit()
     {
         Application.Quit();
+    }
+
+    public void MainMenu()
+    {
+        screen = TypeScreen.MainMenu;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

@@ -9,7 +9,7 @@ public class EnemyWaves : MonoBehaviour
     public List<GameObject> end;
     public List<Vector2> endPos;
     public int num_of_enemies;
-    private int _general_score;
+    public int general_score;
     public float notification_time;
     public bool next_level;
 
@@ -63,8 +63,8 @@ public class EnemyWaves : MonoBehaviour
     public void EnemyDeath(int score)
     {
         num_of_enemies--;
-        _general_score += score;
-        Visual_UImanager.main.SetScore(_general_score);
+        general_score += score;
+        Visual_UImanager.main.SetScore(general_score);
     }
 }
 

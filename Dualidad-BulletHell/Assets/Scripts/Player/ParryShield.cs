@@ -12,6 +12,7 @@ public class ParryShield : MonoBehaviour
     private Offensive[] offensive;
     public Visual_Player visual;
     private bool colision;
+    public int score;
 
     void Start()
     {
@@ -65,9 +66,13 @@ public class ParryShield : MonoBehaviour
         {
             _is_in_cooldown = false;
             colision = true;
+            FindObjectOfType<EnemyWaves>().general_score += score;
+            Visual_UImanager.main.SetScore(FindObjectOfType<EnemyWaves>().general_score);
             var v3 = Input.mousePosition;
             v3 = Camera.main.ScreenToWorldPoint(v3);
             v3.z = 0;
+            if (!collision.GetComponent<Bullet>().reflected)
+                collision.GetComponent<Bullet>().speed += offensive[LevelSystem.main.GetLv_Offensive()].bullet_speed;
             collision.GetComponent<Bullet>().Reflect(v3);
             collision.GetComponent<Bullet>().damage = offensive[LevelSystem.main.GetLv_Offensive()].damage;
             visual.ActionParry(true, !_is_in_parry);

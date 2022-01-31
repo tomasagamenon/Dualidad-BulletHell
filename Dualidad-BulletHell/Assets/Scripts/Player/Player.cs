@@ -10,6 +10,7 @@ public class Player : Entity
     public Offensive[] offensive;
     public Visual_Player visual;
     private int static_life;
+    public int score_damage;
 
     private void Start()
     {
@@ -45,6 +46,8 @@ public class Player : Entity
     public override void GetDamage(int damage)
     {
         base.GetDamage(damage);
+        FindObjectOfType<EnemyWaves>().general_score -= score_damage;
+        Visual_UImanager.main.SetScore(FindObjectOfType<EnemyWaves>().general_score);
         var bullets = FindObjectsOfType<Bullet>();
         foreach (Bullet bullet in bullets)
             if (!bullet.reflected)
@@ -72,4 +75,5 @@ public class Offensive
     public float cooldown;
     public int damage;
     public float parry_duration;
+    public float bullet_speed;
 }

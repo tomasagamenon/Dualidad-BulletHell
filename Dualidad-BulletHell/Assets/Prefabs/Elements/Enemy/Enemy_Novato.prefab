@@ -1046,7 +1046,10 @@ MonoBehaviour:
     rot_per_shoot: 0
     ofset_player: 0
     mirrored: 0
-  score: 100
+    repeatPaterns:
+      time_inter_paterns: 0
+      paterns: []
+  score: 1
   dialogues:
   - sprite: {fileID: 0}
     text: Hola

@@ -902,6 +902,9 @@ MonoBehaviour:
     rot_per_shoot: 10
     ofset_player: 0
     mirrored: 0
+    repeatPaterns:
+      time_inter_paterns: 0
+      paterns: []
   - number_of_shoots: 6
     number_of_bullets: 20
     time_between_bullets: 1
@@ -909,7 +912,10 @@ MonoBehaviour:
     rot_per_shoot: 15
     ofset_player: 0
     mirrored: 0
-  score: 500
+    repeatPaterns:
+      time_inter_paterns: 0
+      paterns: []
+  score: 1000
 --- !u!50 &1284401646226156230
 Rigidbody2D:
   serializedVersion: 4

@@ -20,7 +20,7 @@ public class Enemy : Entity
 
     protected Visual_Enemy visual;
 
-    private bool ready_to_shoot = true;
+    private bool _ready_to_shoot = true;
     protected override void Start()
     {
         base.Start();
@@ -121,13 +121,13 @@ public class Enemy : Entity
             yield return new WaitForSeconds(patern.time_between_bullets);
         }
         if (repeat)
-            ready_to_shoot = true;
+            _ready_to_shoot = true;
         if (patern.repeatPaterns.paterns.Length > 0 && !repeat && a > 0)
         {
             foreach (Paterns paterns in patern.repeatPaterns.paterns)
             {
-                yield return new WaitUntil(() => ready_to_shoot == true);
-                ready_to_shoot = false;
+                yield return new WaitUntil(() => _ready_to_shoot == true);
+                _ready_to_shoot = false;
                 yield return new WaitForSeconds(patern.repeatPaterns.time_inter_paterns);
                 Paterns patern_to_do = paterns;
                 if (paterns.number_of_shoots == 0)

@@ -20,7 +20,7 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         if (dist_from_player < (player.transform.position - transform.position).magnitude)
-            FindObjectOfType<BulletsPool>().PullIn(this);
+            PullIn();
         Move();
     }
 
@@ -40,13 +40,20 @@ public class Bullet : MonoBehaviour
         if (collision.GetComponent<Player>() && !reflected)
         {
             collision.GetComponent<Player>().GetDamage(damage);
-            FindObjectOfType<BulletsPool>().PullIn(this);
+            PullIn();
         }
         if((collision.GetComponent<Enemy>() || collision.GetComponent<Novato>()) && reflected)
         {
             collision.GetComponent<Enemy>().GetDamage(damage);
             reflected = false;
-            FindObjectOfType<BulletsPool>().PullIn(this);
+            PullIn();
         }
+    }
+
+    private void PullIn()
+    {
+        FindObjectOfType<BulletsPool>().PullIn(this);
+        if (reflected)
+            speed -= player.offensive[LevelSystem.main.GetLv_Offensive()].bullet_speed;
     }
 }

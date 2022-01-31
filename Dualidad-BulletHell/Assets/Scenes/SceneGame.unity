@@ -249,7 +249,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.4863482, y: 1}
+    m_SensorSize: {x: 1.0864865, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -5599,7 +5599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 123250653450978166, guid: fa2ef4589a3dd0e44a30dcb6df3f31c1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Exit
+      value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 123250653450978166, guid: fa2ef4589a3dd0e44a30dcb6df3f31c1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -8236,6 +8236,7 @@ MonoBehaviour:
   - {x: -3, y: 0}
   - {x: 3, y: 0}
   num_of_enemies: 0
+  general_score: 0
   notification_time: 0.75
   next_level: 0
 --- !u!114 &1950322668

@@ -925,7 +925,7 @@ MonoBehaviour:
         repeatPaterns:
           time_inter_paterns: 0
           paterns: []
-  score: 500
+  score: 1000
 --- !u!50 &1284401646226156230
 Rigidbody2D:
   serializedVersion: 4
