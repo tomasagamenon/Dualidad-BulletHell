@@ -73,7 +73,7 @@ public class Enemy : Entity
 
     IEnumerator Move()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         _pos_to_go = RandomPointOnCircleEdge(radius);
         _ready_to_go = true;
     }

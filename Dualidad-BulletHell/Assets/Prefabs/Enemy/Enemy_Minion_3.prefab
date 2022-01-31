@@ -604,7 +604,7 @@ MonoBehaviour:
   life: 0
   max_life: 1
   radius: 5
-  speed: 3
+  speed: 6
   rotation_speed: 700
   paterns:
   - number_of_shoots: 4
