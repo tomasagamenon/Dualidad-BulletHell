@@ -2146,8 +2146,10 @@ MonoBehaviour:
   end:
   - {fileID: 4822682417543345127, guid: 862d41039dd723f4b9ca245eb59d8eba, type: 3}
   - {fileID: 3007107998505304900, guid: 0f78113939dc0d7428b66252535584e0, type: 3}
-  end_pos: []
-  end_name: 
+  end_pos:
+  - {x: -3, y: 3}
+  - {x: 3, y: 3}
+  end_name: Level Complete
   num_of_enemies: 0
   general_score: 0
   notification_time: 0.75
