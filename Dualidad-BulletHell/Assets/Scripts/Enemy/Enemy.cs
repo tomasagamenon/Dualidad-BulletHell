@@ -20,7 +20,7 @@ public class Enemy : Entity
 
     protected Visual_Enemy visual;
 
-    private bool ready_to_shoot;
+    private bool ready_to_shoot = true;
     protected override void Start()
     {
         base.Start();
