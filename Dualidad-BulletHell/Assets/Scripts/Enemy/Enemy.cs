@@ -116,18 +116,18 @@ public class Enemy : Entity
             }
             yield return new WaitForSeconds(patern.time_between_bullets);
         }
-        if (patern.repeatPaterns.paterns.Length > 0)
+        if (patern.repeatPaterns.paterns.Count > 0)
         {
             foreach (Paterns paterns in patern.repeatPaterns.paterns)
             {
-                paterns.repeatPaterns.paterns.GetLength(0);
                 yield return new WaitForSeconds(patern.repeatPaterns.time_inter_paterns);
                 Paterns patern_to_do = paterns;
                 if (paterns.number_of_shoots == 0)
                     patern_to_do = patern;
                 bool endRepeat = false;
-                if (paterns == patern.repeatPaterns.paterns[patern.repeatPaterns.paterns.Length-1])
+                if (paterns == patern.repeatPaterns.paterns[patern.repeatPaterns.paterns.Count-1])
                     endRepeat = true;
+                patern_to_do.repeatPaterns.paterns.Clear();
                 StartCoroutine(Shoot(1, patern_to_do, 0, true, endRepeat));
             }
         }
@@ -170,5 +170,5 @@ public class Paterns
 public class RepeatPaterns
 {
     public float time_inter_paterns;
-    public Paterns[] paterns;
+    public List<Paterns> paterns;
 }
