@@ -371,6 +371,20 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     randomizerPitch: 0
+  - name: UI_Confirm_On
+    clip:
+    - {fileID: 8300000, guid: a4b3044351e982646804ebccf8def532, type: 3}
+    source: {fileID: 3801824332305924517}
+    volume: 1
+    pitch: 1
+    randomizerPitch: 0
+  - name: UI_Confirm_Off
+    clip:
+    - {fileID: 8300000, guid: a4b3044351e982646804ebccf8def532, type: 3}
+    source: {fileID: 3801824332305924517}
+    volume: 1
+    pitch: 1
+    randomizerPitch: 0
   - name: =======
     clip: []
     source: {fileID: 0}

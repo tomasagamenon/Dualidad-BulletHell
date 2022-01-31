@@ -15,7 +15,7 @@ public class Player : Entity
     private void Start()
     {
         visual = GetComponent<Visual_Player>();
-        Visual_UImanager.main.SetLife(life);
+        Visual_UImanager.main.SetLife(life, static_life);
     }
 
     void Update()
@@ -29,7 +29,7 @@ public class Player : Entity
         {
             life = defensive[LevelSystem.main.GetLv_Defensive()].life;
             static_life = defensive[LevelSystem.main.GetLv_Defensive()].life;
-            Visual_UImanager.main.SetLife(life);
+            Visual_UImanager.main.SetLife(life, static_life);
         }
 
         translationy *= Time.deltaTime * (defensive[LevelSystem.main.GetLv_Defensive()].speed);
@@ -53,7 +53,7 @@ public class Player : Entity
         foreach (Bullet bullet in bullets)
             if (!bullet.reflected)
                 FindObjectOfType<BulletsPool>().PullIn(bullet);
-        Visual_UImanager.main.SetLife(life);
+        Visual_UImanager.main.SetLife(life, static_life);
         if (life <= 0)
         {
             visual.Hit(true);
