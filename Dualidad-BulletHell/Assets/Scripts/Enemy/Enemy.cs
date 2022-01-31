@@ -120,12 +120,13 @@ public class Enemy : Entity
         {
             foreach (Paterns paterns in patern.repeatPaterns.paterns)
             {
+                paterns.repeatPaterns.paterns.GetLength(0);
                 yield return new WaitForSeconds(patern.repeatPaterns.time_inter_paterns);
                 Paterns patern_to_do = paterns;
                 if (paterns.number_of_shoots == 0)
                     patern_to_do = patern;
                 bool endRepeat = false;
-                if (paterns == patern.repeatPaterns.paterns[patern.repeatPaterns.paterns.Length])
+                if (paterns == patern.repeatPaterns.paterns[patern.repeatPaterns.paterns.Length-1])
                     endRepeat = true;
                 StartCoroutine(Shoot(1, patern_to_do, 0, true, endRepeat));
             }
