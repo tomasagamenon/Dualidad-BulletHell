@@ -124,10 +124,10 @@ public class Enemy : Entity
                 Paterns patern_to_do = paterns;
                 if (paterns.number_of_shoots == 0)
                     patern_to_do = patern;
-                bool end = false;
+                bool endRepeat = false;
                 if (paterns == patern.repeatPaterns.paterns[patern.repeatPaterns.paterns.Length])
-                    end = true;
-                StartCoroutine(Shoot(1, patern_to_do, 0, true, end));
+                    endRepeat = true;
+                StartCoroutine(Shoot(1, patern_to_do, 0, true, endRepeat));
             }
         }
         else if (end)
