@@ -32,7 +32,7 @@ public class Novato : Enemy
         player = FindObjectOfType<Player>();
         _target = player.transform;
         _pos_to_go = transform.position;
-        StartCoroutine(Shoot(1, null,1, false));
+        StartCoroutine(Shoot(1, null,1, false, true));
         visual = GetComponent<Visual_Enemy>();
     }
 

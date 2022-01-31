@@ -26,7 +26,7 @@ public class Enemy : Entity
         player = FindObjectOfType<Player>();
         _target = player.transform;
         _pos_to_go = transform.position;
-        StartCoroutine(Shoot(1, null, 1, false));
+        StartCoroutine(Shoot(1, null, 1, false, true));
         visual = GetComponent<Visual_Enemy>();
     }
 
@@ -65,7 +65,7 @@ public class Enemy : Entity
             if (0.1f >= (_pos_to_go - transform.position).magnitude && _ready_to_go)
             {
                 transform.position = _pos_to_go;
-                StartCoroutine(Shoot(1, null, 1, false));
+                StartCoroutine(Shoot(1, null, 1, false, true));
                 _ready_to_go = false;
             }
         }
@@ -85,7 +85,7 @@ public class Enemy : Entity
         return vector3;
     }
 
-    protected IEnumerator Shoot(int a, Paterns patern, float time, bool repeat)
+    protected IEnumerator Shoot(int a, Paterns patern, float time, bool repeat, bool end)
     {
         yield return new WaitForSeconds(time);
         if (patern == null)
@@ -96,7 +96,7 @@ public class Enemy : Entity
         }
         if (patern == null || repeat)
             if (patern.mirrored)
-                StartCoroutine(Shoot(-1, patern, 0, repeat));
+                StartCoroutine(Shoot(-1, patern, 0, repeat, false));
         for (int i = 0; i < patern.number_of_shoots; i++)
         {
             for (int e = 0; e < patern.number_of_bullets; e++)
@@ -124,13 +124,13 @@ public class Enemy : Entity
                 Paterns patern_to_do = paterns;
                 if (paterns.number_of_shoots == 0)
                     patern_to_do = patern;
-                bool end = true;
+                bool end = false;
                 if (paterns == patern.repeatPaterns.paterns[patern.repeatPaterns.paterns.Length])
-                    end = false;
-                StartCoroutine(Shoot(1, patern_to_do, 0, end));
+                    end = true;
+                StartCoroutine(Shoot(1, patern_to_do, 0, true, end));
             }
         }
-        else if (!repeat)
+        else if (end)
             StartCoroutine(Move());
     }
 
