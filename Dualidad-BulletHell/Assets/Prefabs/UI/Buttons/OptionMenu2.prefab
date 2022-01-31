@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 7408933190727014280}
   - component: {fileID: 123250653450978166}
   - component: {fileID: 5011512477012038469}
+  - component: {fileID: -522607947001657917}
   m_Layer: 0
   m_Name: OptionMenu2
   m_TagString: Untagged
@@ -294,7 +295,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 123250653450978167}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -522607947001657917}
+        m_TargetAssemblyTypeName: AudioToObject, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Selected
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &5011512477012038469
 Animator:
   serializedVersion: 4
@@ -315,3 +328,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-522607947001657917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123250653450978173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 392bc7144bd85e142bbf4f747c98fbe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxClip:
+  - name: Selected
+    nameDataBase: UI_Button_SelectedOption2

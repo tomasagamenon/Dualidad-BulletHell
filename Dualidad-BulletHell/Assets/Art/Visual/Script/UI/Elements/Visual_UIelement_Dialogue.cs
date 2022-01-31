@@ -31,11 +31,29 @@ public class Visual_UIelement_Dialogue : Visual_UIelement
             SetAnimator("ChangeText");
 
             StopAllCoroutines();
-            StartCoroutine(StartDialogue(text));
+            StartCoroutine(StartDialogue(text, speedChar));
         }
     }
+    public void SetDialogue(Dialogue dialogue) {
+        if (currentFace != dialogue.sprite) {
+            currentFace = dialogue.sprite;
+            image.sprite = dialogue.sprite;
+            SetAnimator("ChangeFace");
+        }
+        if (currentText != dialogue.text) {
+            currentText = dialogue.text;
 
-    IEnumerator StartDialogue(string text) {
+            anim.gameObject.SetActive(true);
+
+            SetAnimator("ChangeText");
+
+            StopAllCoroutines();
+            StartCoroutine(StartDialogue(dialogue.text, dialogue.speedDialogue));
+        }
+        ReplaceSFX("Char", dialogue.charClip);
+    }
+
+    IEnumerator StartDialogue(string text, float speedChar_ ) {
 
         inDialogue = true;
         SetAnimator(true, "Active");
@@ -48,7 +66,7 @@ public class Visual_UIelement_Dialogue : Visual_UIelement
             text_Dialogue.SetText(text_Dialogue.text + character);
             PlaySFX("Char");
 
-            yield return new WaitForSeconds(speedChar);
+            yield return new WaitForSeconds(speedChar_);
         }
 
         yield return new WaitForSeconds(timeToclose);
@@ -63,7 +81,6 @@ public class Visual_UIelement_Dialogue : Visual_UIelement
 
         StartCoroutine(Hide());
     }
-
     IEnumerator Hide() { yield return new WaitForSeconds(1); anim.gameObject.SetActive(false); }
 }
 

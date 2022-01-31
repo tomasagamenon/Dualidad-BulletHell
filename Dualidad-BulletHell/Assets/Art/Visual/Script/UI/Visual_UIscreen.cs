@@ -12,6 +12,8 @@ public class Visual_UIscreen : MonoBehaviour
     [SerializeField, Range(0, 1)] float HideSecond;
 
     public string toMusicClip;
+    [SerializeField]  SFX_sound[] sfxClip;
+
     [SerializeField, Range(0, 1)] float timeScale_Intro, timeScale_End;
 
     public virtual void StartScreen()
@@ -22,7 +24,7 @@ public class Visual_UIscreen : MonoBehaviour
             anim.gameObject.SetActive(true);
             anim.SetBool("Active", true);
         }
-
+        PlaySFX("Intro");
     }
     public virtual void EndScreen()
     {
@@ -32,6 +34,7 @@ public class Visual_UIscreen : MonoBehaviour
             anim.SetBool("Active", false);
             Invoke("Hide", HideSecond);
         }
+        PlaySFX("End");
     }
 
     void Hide() { anim.gameObject.SetActive(false); }
@@ -47,8 +50,8 @@ public class Visual_UIscreen : MonoBehaviour
 
     void PlaySFX(string SFXName)
     {
-        //SFX_sound sfxPlay = System.Array.Find(sfxClip, sfx => sfx.name == SFXName);
-        //if (sfxPlay != null) sfxPlay.Play();
+        SFX_sound sfxPlay = System.Array.Find(sfxClip, sfx => sfx.name == SFXName);
+        if (sfxPlay != null) sfxPlay.Play();
     }
     void ChangeTime(float time) { Time.timeScale = time; }
 }
