@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0256f813a53595441833b3880c234d41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 5
+  life: 7
   max_life: 0
   rotation_speed: 720
   defensive:
@@ -131,12 +131,15 @@ MonoBehaviour:
   - cooldown: 1
     damage: 1
     parry_duration: 0.5
+    bullet_speed: 0
   - cooldown: 0.75
     damage: 1
     parry_duration: 0.5
+    bullet_speed: 0
   - cooldown: 0.5
     damage: 1
     parry_duration: 0.5
+    bullet_speed: 0
   visual: {fileID: 351270912069686234}
   score_damage: 500
 --- !u!58 &513282368370110542
