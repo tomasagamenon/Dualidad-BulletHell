@@ -734,7 +734,7 @@ GameObject:
   - component: {fileID: 976797004296002703}
   - component: {fileID: 3315699531643362206}
   m_Layer: 3
-  m_Name: Enemy_Novato 2
+  m_Name: Enemy_Novato_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -881,15 +881,15 @@ MonoBehaviour:
   score: 1
   dialogues:
   - sprite: {fileID: 0}
-    text: Hola
+    text: W-why are you hh-here?
     charClip: 
     speedDialogue: 0
   - sprite: {fileID: 0}
-    text: Chau
+    text: I'm n-not ssscared, I'll sh-shoot you
     charClip: 
     speedDialogue: 0
   - sprite: {fileID: 0}
-    text: Andateeeee
+    text: '*gwaaaah*'
     charClip: 
     speedDialogue: 0
   time: 2
