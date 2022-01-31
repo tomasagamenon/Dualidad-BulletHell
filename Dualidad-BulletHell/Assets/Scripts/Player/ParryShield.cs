@@ -11,7 +11,7 @@ public class ParryShield : MonoBehaviour
     public float speed_rot;
     private Offensive[] offensive;
     public Visual_Player visual;
-    private bool colision;
+    private bool _colision;
     public int score;
 
     void Start()
@@ -50,14 +50,14 @@ public class ParryShield : MonoBehaviour
         visual.ActionParry(false, !_is_in_parry);
         yield return new WaitForSeconds(offensive[LevelSystem.main.GetLv_Offensive()].parry_duration);
         _is_in_parry = false;
-        visual.ActionParry(false, !_is_in_parry);
-        if(!colision)
+        if(!_colision)
         {
+            visual.ActionParry(false, !_is_in_parry);
             _is_in_cooldown = true;
             visual.ParryState(!_is_in_cooldown);
             StartCoroutine(InCooldown());
         }
-        colision = false;
+        _colision = false;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -65,7 +65,7 @@ public class ParryShield : MonoBehaviour
         if (collision.GetComponent<Bullet>() && _is_in_parry)
         {
             _is_in_cooldown = false;
-            colision = true;
+            _colision = true;
             FindObjectOfType<EnemyWaves>().general_score += score;
             Visual_UImanager.main.SetScore(FindObjectOfType<EnemyWaves>().general_score);
             var v3 = Input.mousePosition;

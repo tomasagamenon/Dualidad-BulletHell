@@ -17,23 +17,6 @@ public class Visual_UIelement_Dialogue : Visual_UIelement
     Sprite currentFace;
     string currentText;
 
-    public void SetDialogue(Sprite spr, string text) {
-        if (currentFace != spr) {
-            currentFace = spr;
-            image.sprite = spr;
-            SetAnimator("ChangeFace");
-        }
-        if (currentText != text) {
-            currentText = text;
-
-            anim.gameObject.SetActive(true);
-
-            SetAnimator("ChangeText");
-
-            StopAllCoroutines();
-            StartCoroutine(StartDialogue(text, speedChar));
-        }
-    }
     public void SetDialogue(Dialogue dialogue) {
         if (currentFace != dialogue.sprite) {
             currentFace = dialogue.sprite;

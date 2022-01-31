@@ -7,7 +7,8 @@ public class EnemyWaves : MonoBehaviour
     public List<Levels> levels;
     private int _num_wave;
     public List<GameObject> end;
-    public List<Vector2> endPos;
+    public List<Vector2> end_pos;
+    public string end_name;
     public int num_of_enemies;
     public int general_score;
     public float notification_time;
@@ -20,7 +21,8 @@ public class EnemyWaves : MonoBehaviour
 
     void Update()
     {
-
+        if (num_of_enemies < 0)
+            num_of_enemies = 0;
     }
 
     IEnumerator Level()
@@ -54,8 +56,9 @@ public class EnemyWaves : MonoBehaviour
             else
                 for (int i = 0; i < end.Count; i++)
                 {
-                    var pos = FindObjectOfType<Player>().transform.position + new Vector3(endPos[i].x, endPos[i].y, 0);
+                    var pos = FindObjectOfType<Player>().transform.position + new Vector3(end_pos[i].x, end_pos[i].y, 0);
                     Instantiate(end[i], pos, transform.rotation);
+                    Visual_UImanager.main.SetNotification(notification_time, end_name);
                 }
         }
     }

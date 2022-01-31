@@ -17,7 +17,7 @@ public class DialogueSystem : MonoBehaviour
         if (scrDialogue.inDialogue) return;
         if (listDialogue.Count == 0) return;
 
-        Visual_UImanager.main.SetDialogue(listDialogue[0].sprite, listDialogue[0].text);
+        Visual_UImanager.main.SetDialogue(listDialogue[0]);
     }
 
 }
