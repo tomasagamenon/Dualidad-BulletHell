@@ -249,7 +249,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.9007491, y: 1}
+    m_SensorSize: {x: 0.4675768, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -380,7 +380,7 @@ Transform:
   - {fileID: 1989074715}
   - {fileID: 1027372745}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &108947487
 MonoBehaviour:
@@ -417,6 +417,63 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8210171813436159703, guid: c183f9bbd1178cf48ad9d4b2df5fec69, type: 3}
   bullets_in_use: []
   bullets_not_in_use: []
+--- !u!1001 &112219484
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 900977390397197481, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 900977390397197481, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.797245
+      objectReference: {fileID: 0}
+    - target: {fileID: 900977390397197481, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.27212656
+      objectReference: {fileID: 0}
+    - target: {fileID: 900977390397197481, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 900977390397197481, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 900977390397197481, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 900977390397197481, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 900977390397197481, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 900977390397197481, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 900977390397197481, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 900977390397197481, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 900977390397197486, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
+      propertyPath: m_Name
+      value: Enemy_Boss
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
 --- !u!1 &114699813
 GameObject:
   m_ObjectHideFlags: 0
@@ -2672,7 +2729,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
+  m_fontSize: 19.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2917,7 +2974,7 @@ Transform:
   - {fileID: 819979706}
   - {fileID: 1098717590}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &628277604
 MonoBehaviour:
@@ -6658,7 +6715,7 @@ Transform:
   - {fileID: 1154632691}
   - {fileID: 1684315163}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1718591914
 MonoBehaviour:
@@ -6769,7 +6826,7 @@ Transform:
   m_Children:
   - {fileID: 1950322662}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1770588997
 GameObject:
@@ -7243,7 +7300,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7318,7 +7375,7 @@ Transform:
   - {fileID: 308898194}
   - {fileID: 140167903}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1830551984
 PrefabInstance:
@@ -8018,7 +8075,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1950322662
 Transform:
   m_ObjectHideFlags: 0
@@ -8097,15 +8154,15 @@ MonoBehaviour:
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
       spawns:
-      - {x: 0, y: 3}
-      - {x: 0, y: -3}
+      - {x: 0, y: 4}
+      - {x: 0, y: -4}
     - name: Wave 2
       enemies:
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
       spawns:
-      - {x: 0, y: 3}
-      - {x: 0, y: -3}
+      - {x: 0, y: 4}
+      - {x: 0, y: -4}
     - name: Wave 3
       enemies:
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
@@ -8113,10 +8170,10 @@ MonoBehaviour:
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
       spawns:
-      - {x: 0, y: 3}
-      - {x: 0, y: -3}
-      - {x: -4, y: 0}
-      - {x: 4, y: 0}
+      - {x: 0, y: 4}
+      - {x: 0, y: -4}
+      - {x: -5, y: 0}
+      - {x: 5, y: 0}
     - name: Wave 4
       enemies:
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
@@ -8124,10 +8181,10 @@ MonoBehaviour:
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
       spawns:
-      - {x: 0, y: 3}
-      - {x: 0, y: -3}
-      - {x: -3, y: -2.5}
-      - {x: 3, y: -2.5}
+      - {x: 0, y: 4}
+      - {x: 0, y: -4}
+      - {x: -4, y: -3.5}
+      - {x: 4, y: -3.5}
     - name: Wave 5
       enemies:
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
@@ -8139,26 +8196,26 @@ MonoBehaviour:
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
       spawns:
-      - {x: 4, y: 0}
-      - {x: 4, y: 4}
-      - {x: 4, y: -4}
-      - {x: -4, y: 4}
-      - {x: -4, y: -4}
-      - {x: -4, y: 0}
-      - {x: 0, y: 4}
-      - {x: 0, y: -4}
+      - {x: 5, y: 0}
+      - {x: 5, y: 5}
+      - {x: 5, y: -5}
+      - {x: -5, y: 5}
+      - {x: -5, y: -5}
+      - {x: -5, y: 0}
+      - {x: 0, y: 5}
+      - {x: 0, y: -5}
     - name: Wave 6
       enemies:
       - {fileID: -8975188249946522581, guid: f0e4ba1e40c578f4b9534f5c0cafb9b0, type: 3}
       - {fileID: -8975188249946522581, guid: f0e4ba1e40c578f4b9534f5c0cafb9b0, type: 3}
       spawns:
-      - {x: 0, y: 3}
-      - {x: 0, y: -3}
+      - {x: 0, y: 4}
+      - {x: 0, y: -4}
     - name: Wave 7
       enemies:
       - {fileID: 2965310142944442976, guid: c555a37403f1d6c4c8a473bd9290eb6e, type: 3}
       spawns:
-      - {x: 0, y: 3}
+      - {x: 0, y: 4}
   - waves:
     - name: Wave 1
       enemies:
@@ -8166,9 +8223,9 @@ MonoBehaviour:
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
       - {fileID: -8975188249946522581, guid: f0e4ba1e40c578f4b9534f5c0cafb9b0, type: 3}
       spawns:
-      - {x: -3, y: 3}
-      - {x: 3, y: 3}
-      - {x: 0, y: -3}
+      - {x: -4, y: 4}
+      - {x: 4, y: 4}
+      - {x: 0, y: -4}
     - name: Wave 2
       enemies:
       - {fileID: -8975188249946522581, guid: f0e4ba1e40c578f4b9534f5c0cafb9b0, type: 3}
@@ -8176,10 +8233,10 @@ MonoBehaviour:
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
       spawns:
-      - {x: 0, y: 3}
-      - {x: -3, y: -3}
-      - {x: 0, y: -3}
-      - {x: 3, y: -3}
+      - {x: 0, y: 4}
+      - {x: -4, y: -4}
+      - {x: 0, y: -4}
+      - {x: 4, y: -4}
     - name: Wave 3
       enemies:
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
@@ -8187,26 +8244,26 @@ MonoBehaviour:
       - {fileID: -8975188249946522581, guid: f0e4ba1e40c578f4b9534f5c0cafb9b0, type: 3}
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
       spawns:
-      - {x: -3, y: 3}
-      - {x: 3, y: 3}
-      - {x: -3, y: -3}
-      - {x: 3, y: -3}
+      - {x: -4, y: 4}
+      - {x: 4, y: 4}
+      - {x: -4, y: -4}
+      - {x: 4, y: -4}
     - name: Wave 4
       enemies:
       - {fileID: -8975188249946522581, guid: 42c9a0eaeaae2f7428a581d2f35ae21b, type: 3}
       - {fileID: -8975188249946522581, guid: 42c9a0eaeaae2f7428a581d2f35ae21b, type: 3}
       spawns:
-      - {x: 4, y: 0}
-      - {x: -4, y: 0}
+      - {x: 5, y: 0}
+      - {x: -5, y: 0}
     - name: Wave 5
       enemies:
       - {fileID: -8975188249946522581, guid: 42c9a0eaeaae2f7428a581d2f35ae21b, type: 3}
       - {fileID: -8975188249946522581, guid: 42c9a0eaeaae2f7428a581d2f35ae21b, type: 3}
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
       spawns:
-      - {x: -4, y: -3}
-      - {x: 4, y: 3}
-      - {x: 0, y: 3}
+      - {x: -5, y: -4}
+      - {x: 5, y: 4}
+      - {x: 0, y: 4}
     - name: Wave 6
       enemies:
       - {fileID: -8975188249946522581, guid: 42c9a0eaeaae2f7428a581d2f35ae21b, type: 3}
@@ -8214,24 +8271,21 @@ MonoBehaviour:
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
       spawns:
-      - {x: 0, y: 3}
-      - {x: -4, y: -2.5}
-      - {x: 4, y: -2.5}
-      - {x: 0, y: -3}
+      - {x: 0, y: 4}
+      - {x: -5, y: -3.5}
+      - {x: 5, y: -3.5}
+      - {x: 0, y: -4}
     - name: Wave 7
       enemies:
       - {fileID: 2965310142944442976, guid: 011d27738b80a0d409f0547ab85f285a, type: 3}
       spawns:
-      - {x: 0, y: 3}
-      - {x: -4, y: -2.5}
-      - {x: 4, y: -2.5}
-      - {x: 0, y: -3}
+      - {x: 0, y: 4}
   - waves:
     - name: Boss Wave
       enemies:
       - {fileID: 900977390397197480, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
       spawns:
-      - {x: 0, y: 3}
+      - {x: 0, y: 4}
   end:
   - {fileID: 4822682417543345127, guid: 862d41039dd723f4b9ca245eb59d8eba, type: 3}
   - {fileID: 3007107998505304900, guid: 0f78113939dc0d7428b66252535584e0, type: 3}
@@ -8932,7 +8986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2629642495317566068, guid: 40fe94517eb27d74288c1177d20fbc58, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -47.833332
+      value: -47.83333
       objectReference: {fileID: 0}
     - target: {fileID: 2629642495317566068, guid: 40fe94517eb27d74288c1177d20fbc58, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

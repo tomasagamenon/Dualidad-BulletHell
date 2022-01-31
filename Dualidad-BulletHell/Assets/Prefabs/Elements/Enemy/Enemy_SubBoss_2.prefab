@@ -895,11 +895,11 @@ MonoBehaviour:
   speed: 6
   rotation_speed: 700
   paterns:
-  - number_of_shoots: 64
+  - number_of_shoots: 73
     number_of_bullets: 2
-    time_between_bullets: 0.1
+    time_between_bullets: 0.05
     distance_between_bullets: 0
-    rot_per_shoot: 7
+    rot_per_shoot: 5
     ofset_player: 0
     mirrored: 1
     repeatPaterns:
