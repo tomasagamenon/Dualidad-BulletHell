@@ -43,6 +43,7 @@ public class Visual_UIscreen : MonoBehaviour
     public void StateScreen(bool state, float wait)
     {
         waitTime = (WaitSecond * correctionWait) * wait;
+        StopAllCoroutines();
         StartCoroutine(Screen(state));
     }
     IEnumerator Screen(bool state) { if (state) { yield return new WaitForSecondsRealtime(waitTime); StartScreen(); } else EndScreen(); }

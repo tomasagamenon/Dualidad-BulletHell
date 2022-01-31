@@ -18,7 +18,7 @@ public class Visual_UImanager : MonoBehaviour
 
 
     public void SetScore(int score) { scrScore.SetScoreText(score); }
-    public void SetLife(int value) { scrLife.SetLife(value); }
+    public void SetLife(int value, int max) { scrLife.SetLife(value, max); }
 
     public void SetDialogue(Sprite spr, string text) { scrDialogue.SetDialogue(spr, text); }
 

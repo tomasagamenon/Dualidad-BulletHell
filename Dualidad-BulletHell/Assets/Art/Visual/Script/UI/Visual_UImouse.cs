@@ -9,6 +9,7 @@ public class Visual_UImouse : Visual_UIelement
 
     public void SetMouse(typeMouse type_) {
         type = type_;
+        anim.ResetTrigger("Press");
         SetAnimator("Change");
     }
     public void SetState(bool state) { SetAnimator(state, "Active"); }
@@ -23,6 +24,7 @@ public class Visual_UImouse : Visual_UIelement
                 anim.runtimeAnimatorController = menu;
                 break;
         }
+        anim.ResetTrigger("Press");
         SetAnimator("Spawn");
     }
 
