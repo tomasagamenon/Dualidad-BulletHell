@@ -56,8 +56,13 @@ public class Visual_Enemy : Visual_ElementWorld
     {
         SetAnimator("Hit");
         PlaySFX("Hit");
-        Effect_Manager.main.InstantiateEffect(transf.position, "Explosion");
-        if (isDeath) { SetAnimator("Death"); PlaySFX("Death"); }
+
+        if (isDeath) {
+            SetAnimator("Death"); PlaySFX("Death");
+            Effect_Manager.main.InstantiateEffect_Explosion(transf.position, 1.25F);
+        } else {
+            Effect_Manager.main.InstantiateEffect_Explosion(transf.position, 0.9F);
+        }
     }
     public void Spawn()
     {

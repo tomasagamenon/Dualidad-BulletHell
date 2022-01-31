@@ -23,11 +23,12 @@ public class Visual_Bullets : Visual_ElementWorld
     {
         SetAnimator("Spawn");
         PlaySFX("Spawn");
+        Effect_Manager.main.InstantiateEffect_Explosion(transf.position, .25f);
     }
     public void Contact()
     {
         SetAnimator("Contact");
         PlaySFX("Contact");
-        Effect_Manager.main.InstantiateEffect(transf.position, "Explosion");
+        Effect_Manager.main.InstantiateEffect_Explosion(transf.position, .5f);
     }
 }

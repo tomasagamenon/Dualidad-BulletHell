@@ -6,6 +6,7 @@ public class Effect_Controller : MonoBehaviour
 {
     [SerializeField] Animator anim;
 
+    [SerializeField, Range(0.1f, 2)] float scaleBase = 1;
     [Range(0,2)] public float speedAnimation;
     [SerializeField, Range(0, 10)] float correctionSpeed;
 
@@ -21,6 +22,11 @@ public class Effect_Controller : MonoBehaviour
     {
         Initializer(position);
     }
+    public virtual void Spawn(Vector3 position, float scaleBase_)
+    {
+        scaleBase = scaleBase_;
+        Initializer(position);
+    }
 
     void Initializer(Vector3 position)
     {
@@ -30,7 +36,7 @@ public class Effect_Controller : MonoBehaviour
         transform.position = position;
 
         transform.position += offset + new Vector3(Random.Range(-offsetRandom.x, offsetRandom.x), Random.Range(-offsetRandom.y, offsetRandom.y));
-        transform.localScale = Vector3.one + Vector3.one * Random.Range(0, scaleRandom);
+        transform.localScale = Vector3.one + Vector3.one * scaleBase * Random.Range(0, scaleRandom);
         transform.rotation = Quaternion.Euler(0, Random.Range(-rotationRandom, rotationRandom), 0);
     }
 

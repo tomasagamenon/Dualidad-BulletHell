@@ -12,4 +12,7 @@ public class Effect_Manager : MonoBehaviour
     public void InstantiateEffect_PopUp(Vector3 position, string text, Color color) {
         PoolManager.main.GetObject_InPool("PopUp").GetComponent<Effect_popUpController>().Spawn(position, text, color);
     }
+    public void InstantiateEffect_Explosion(Vector3 position, float size) {
+        PoolManager.main.GetObject_InPool("Explosion").GetComponent<Effect_Controller>().Spawn(position, size);
+    }
 }
