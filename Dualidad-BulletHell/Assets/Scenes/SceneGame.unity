@@ -187,7 +187,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.8261618, y: 1}
+    m_SensorSize: {x: 0.55119455, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2001,21 +2001,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - waves:
-    - name: Wave 1
+    - name: First wave
       enemies:
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
       spawns:
       - {x: 0, y: 4}
       - {x: 0, y: -4}
-    - name: Wave 2
+    - name: Second wave
       enemies:
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
       spawns:
       - {x: 0, y: 4}
       - {x: 0, y: -4}
-    - name: Wave 3
+    - name: Third wave
       enemies:
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
@@ -2026,7 +2026,7 @@ MonoBehaviour:
       - {x: 0, y: -4}
       - {x: -5, y: 0}
       - {x: 5, y: 0}
-    - name: Wave 4
+    - name: Fourth wave
       enemies:
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
@@ -2037,7 +2037,7 @@ MonoBehaviour:
       - {x: 0, y: -4}
       - {x: -4, y: -3.5}
       - {x: 4, y: -3.5}
-    - name: Wave 5
+    - name: Fifth wave
       enemies:
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
@@ -2056,20 +2056,20 @@ MonoBehaviour:
       - {x: -5, y: 0}
       - {x: 0, y: 5}
       - {x: 0, y: -5}
-    - name: Wave 6
+    - name: Sixth wave
       enemies:
       - {fileID: -8975188249946522581, guid: f0e4ba1e40c578f4b9534f5c0cafb9b0, type: 3}
       - {fileID: -8975188249946522581, guid: f0e4ba1e40c578f4b9534f5c0cafb9b0, type: 3}
       spawns:
       - {x: 0, y: 4}
       - {x: 0, y: -4}
-    - name: Wave 7
+    - name: The brute
       enemies:
       - {fileID: 2965310142944442976, guid: c555a37403f1d6c4c8a473bd9290eb6e, type: 3}
       spawns:
       - {x: 0, y: 4}
   - waves:
-    - name: Wave 1
+    - name: First wave
       enemies:
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
@@ -2078,7 +2078,7 @@ MonoBehaviour:
       - {x: -4, y: 4}
       - {x: 4, y: 4}
       - {x: 0, y: -4}
-    - name: Wave 2
+    - name: Second wave
       enemies:
       - {fileID: -8975188249946522581, guid: f0e4ba1e40c578f4b9534f5c0cafb9b0, type: 3}
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
@@ -2089,7 +2089,7 @@ MonoBehaviour:
       - {x: -4, y: -4}
       - {x: 0, y: -4}
       - {x: 4, y: -4}
-    - name: Wave 3
+    - name: Third wave
       enemies:
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
       - {fileID: -8975188249946522581, guid: f0e4ba1e40c578f4b9534f5c0cafb9b0, type: 3}
@@ -2100,14 +2100,14 @@ MonoBehaviour:
       - {x: 4, y: 4}
       - {x: -4, y: -4}
       - {x: 4, y: -4}
-    - name: Wave 4
+    - name: Fourth wave
       enemies:
       - {fileID: -8975188249946522581, guid: 42c9a0eaeaae2f7428a581d2f35ae21b, type: 3}
       - {fileID: -8975188249946522581, guid: 42c9a0eaeaae2f7428a581d2f35ae21b, type: 3}
       spawns:
       - {x: 5, y: 0}
       - {x: -5, y: 0}
-    - name: Wave 5
+    - name: Fifth wave
       enemies:
       - {fileID: -8975188249946522581, guid: 42c9a0eaeaae2f7428a581d2f35ae21b, type: 3}
       - {fileID: -8975188249946522581, guid: 42c9a0eaeaae2f7428a581d2f35ae21b, type: 3}
@@ -2116,7 +2116,7 @@ MonoBehaviour:
       - {x: -5, y: -4}
       - {x: 5, y: 4}
       - {x: 0, y: 4}
-    - name: Wave 6
+    - name: Sixth wave
       enemies:
       - {fileID: -8975188249946522581, guid: 42c9a0eaeaae2f7428a581d2f35ae21b, type: 3}
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
@@ -2127,13 +2127,13 @@ MonoBehaviour:
       - {x: -5, y: -3.5}
       - {x: 5, y: -3.5}
       - {x: 0, y: -4}
-    - name: Wave 7
+    - name: The commander
       enemies:
       - {fileID: 2965310142944442976, guid: 011d27738b80a0d409f0547ab85f285a, type: 3}
       spawns:
       - {x: 0, y: 4}
   - waves:
-    - name: Boss Wave
+    - name: The boss
       enemies:
       - {fileID: 900977390397197480, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
       spawns:
@@ -2402,6 +2402,10 @@ PrefabInstance:
     - target: {fileID: 3291619306893046493, guid: 84e5c55605fcc7245923b28235e4d60b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3291619306912339727, guid: 84e5c55605fcc7245923b28235e4d60b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 27.500002
       objectReference: {fileID: 0}
     - target: {fileID: 3291619307208304136, guid: 84e5c55605fcc7245923b28235e4d60b, type: 3}
       propertyPath: m_Name
