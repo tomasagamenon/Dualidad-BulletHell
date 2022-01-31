@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7193454432265803878}
   - component: {fileID: 7193454432265803879}
   - component: {fileID: 7193454432265803872}
+  - component: {fileID: 2432725940233170640}
   m_Layer: 0
   m_Name: MouseTarget
   m_TagString: Untagged
@@ -46,7 +47,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 22100000, guid: bcfc4223ddf5ca0429573de8a058de3b, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -71,6 +72,18 @@ MonoBehaviour:
   type: 0
   gameplay: {fileID: 22100000, guid: f030c52d454a3454e9567059dab9a36a, type: 2}
   menu: {fileID: 22100000, guid: bcfc4223ddf5ca0429573de8a058de3b, type: 2}
+--- !u!114 &2432725940233170640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7193454432265803877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d747713d394fc4643b126259642354c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7193454433125947808
 GameObject:
   m_ObjectHideFlags: 0

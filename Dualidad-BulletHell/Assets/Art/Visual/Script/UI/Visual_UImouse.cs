@@ -20,11 +20,11 @@ public class Visual_UImouse : Visual_UIelement
                 anim.runtimeAnimatorController = gameplay;
                 break;
             case typeMouse.inMenu:
-                anim.runtimeAnimatorController = gameplay;
+                anim.runtimeAnimatorController = menu;
                 break;
         }
         SetAnimator("Spawn");
     }
 
-    public enum typeMouse { inGameplay, inMenu }
 }
+public enum typeMouse { inGameplay, inMenu }

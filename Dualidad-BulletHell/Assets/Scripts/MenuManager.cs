@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     public static TypeScreen screen;
+    public TypeScreen public_screen;
 
     private void Awake()
     {
@@ -19,6 +20,7 @@ public class MenuManager : MonoBehaviour
 
     void Update()
     {
+        public_screen = screen;
         if (Input.GetKeyDown(KeyCode.Escape) && (screen == TypeScreen.Gameplay || screen == TypeScreen.Pause))
         {
             if (screen != TypeScreen.Pause)

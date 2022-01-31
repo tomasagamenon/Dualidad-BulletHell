@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Cinemachine;
+using System.Collections;
 
 [ExecuteInEditMode]
 [SaveDuringPlay]
@@ -38,8 +39,8 @@ public class Visual_CameraShakeCM : CinemachineExtension
 
     public void Update()
     {
-        shakeTimer -= Time.deltaTime;
-        if (shakeTimer <= 0) enabled = false;
+        //shakeTimer -= Time.deltaTime;
+        //if (shakeTimer <= 0) enabled = false;
     }
 
     public void SetShake(float xAmplitude, float yAmplitude, float rotAmplitude, float time)
@@ -50,6 +51,14 @@ public class Visual_CameraShakeCM : CinemachineExtension
         m_rotate = rotAmplitude;
 
         enabled = true;
+        StopAllCoroutines();
+        StartCoroutine(Shake());
+    }
+    
+    IEnumerator Shake()
+    {
+        yield return new WaitForSecondsRealtime(shakeTimer);
+        enabled = false;
     }
 
     public void Stop() { enabled = false; }
