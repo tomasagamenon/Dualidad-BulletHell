@@ -11,6 +11,7 @@ public class Effect_Controller : MonoBehaviour
 
     [SerializeField] Vector3 offset, offsetRandom;
     [SerializeField, Range(0.1f,2)] float scaleRandom;
+    [SerializeField, Range(0.1f, 2)] float speedRandom;
     [SerializeField, Range(-10, 10)] float rotationRandom;
 
     public virtual void Spawn(Vector3 position) {
@@ -24,7 +25,7 @@ public class Effect_Controller : MonoBehaviour
     void Initializer(Vector3 position)
     {
         anim.SetTrigger("Spawn");
-        anim.SetFloat("Speed", speedAnimation * correctionSpeed);
+        anim.SetFloat("Speed", speedAnimation * correctionSpeed * Random.Range(0.1f, scaleRandom));
 
         transform.position = position;
 

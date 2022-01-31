@@ -28,5 +28,6 @@ public class Visual_Bullets : Visual_ElementWorld
     {
         SetAnimator("Contact");
         PlaySFX("Contact");
+        Effect_Manager.main.InstantiateEffect(transf.position, "Explosion");
     }
 }

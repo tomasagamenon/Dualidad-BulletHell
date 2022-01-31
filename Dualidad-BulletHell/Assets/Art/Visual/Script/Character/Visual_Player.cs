@@ -51,6 +51,8 @@ public class Visual_Player : Visual_ElementWorld
         PlayShake("Hit");
         PlaySFX("Hit");
         if (isDeath) { SetAnimator("Death"); PlaySFX("Death"); }
+
+        Effect_Manager.main.InstantiateEffect(pivotRot.position, "Explosion");
     }
     public void Spawn()
     {
