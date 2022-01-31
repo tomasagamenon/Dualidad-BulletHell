@@ -738,7 +738,7 @@ MonoBehaviour:
   speed: 6
   rotation_speed: 700
   paterns:
-  - number_of_shoots: 36
+  - number_of_shoots: 37
     number_of_bullets: 4
     time_between_bullets: 0.1
     distance_between_bullets: 0
@@ -770,50 +770,70 @@ MonoBehaviour:
       paterns: []
   - number_of_shoots: 5
     number_of_bullets: 1
-    time_between_bullets: 0.05
+    time_between_bullets: 0.09
     distance_between_bullets: 0
-    rot_per_shoot: 5
-    ofset_player: 0
+    rot_per_shoot: 9
+    ofset_player: -22.5
     mirrored: 0
     repeatPaterns:
       time_inter_paterns: 0
       paterns:
       - number_of_shoots: 5
         number_of_bullets: 1
-        time_between_bullets: 0.05
+        time_between_bullets: 0.09
         distance_between_bullets: 0
-        rot_per_shoot: -5
-        ofset_player: 0
+        rot_per_shoot: -9
+        ofset_player: 22.5
         mirrored: 0
         repeatPaterns:
           time_inter_paterns: 0
           paterns: []
       - number_of_shoots: 5
         number_of_bullets: 1
-        time_between_bullets: 0.05
+        time_between_bullets: 0.09
         distance_between_bullets: 0
-        rot_per_shoot: 5
-        ofset_player: 0
+        rot_per_shoot: 9
+        ofset_player: -22.5
         mirrored: 0
         repeatPaterns:
           time_inter_paterns: 0
           paterns: []
       - number_of_shoots: 5
         number_of_bullets: 1
-        time_between_bullets: 0.05
+        time_between_bullets: 0.09
         distance_between_bullets: 0
-        rot_per_shoot: -5
-        ofset_player: 0
+        rot_per_shoot: -9
+        ofset_player: 22.5
         mirrored: 0
         repeatPaterns:
           time_inter_paterns: 0
           paterns: []
       - number_of_shoots: 5
         number_of_bullets: 1
-        time_between_bullets: 0.05
+        time_between_bullets: 0.09
         distance_between_bullets: 0
-        rot_per_shoot: 5
-        ofset_player: 0
+        rot_per_shoot: 9
+        ofset_player: -22.5
+        mirrored: 0
+        repeatPaterns:
+          time_inter_paterns: 0
+          paterns: []
+      - number_of_shoots: 5
+        number_of_bullets: 1
+        time_between_bullets: 0.09
+        distance_between_bullets: 0
+        rot_per_shoot: -9
+        ofset_player: 22.5
+        mirrored: 0
+        repeatPaterns:
+          time_inter_paterns: 0
+          paterns: []
+      - number_of_shoots: 5
+        number_of_bullets: 1
+        time_between_bullets: 0.09
+        distance_between_bullets: 0
+        rot_per_shoot: 9
+        ofset_player: -22.5
         mirrored: 0
         repeatPaterns:
           time_inter_paterns: 0

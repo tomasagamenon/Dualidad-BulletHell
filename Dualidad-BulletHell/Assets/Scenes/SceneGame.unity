@@ -249,7 +249,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.4675768, y: 1}
+    m_SensorSize: {x: 1.4863482, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -380,7 +380,7 @@ Transform:
   - {fileID: 1989074715}
   - {fileID: 1027372745}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &108947487
 MonoBehaviour:
@@ -417,63 +417,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8210171813436159703, guid: c183f9bbd1178cf48ad9d4b2df5fec69, type: 3}
   bullets_in_use: []
   bullets_not_in_use: []
---- !u!1001 &112219484
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 900977390397197481, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 900977390397197481, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.797245
-      objectReference: {fileID: 0}
-    - target: {fileID: 900977390397197481, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.27212656
-      objectReference: {fileID: 0}
-    - target: {fileID: 900977390397197481, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 900977390397197481, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 900977390397197481, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 900977390397197481, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 900977390397197481, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 900977390397197481, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 900977390397197481, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 900977390397197481, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 900977390397197486, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
-      propertyPath: m_Name
-      value: Enemy_Boss
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 278a9f9d18708e244b0e2e7d0125e3c8, type: 3}
 --- !u!1 &114699813
 GameObject:
   m_ObjectHideFlags: 0
@@ -2729,7 +2672,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.35
+  m_fontSize: 40
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2974,7 +2917,7 @@ Transform:
   - {fileID: 819979706}
   - {fileID: 1098717590}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &628277604
 MonoBehaviour:
@@ -6715,7 +6658,7 @@ Transform:
   - {fileID: 1154632691}
   - {fileID: 1684315163}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1718591914
 MonoBehaviour:
@@ -6826,7 +6769,7 @@ Transform:
   m_Children:
   - {fileID: 1950322662}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1770588997
 GameObject:
@@ -7300,7 +7243,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 40
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7375,7 +7318,7 @@ Transform:
   - {fileID: 308898194}
   - {fileID: 140167903}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1830551984
 PrefabInstance:
@@ -8075,7 +8018,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1950322662
 Transform:
   m_ObjectHideFlags: 0
