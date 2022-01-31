@@ -15,6 +15,7 @@ public class Enemy : Entity
     public List<Paterns> paterns;
     protected BulletsPool bulletsPool;
     protected Player player;
+    public float time_before_shoot;
 
     public int score;
 
@@ -28,12 +29,14 @@ public class Enemy : Entity
         player = FindObjectOfType<Player>();
         _target = player.transform;
         _pos_to_go = transform.position;
-        StartCoroutine(Shoot(1, null, 1, false, true));
+        StartCoroutine(Shoot(1, null, time_before_shoot, false, true));
         visual = GetComponent<Visual_Enemy>();
     }
 
     protected virtual void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+            Death();
         if ((player.transform.position - transform.position).magnitude < radius * 5)
         {
             Vector3 dir = Vector3.zero;
@@ -67,7 +70,7 @@ public class Enemy : Entity
             if (0.1f >= (_pos_to_go - transform.position).magnitude && _ready_to_go)
             {
                 transform.position = _pos_to_go;
-                StartCoroutine(Shoot(1, null, 1, false, true));
+                StartCoroutine(Shoot(1, null, time_before_shoot, false, true));
                 _ready_to_go = false;
             }
         }

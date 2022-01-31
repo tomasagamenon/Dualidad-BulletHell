@@ -915,6 +915,7 @@ MonoBehaviour:
     repeatPaterns:
       time_inter_paterns: 0
       paterns: []
+  time_before_shoot: 1
   score: 1000
 --- !u!50 &1284401646226156230
 Rigidbody2D:

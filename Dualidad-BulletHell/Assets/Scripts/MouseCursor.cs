@@ -25,7 +25,6 @@ public class MouseCursor : MonoBehaviour
             {
                 visual.SetMouse(typeMouse.inGameplay);
                 type = typeMouse.inGameplay;
-                Debug.LogError("x");
             }
         }
         else if (type != typeMouse.inMenu)

@@ -29,6 +29,7 @@ public class Player : Entity
         {
             life = defensive[LevelSystem.main.GetLv_Defensive()].life;
             static_life = defensive[LevelSystem.main.GetLv_Defensive()].life;
+            Visual_UImanager.main.SetLife(life);
         }
 
         translationy *= Time.deltaTime * (defensive[LevelSystem.main.GetLv_Defensive()].speed);
