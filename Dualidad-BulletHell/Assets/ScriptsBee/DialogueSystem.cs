@@ -26,6 +26,7 @@ public class Dialogue {
     public Sprite sprite;
     [TextArea] public string text;
 
+    public string charClip;
     [Range(0.1f, 2)] public float speedDialogue;
 
     public void Talk() { DialogueSystem.main.AddDialogue(this); }

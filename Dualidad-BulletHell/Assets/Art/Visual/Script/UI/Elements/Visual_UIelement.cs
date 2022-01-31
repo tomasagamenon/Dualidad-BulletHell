@@ -10,6 +10,11 @@ public class Visual_UIelement : MonoBehaviour
         SFX_sound sfxPlay = System.Array.Find(sfxClip, sfx => sfx.name == SFXName);
         if (sfxPlay != null) sfxPlay.Play();
     }
+    public void ReplaceSFX(string SFXName, string toNameDataBase)
+    {
+        SFX_sound sfxPlay = System.Array.Find(sfxClip, sfx => sfx.name == SFXName);
+        if (sfxPlay != null) sfxPlay.nameDataBase = toNameDataBase;
+    }
 
     public virtual void SetAnimator(string action) { anim.SetTrigger(action); }
     public virtual void SetAnimator(bool state, string action) { anim.SetBool(action, state); }

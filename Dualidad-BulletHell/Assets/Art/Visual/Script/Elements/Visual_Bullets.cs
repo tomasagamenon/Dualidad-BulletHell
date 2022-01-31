@@ -3,14 +3,13 @@ using UnityEngine;
 public class Visual_Bullets : Visual_ElementWorld
 {
     [SerializeField] Color colorBullet;
-    [SerializeField, Range(0, 2)] float size, speed;
+    [SerializeField, Range(0, 2)] float size;
 
     [SerializeField] Transform transf, pivotScale;
     [SerializeField] SpriteRenderer spr;
 
     private void Start() {
         SetBullet(colorBullet, size);
-        Speed(speed);
     }
 
     public void SetBullet(Color color, float modSize)
@@ -19,7 +18,7 @@ public class Visual_Bullets : Visual_ElementWorld
         transf.localScale = Vector3.one * size * modSize;
     }
 
-    public void Speed(float speed_) { speed = speed_;  pivotScale.localScale = new Vector3(.85f, speed_); }
+    public void Speed(Vector2 speed_) { pivotScale.localScale = new Vector3(speed_.x, speed_.y); }
     public void Spawn()
     {
         SetAnimator("Spawn");
