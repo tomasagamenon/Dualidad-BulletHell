@@ -26,7 +26,7 @@ public class Enemy : Entity
         player = FindObjectOfType<Player>();
         _target = player.transform;
         _pos_to_go = transform.position;
-        StartCoroutine(Shoot(1, null, 1));
+        StartCoroutine(Shoot(1, null, 1, false));
         visual = GetComponent<Visual_Enemy>();
     }
 
@@ -65,7 +65,7 @@ public class Enemy : Entity
             if (0.1f >= (_pos_to_go - transform.position).magnitude && _ready_to_go)
             {
                 transform.position = _pos_to_go;
-                StartCoroutine(Shoot(1, null, 1));
+                StartCoroutine(Shoot(1, null, 1, false));
                 _ready_to_go = false;
             }
         }
@@ -85,7 +85,7 @@ public class Enemy : Entity
         return vector3;
     }
 
-    protected IEnumerator Shoot(int a, Paterns patern, float time)
+    protected IEnumerator Shoot(int a, Paterns patern, float time, bool repeat)
     {
         yield return new WaitForSeconds(time);
         if (patern == null)
@@ -93,9 +93,10 @@ public class Enemy : Entity
             if (paterns.Count > 1)
                 patern = paterns[Random.Range(0, paterns.Count)];
             else patern = paterns[0];
-            if (patern.mirrored)
-                StartCoroutine(Shoot(-1, patern, 0));
         }
+        if (patern == null || repeat)
+            if (patern.mirrored)
+                StartCoroutine(Shoot(-1, patern, 0, repeat));
         for (int i = 0; i < patern.number_of_shoots; i++)
         {
             for (int e = 0; e < patern.number_of_bullets; e++)
@@ -114,6 +115,17 @@ public class Enemy : Entity
                 bullet.dir = bullet.transform.up;
             }
             yield return new WaitForSeconds(patern.time_between_bullets);
+        }
+        if (patern.repeatPaterns.paterns.Length > 0)
+        {
+            foreach(Paterns paterns in patern.repeatPaterns.paterns)
+            {
+                yield return new WaitForSeconds(patern.repeatPaterns.time_inter_paterns);
+                Paterns patern_to_do = paterns;
+                if (paterns.number_of_shoots == 0)
+                    patern_to_do = patern;
+                StartCoroutine(Shoot(1, patern_to_do, 0, true));
+            }
         }
         StartCoroutine(Move());
     }
@@ -146,4 +158,12 @@ public class Paterns
     public float rot_per_shoot;
     public float ofset_player;
     public bool mirrored;
+    public RepeatPaterns repeatPaterns;
+}
+
+[System.Serializable]
+public class RepeatPaterns
+{
+    public float time_inter_paterns;
+    public Paterns[] paterns;
 }
