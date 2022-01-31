@@ -58,6 +58,9 @@ public class ParryShield : MonoBehaviour
     {
         if (collision.GetComponent<Bullet>() && _is_in_parry)
         {
+            _is_in_cooldown = false;
+            visual.ParryState(!_is_in_cooldown);
+            StopCoroutine(InCooldown());
             var v3 = Input.mousePosition;
             v3 = Camera.main.ScreenToWorldPoint(v3);
             v3.z = 0;

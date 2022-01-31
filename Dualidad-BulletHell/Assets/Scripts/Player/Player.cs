@@ -33,8 +33,6 @@ public class Player : Entity
         translationy *= Time.deltaTime * (defensive[LevelSystem.main.GetLv_Defensive()].speed);
         translationx *= Time.deltaTime * (defensive[LevelSystem.main.GetLv_Defensive()].speed);
 
-        Debug.LogError(defensive[LevelSystem.main.GetLv_Defensive()].speed);
-
         transform.Translate(translationx, translationy, 0, Space.World);
         //Vector3 lookAtPos = new Vector3(translationx, translationy, 0);
         //if(lookAtPos.magnitude > 0)
