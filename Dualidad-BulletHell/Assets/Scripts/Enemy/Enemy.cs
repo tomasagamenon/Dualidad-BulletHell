@@ -126,7 +126,7 @@ public class Enemy : Entity
         {
             foreach (Paterns paterns in patern.repeatPaterns.paterns)
             {
-                yield return new WaitUntil(() => ready_to_shoot);
+                yield return new WaitUntil(() => ready_to_shoot == true);
                 ready_to_shoot = false;
                 yield return new WaitForSeconds(patern.repeatPaterns.time_inter_paterns);
                 Paterns patern_to_do = paterns;
