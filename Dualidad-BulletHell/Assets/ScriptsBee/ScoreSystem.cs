@@ -5,11 +5,13 @@ using UnityEngine;
 public class ScoreSystem : MonoBehaviour
 {
     public static ScoreSystem main;
-    private void Awake() { if (main == null) main = this; else Destroy(this.gameObject); }
+    private void Awake() {
+        if (main == null) main = this; else Destroy(this.gameObject);
+        Initializer();
+    }
 
     public int score;
 
-    private void Start() { Initializer(); }
     void Initializer() {
         score = 0;
     }

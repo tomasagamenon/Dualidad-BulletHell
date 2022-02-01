@@ -492,6 +492,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 67629c4aa29b61f42b383f949b87404e, type: 3}
     source: {fileID: 3801824332785497492}
     volume: 1
+  setting: {fileID: 11400000, guid: 093756e9d2a79234f8727719cdbf9084, type: 2}
   volumeMaster: 1
   volumeSFX: 1
   volumeMusic: 1
@@ -542,7 +543,7 @@ MonoBehaviour:
   nameMixer: MASTER
   mixer: {fileID: 24100000, guid: 41ced7a784c4a4846b6362e3c8b1ee65, type: 2}
   nameVarVolume: MASTER_volume
-  minVolume: 0.1
+  minVolume: 0.0001
   maxVolume: 1
   volume: 1
 --- !u!1 &3801824331819421340
@@ -625,7 +626,7 @@ MonoBehaviour:
   nameMixer: MUSIC
   mixer: {fileID: 24100000, guid: 41ced7a784c4a4846b6362e3c8b1ee65, type: 2}
   nameVarVolume: MUSIC_volume
-  minVolume: 0.1
+  minVolume: 0.0001
   maxVolume: 1
   volume: 1
 --- !u!1 &3801824332231177077
@@ -675,7 +676,7 @@ MonoBehaviour:
   nameMixer: SFX
   mixer: {fileID: 24100000, guid: 41ced7a784c4a4846b6362e3c8b1ee65, type: 2}
   nameVarVolume: SFX_volume
-  minVolume: 0.1
+  minVolume: 0.0001
   maxVolume: 1
   volume: 1
 --- !u!1 &3801824332252427455

@@ -5,11 +5,12 @@ using UnityEngine;
 public class LevelSystem : MonoBehaviour
 {
     public static LevelSystem main;
-    private void Awake() { if (main == null) main = this; else Destroy(this.gameObject); }
+    private void Awake() {
+        if (main == null) main = this; else Destroy(this.gameObject);
+        ResetLV();
+    }
        
     [SerializeField] int offensive, defensive;
-
-    private void Start() { ResetLV(); }
 
     public int GetLv_Offensive() { return offensive; }
     public int GetLv_Defensive() { return defensive; }

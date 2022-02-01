@@ -18,9 +18,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] MUSIC[] music;
 
     [Header("====CONSTRUCT====")]
+    [SerializeField] Settings setting;
     [SerializeField, Range(0, 1)] float volumeMaster;
     [SerializeField, Range(0, 1)] float volumeSFX, volumeMusic;
-
 
     #region CONSTRUCT
     private void Awake()
@@ -36,7 +36,9 @@ public class AudioManager : MonoBehaviour
 
     public void GetReferences()
     {
-
+        SetVolume_MASTER(setting.volumeMaster);
+        SetVolume_MUSIC(setting.volumeMusic);
+        SetVolume_SFX(setting.volumeSFX);
     }
     public void Initializer()
     {
@@ -68,16 +70,21 @@ public class AudioManager : MonoBehaviour
     {
         volumeMaster = volume;
         SetVolume(Array.Find(mixers, mixer => mixer.nameMixer == "MASTER"), volumeMaster);
+
+        setting.volumeMaster = volumeMaster;
     }
     public void SetVolume_SFX(float volume)
     {
         volumeSFX = volume;
         SetVolume(Array.Find(mixers, mixer => mixer.nameMixer == "SFX"), volumeSFX);
+        setting.volumeSFX = volumeSFX;
     }
     public void SetVolume_MUSIC(float volume)
     {
         volumeMusic = volume;
         SetVolume(Array.Find(mixers, mixer => mixer.nameMixer == "MUSIC"), volumeMusic);
+
+        setting.volumeMusic = volumeMusic;
     }
     #endregion
     #endregion
