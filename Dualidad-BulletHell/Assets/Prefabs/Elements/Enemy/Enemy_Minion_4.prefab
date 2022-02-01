@@ -240,8 +240,8 @@ MonoBehaviour:
   textHp: {fileID: 3002681228666865292}
   addText: 'HP '
   spr:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 5257048517897298902}
+  - {fileID: 1430408200909416075}
   colorEnemy: {r: 0.53900003, g: 0.34932247, b: 0.161, a: 1}
 --- !u!114 &-8975188249946522581
 MonoBehaviour:

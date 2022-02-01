@@ -503,8 +503,8 @@ MonoBehaviour:
   textHp: {fileID: 1649967553465578816}
   addText: 'HP '
   spr:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 7862852847047381524}
+  - {fileID: 1886205892454113912}
   colorEnemy: {r: 1, g: 1, b: 1, a: 1}
 --- !u!50 &8711101028407078090
 Rigidbody2D:
