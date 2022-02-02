@@ -48,6 +48,7 @@ public class Player : Entity
     {
         base.GetDamage(damage);
         FindObjectOfType<EnemyWaves>().general_score -= score_damage;
+        Effect_Manager.main.InstantiateEffect_PopUp(transform.position, score_damage.ToString(), Color.red);
         Visual_UImanager.main.SetScore(FindObjectOfType<EnemyWaves>().general_score);
         var bullets = FindObjectsOfType<Bullet>();
         foreach (Bullet bullet in bullets)

@@ -62,17 +62,17 @@ public class ParryShield : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.GetComponent<Bullet>() && _is_in_parry)
+        if (collision.GetComponent<Bullet>() && _is_in_parry && !collision.GetComponent<Bullet>().reflected)
         {
             _is_in_cooldown = false;
             _colision = true;
             FindObjectOfType<EnemyWaves>().general_score += score;
+            Effect_Manager.main.InstantiateEffect_PopUp(transform.position, score.ToString(), Color.white);
             Visual_UImanager.main.SetScore(FindObjectOfType<EnemyWaves>().general_score);
             var v3 = Input.mousePosition;
             v3 = Camera.main.ScreenToWorldPoint(v3);
             v3.z = 0;
-            if (!collision.GetComponent<Bullet>().reflected)
-                collision.GetComponent<Bullet>().speed += offensive[LevelSystem.main.GetLv_Offensive()].bullet_speed;
+            collision.GetComponent<Bullet>().speed += offensive[LevelSystem.main.GetLv_Offensive()].bullet_speed;
             collision.GetComponent<Bullet>().Reflect(v3);
             collision.GetComponent<Bullet>().damage = offensive[LevelSystem.main.GetLv_Offensive()].damage;
             visual.ActionParry(true, !_is_in_parry);

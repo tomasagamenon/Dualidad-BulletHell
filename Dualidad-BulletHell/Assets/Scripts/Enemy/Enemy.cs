@@ -31,10 +31,19 @@ public class Enemy : Entity
         _pos_to_go = transform.position;
         StartCoroutine(Shoot(1, null, time_before_shoot, false, true));
         visual = GetComponent<Visual_Enemy>();
+        visual.SetLife(life);
     }
 
     protected virtual void Update()
     {
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+        if (hit != false)
+        {
+            if (hit.collider.gameObject == gameObject)
+                visual.TargetState(hit);
+        }
+        else visual.TargetState(false);
+
         if (Input.GetKeyDown(KeyCode.Space))
             Death();
         if ((player.transform.position - transform.position).magnitude < radius * 5)
@@ -159,6 +168,7 @@ public class Enemy : Entity
     {
         base.Death();
         FindObjectOfType<EnemyWaves>().EnemyDeath(score);
+        Effect_Manager.main.InstantiateEffect_PopUp(transform.position, score.ToString(), Color.white);
         Destroy(gameObject);
     }
 }
