@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 024debc212fbb7d4eb3b20e6c59492a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 0
+  life: 1
   max_life: 1
   radius: 5
   speed: 6
@@ -189,6 +189,7 @@ MonoBehaviour:
       paterns: []
   time_before_shoot: 1.1
   score: 250
+  _targeted: 0
 --- !u!50 &-8054202643055163244
 Rigidbody2D:
   serializedVersion: 4
