@@ -25,13 +25,6 @@ public class Player : Entity
 
         visual.Move(new Vector2(-translationx, translationy));
 
-        if (static_life != defensive[LevelSystem.main.GetLv_Defensive()].life)
-        {
-            life = defensive[LevelSystem.main.GetLv_Defensive()].life;
-            static_life = defensive[LevelSystem.main.GetLv_Defensive()].life;
-            Visual_UImanager.main.SetLife(life, static_life);
-        }
-
         translationy *= Time.deltaTime * (defensive[LevelSystem.main.GetLv_Defensive()].speed);
         translationx *= Time.deltaTime * (defensive[LevelSystem.main.GetLv_Defensive()].speed);
 
@@ -54,13 +47,21 @@ public class Player : Entity
         foreach (Bullet bullet in bullets)
             if (!bullet.reflected)
                 FindObjectOfType<BulletsPool>().PullIn(bullet);
-        Visual_UImanager.main.SetLife(life, static_life);
+        Visual_UImanager.main.SetLife(life, max_life);
         if (life <= 0)
         {
             visual.Hit(true);
             Visual_UImanager.main.SetScreen(TypeScreen.GameOver);
         }
         else visual.Hit(false);
+    }
+
+    public void RefreshValues(bool defense)
+    {
+        life = defensive[LevelSystem.main.GetLv_Defensive()].life;
+        if (defense)
+            max_life = defensive[LevelSystem.main.GetLv_Defensive()].life;
+        Visual_UImanager.main.SetLife(life, max_life);
     }
 }
 
