@@ -10,17 +10,21 @@ public class Bullet : MonoBehaviour
     private Player player;
     public Vector3 dir;
     public bool reflected;
+
+    private Visual_Bullets visual;
+    [SerializeField] Color color_bullet_reflect;
     // Start is called before the first frame update
     void Start()
     {
         player = FindObjectOfType<Player>();
+        visual = GetComponent<Visual_Bullets>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if (dist_from_player < (player.transform.position - transform.position).magnitude)
-            PullIn();
+            visual.Contact();
         Move();
     }
 
@@ -31,6 +35,8 @@ public class Bullet : MonoBehaviour
 
     public void Reflect(Vector3 mousePos)
     {
+        visual.SetBullet(color_bullet_reflect, 1);
+        visual.Speed(new Vector2(0.7f, 1));
         dir = (mousePos - transform.position).normalized;
         reflected = true;
     }
@@ -40,17 +46,17 @@ public class Bullet : MonoBehaviour
         if (collision.GetComponent<Player>() && !reflected)
         {
             collision.GetComponent<Player>().GetDamage(damage);
-            PullIn();
+            visual.Contact();
         }
         if((collision.GetComponent<Enemy>() || collision.GetComponent<Novato>()) && reflected)
         {
             collision.GetComponent<Enemy>().GetDamage(damage);
             reflected = false;
-            PullIn();
+            visual.Contact();
         }
     }
 
-    private void PullIn()
+    public void PullIn()
     {
         FindObjectOfType<BulletsPool>().PullIn(this);
         if (reflected)

@@ -8,7 +8,7 @@ public class Visual_Bullets : Visual_ElementWorld
     [SerializeField] Transform transf, pivotScale;
     [SerializeField] SpriteRenderer spr;
 
-    private void Start() {
+    private void OnEnable() {
         SetBullet(colorBullet, size);
     }
 

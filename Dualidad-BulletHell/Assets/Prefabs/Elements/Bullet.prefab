@@ -97,6 +97,7 @@ MonoBehaviour:
   damage: 1
   dir: {x: 0, y: 0, z: 0}
   reflected: 0
+  color_bullet_reflect: {r: 0.59607846, g: 0.1764706, b: 0.1764706, a: 1}
 --- !u!58 &8074687240971427164
 CircleCollider2D:
   m_ObjectHideFlags: 0
