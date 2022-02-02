@@ -29,6 +29,8 @@ public class PoolManager : MonoBehaviour
     public GameObject GetObject_InPool(string namePool)
     {
         newObject = System.Array.Find(pools.ToArray(), pool => pool.name == namePool).GetObject();
+        if (newObject == null)
+            return null;
         newObject.SetActive(true);
         newObject.transform.SetParent(parentSpawn);
         return newObject;

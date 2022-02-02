@@ -889,8 +889,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 024debc212fbb7d4eb3b20e6c59492a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 0
-  max_life: 0
+  life: 10
+  max_life: 10
   radius: 5
   speed: 6
   rotation_speed: 700
