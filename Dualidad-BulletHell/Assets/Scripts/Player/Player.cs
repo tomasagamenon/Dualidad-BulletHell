@@ -6,7 +6,7 @@ public class Player : Entity
 {
     //public float speed;
     public float rotation_speed;
-    public Deffensive[] defensive;
+    public Defensive[] defensive;
     public Offensive[] offensive;
     public Visual_Player visual;
     private int static_life;
@@ -66,7 +66,7 @@ public class Player : Entity
 }
 
 [System.Serializable]
-public class Deffensive
+public class Defensive
 {
     public int life;
     public float speed;

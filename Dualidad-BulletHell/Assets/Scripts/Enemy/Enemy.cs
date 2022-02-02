@@ -160,7 +160,6 @@ public class Enemy : Entity
             visual.TargetState(hit);
             _targeted = true;
         }
-        Debug.Log(hit);
         StartCoroutine(Target());
     }
 

@@ -6,9 +6,7 @@ public class EnemyWaves : MonoBehaviour
 {
     public List<Levels> levels;
     private int _num_wave;
-    public List<GameObject> end;
-    public List<Vector2> end_pos;
-    public string end_name;
+    public List<End> end;
     public int num_of_enemies;
     public int general_score;
     public float notification_time;
@@ -54,11 +52,14 @@ public class EnemyWaves : MonoBehaviour
             if (level == levels[levels.Count - 1])
                 FindObjectOfType<MenuManager>().Win();
             else
-                for (int i = 0; i < end.Count; i++)
+                for (int i = 0; i < end[levels.IndexOf(level)].objects.Count; i++)
                 {
-                    var pos = FindObjectOfType<Player>().transform.position + new Vector3(end_pos[i].x, end_pos[i].y, 0);
-                    Instantiate(end[i], pos, transform.rotation);
-                    Visual_UImanager.main.SetNotification(notification_time, end_name);
+                    Visual_UImanager.main.SetNotification(notification_time, end[i].name);
+                    for (int x = 0; x < end[i].objects.Count; i++)
+                    {
+                        var pos = FindObjectOfType<Player>().transform.position + new Vector3(end[i].spawns[x].x, end[i].spawns[x].y, 0);
+                        Instantiate(end[i].objects[x], pos, transform.rotation);
+                    }
                 }
         }
     }
@@ -83,5 +84,13 @@ public class Waves
 {
     public string name;
     public List<Entity> enemies;
+    public List<Vector2> spawns;
+}
+
+[System.Serializable]
+public class End
+{
+    public string name;
+    public List<GameObject> objects;
     public List<Vector2> spawns;
 }
