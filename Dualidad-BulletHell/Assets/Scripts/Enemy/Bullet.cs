@@ -46,14 +46,18 @@ public class Bullet : MonoBehaviour
     {
         if (collision.GetComponent<Player>() && !reflected)
         {
+            GetComponent<CircleCollider2D>().enabled = false;
             collision.GetComponent<Player>().GetDamage(damage);
             visual.Contact();
+            enabled = false;
         }
         if ((collision.GetComponent<Enemy>() || collision.GetComponent<Novato>()) && reflected)
         {
+            GetComponent<CircleCollider2D>().enabled = false;
             collision.GetComponent<Enemy>().GetDamage(damage);
             reflected = false;
             visual.Contact();
+            enabled = false;
         }
     }
 

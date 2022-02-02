@@ -166,9 +166,16 @@ public class Enemy : Entity
 
     protected override void Death()
     {
+        GetComponent<CircleCollider2D>().enabled = false;
         base.Death();
         FindObjectOfType<EnemyWaves>().EnemyDeath(score);
         Effect_Manager.main.InstantiateEffect_PopUp(transform.position, score.ToString(), Color.white);
+        enabled = false;
+    }
+
+    public void Destroy()
+    {
+        Destroy(gameObject);
     }
 }
 
