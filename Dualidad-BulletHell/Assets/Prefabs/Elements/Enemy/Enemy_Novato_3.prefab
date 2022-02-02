@@ -903,15 +903,15 @@ MonoBehaviour:
   - sprite: {fileID: 21300000, guid: b4ea81e937c20a649a0eb0e18de9379f, type: 3}
     text: W-why are you hh-here?
     charClip: 
-    speedDialogue: 0
+    speedDialogue: 0.07
   - sprite: {fileID: 21300000, guid: b4ea81e937c20a649a0eb0e18de9379f, type: 3}
     text: I'm n-not ssscared, I'll sh-shoot you
     charClip: 
-    speedDialogue: 0
+    speedDialogue: 0.07
   - sprite: {fileID: 21300000, guid: b4ea81e937c20a649a0eb0e18de9379f, type: 3}
     text: '*gwaaaah*'
     charClip: 
-    speedDialogue: 0
+    speedDialogue: 0.07
   time: 2
 --- !u!1 &4679870495506041841
 GameObject:

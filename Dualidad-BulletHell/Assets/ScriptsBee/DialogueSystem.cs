@@ -27,7 +27,7 @@ public class Dialogue {
     [TextArea] public string text;
 
     public string charClip;
-    [Range(0.1f, 2)] public float speedDialogue;
+    [Range(0f, 2)] public float speedDialogue;
 
     public void Talk() { DialogueSystem.main.AddDialogue(this); }
 }
