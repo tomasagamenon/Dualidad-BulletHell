@@ -67,11 +67,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 7323495078018568836}
-  speedAnimation: 1
+  scaleBase: 1
+  speedAnimation: 2
   correctionSpeed: 1
   offset: {x: 0, y: 0.25, z: 0}
   offsetRandom: {x: 0.1, y: 0.3, z: 0}
   scaleRandom: 0.1
+  speedRandom: 0.25
   rotationRandom: 2.5
   text: {fileID: 7323495078725842856}
 --- !u!1 &7323495078725842858
