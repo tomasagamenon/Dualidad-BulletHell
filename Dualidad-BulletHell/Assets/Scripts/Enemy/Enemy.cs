@@ -22,6 +22,8 @@ public class Enemy : Entity
     protected Visual_Enemy visual;
 
     private bool _ready_to_shoot = true;
+    public bool _targeted; 
+    RaycastHit2D hit;
     protected override void Start()
     {
         base.Start();
@@ -32,17 +34,12 @@ public class Enemy : Entity
         StartCoroutine(Shoot(1, null, time_before_shoot, false, true));
         visual = GetComponent<Visual_Enemy>();
         visual.SetLife(life);
+        StartCoroutine(Target());
     }
 
     protected virtual void Update()
     {
-        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-        if (hit != false)
-        {
-            if (hit.collider.gameObject == gameObject)
-                visual.TargetState(hit);
-        }
-        else visual.TargetState(false);
+        hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
         if ((player.transform.position - transform.position).magnitude < radius * 5)
         {
             Vector3 dir = Vector3.zero;
@@ -149,6 +146,22 @@ public class Enemy : Entity
         }
         else if (end)
             StartCoroutine(Move());
+    }
+
+    IEnumerator Target()
+    {
+        yield return new WaitForSeconds(0.1f);
+        if (hit.collider.gameObject != gameObject && _targeted)
+        {
+            visual.TargetState(false);
+            _targeted = false;
+        } else if(hit.collider.gameObject == gameObject && !_targeted)
+        {
+            visual.TargetState(hit);
+            _targeted = true;
+        }
+        Debug.Log(hit);
+        StartCoroutine(Target());
     }
 
     public override void GetDamage(int damage)

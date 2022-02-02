@@ -187,7 +187,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.1672355, y: 1}
+    m_SensorSize: {x: 1.3207207, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -976,6 +976,7 @@ GameObject:
   - component: {fileID: 671103873}
   - component: {fileID: 671103872}
   - component: {fileID: 671103871}
+  - component: {fileID: 671103875}
   m_Layer: 0
   m_Name: Border
   m_TagString: Untagged
@@ -1069,6 +1070,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &671103875
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671103870}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.0516548, y: 0.5736275}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 47.846214, y: 37.329712}
+  m_EdgeRadius: 0
 --- !u!4 &755378563 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2965310142944442983, guid: c555a37403f1d6c4c8a473bd9290eb6e, type: 3}
@@ -2393,7 +2420,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 428648552, guid: 84e5c55605fcc7245923b28235e4d60b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 4.999996
+      value: 4.999998
       objectReference: {fileID: 0}
     - target: {fileID: 707192389985167240, guid: 84e5c55605fcc7245923b28235e4d60b, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2505,7 +2532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3291619306912339727, guid: 84e5c55605fcc7245923b28235e4d60b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 27.50003
+      value: 27.500038
       objectReference: {fileID: 0}
     - target: {fileID: 3291619307082494393, guid: 84e5c55605fcc7245923b28235e4d60b, type: 3}
       propertyPath: m_IsActive

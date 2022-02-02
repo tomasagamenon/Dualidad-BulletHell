@@ -51,7 +51,7 @@ public class Player : Entity
         if (life <= 0)
         {
             visual.Hit(true);
-            Visual_UImanager.main.SetScreen(TypeScreen.GameOver);
+            FindObjectOfType<MenuManager>().Lose();
         }
         else visual.Hit(false);
     }

@@ -66,4 +66,16 @@ public class MenuManager : MonoBehaviour
         screen = TypeScreen.MainMenu;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void Lose()
+    {
+        screen = TypeScreen.GameOver;
+        Visual_UImanager.main.SetScreen(TypeScreen.GameOver);
+    }
+
+    public void Win()
+    {
+        screen = TypeScreen.Win;
+        Visual_UImanager.main.SetScreen(TypeScreen.Win);
+    }
 }

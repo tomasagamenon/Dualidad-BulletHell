@@ -51,8 +51,8 @@ public class EnemyWaves : MonoBehaviour
         }
         if (_num_wave >= waves.Count)
         {
-            if(level == levels[levels.Count-1])
-                Visual_UImanager.main.SetScreen(TypeScreen.Win);
+            if (level == levels[levels.Count - 1])
+                FindObjectOfType<MenuManager>().Win();
             else
                 for (int i = 0; i < end.Count; i++)
                 {
