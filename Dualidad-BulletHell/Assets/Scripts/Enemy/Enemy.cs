@@ -43,9 +43,6 @@ public class Enemy : Entity
                 visual.TargetState(hit);
         }
         else visual.TargetState(false);
-
-        if (Input.GetKeyDown(KeyCode.Space))
-            GetDamage(10000);
         if ((player.transform.position - transform.position).magnitude < radius * 5)
         {
             Vector3 dir = Vector3.zero;
