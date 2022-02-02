@@ -25,7 +25,6 @@ public class ParryShield : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && !_is_in_parry && !_is_in_cooldown)
             StartCoroutine(Parry());
         Vector3 rotate = Vector3.zero;
-        var parent = GetComponentInParent<Player>();
         var v3 = Input.mousePosition;
         v3 = Camera.main.ScreenToWorldPoint(v3);
         v3.z = 0;

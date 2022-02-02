@@ -52,15 +52,14 @@ public class EnemyWaves : MonoBehaviour
             if (level == levels[levels.Count - 1])
                 FindObjectOfType<MenuManager>().Win();
             else
-                for (int i = 0; i < end[levels.IndexOf(level)].objects.Count; i++)
+            {
+                Visual_UImanager.main.SetNotification(notification_time, end[levels.IndexOf(level)].name);
+                for (int x = 0; x < end[levels.IndexOf(level)].objects.Count; x++)
                 {
-                    Visual_UImanager.main.SetNotification(notification_time, end[i].name);
-                    for (int x = 0; x < end[i].objects.Count; i++)
-                    {
-                        var pos = FindObjectOfType<Player>().transform.position + new Vector3(end[i].spawns[x].x, end[i].spawns[x].y, 0);
-                        Instantiate(end[i].objects[x], pos, transform.rotation);
-                    }
+                    var pos = FindObjectOfType<Player>().transform.position + new Vector3(end[levels.IndexOf(level)].spawns[x].x, end[levels.IndexOf(level)].spawns[x].y, 0);
+                    Instantiate(end[levels.IndexOf(level)].objects[x], pos, transform.rotation);
                 }
+            }
         }
     }
 

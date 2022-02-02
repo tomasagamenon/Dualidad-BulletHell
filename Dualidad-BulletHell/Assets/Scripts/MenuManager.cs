@@ -10,6 +10,7 @@ public class MenuManager : MonoBehaviour
 
     private void Awake()
     {
+        FindObjectOfType<ParryShield>().enabled = false;
         Visual_UImanager.main.SetScreen(screen);
     }
 
@@ -44,6 +45,7 @@ public class MenuManager : MonoBehaviour
         TimerSystem.main.Play();
         Visual_UImanager.main.SetScreen(TypeScreen.Gameplay);
         screen = TypeScreen.Gameplay;
+        FindObjectOfType<ParryShield>().enabled = true;
     }
 
     public void Retry()
