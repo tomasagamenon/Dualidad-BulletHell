@@ -15,7 +15,9 @@ public class MenuManager : MonoBehaviour
 
     void Start()
     {
-
+        if (screen == TypeScreen.Gameplay)
+            TimerSystem.main.Play();
+        else TimerSystem.main.Stop();
     }
 
     void Update()
@@ -25,10 +27,12 @@ public class MenuManager : MonoBehaviour
         {
             if (screen != TypeScreen.Pause)
             {
+                TimerSystem.main.Pause();
                 Visual_UImanager.main.SetScreen(TypeScreen.Pause);
                 screen = TypeScreen.Pause;
             } else if(screen == TypeScreen.Pause)
             {
+                TimerSystem.main.Play();
                 Visual_UImanager.main.SetScreen(TypeScreen.Gameplay);
                 screen = TypeScreen.Gameplay;
             }
@@ -37,14 +41,17 @@ public class MenuManager : MonoBehaviour
 
     public void Gamplay()
     {
+        TimerSystem.main.Play();
         Visual_UImanager.main.SetScreen(TypeScreen.Gameplay);
         screen = TypeScreen.Gameplay;
     }
 
     public void Retry()
     {
+        TimerSystem.main.Stop();
         screen = TypeScreen.Gameplay;
         Time.timeScale = 1;
+        TimerSystem.main.Play();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
     }
 
@@ -55,6 +62,7 @@ public class MenuManager : MonoBehaviour
 
     public void MainMenu()
     {
+        TimerSystem.main.Stop();
         screen = TypeScreen.MainMenu;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
