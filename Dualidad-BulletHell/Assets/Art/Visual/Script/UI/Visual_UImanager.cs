@@ -9,6 +9,7 @@ public class Visual_UImanager : MonoBehaviour
     [SerializeField] Visual_UIelement_Score scrScore;
     [SerializeField] Visual_UIelement_Dialogue scrDialogue;
     [SerializeField] Visual_UIelement_Mision scrMision;
+    [SerializeField] Visual_UIelement_Timer scrTimer;
 
     [SerializeField] Visual_UIelement_Notification scrNotification;
 
@@ -19,6 +20,7 @@ public class Visual_UImanager : MonoBehaviour
 
     public void SetScore(int score) { scrScore.SetScoreText(score); }
     public void SetLife(int value, int max) { scrLife.SetLife(value, max); }
+    public void SetTimer(int min, int second, int milisecond) { scrTimer.SetTimer(min, second, milisecond); }
 
     public void SetDialogue(Dialogue dialogue) { scrDialogue.SetDialogue(dialogue); }
 
