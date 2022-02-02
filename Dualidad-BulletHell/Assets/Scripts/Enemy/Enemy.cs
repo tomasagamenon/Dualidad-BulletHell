@@ -169,7 +169,6 @@ public class Enemy : Entity
         base.Death();
         FindObjectOfType<EnemyWaves>().EnemyDeath(score);
         Effect_Manager.main.InstantiateEffect_PopUp(transform.position, score.ToString(), Color.white);
-        Destroy(gameObject);
     }
 }
 

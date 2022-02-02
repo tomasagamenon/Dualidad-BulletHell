@@ -5,11 +5,14 @@ using UnityEngine;
 public class Portal : MonoBehaviour
 {
     public int score_novato;
+    private void Start()
+    {
+        GetComponent<Visual_Portal>().Spawn();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.GetComponent<Player>())
         {
-            FindObjectOfType<EnemyWaves>().next_level = true;
             GetComponent<Visual_Portal>().Contact();
             if (FindObjectOfType<Novato>())
             {
@@ -17,8 +20,12 @@ public class Portal : MonoBehaviour
                 FindObjectOfType<EnemyWaves>().general_score += score_novato;
                 Visual_UImanager.main.SetScore(FindObjectOfType<EnemyWaves>().general_score);
             }
-            Visual_UImanager.main.SetLevelup(false);
-            Destroy(this);
         }
+    }
+    public void Destroy()
+    {
+        FindObjectOfType<EnemyWaves>().next_level = true;
+        Visual_UImanager.main.SetLevelup(false);
+        Destroy(gameObject);
     }
 }
