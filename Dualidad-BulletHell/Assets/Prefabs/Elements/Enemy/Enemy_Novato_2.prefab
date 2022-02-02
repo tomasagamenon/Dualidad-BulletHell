@@ -574,15 +574,15 @@ MonoBehaviour:
   time_before_shoot: 1
   score: 1
   dialogues:
-  - sprite: {fileID: 0}
+  - sprite: {fileID: 21300000, guid: b4ea81e937c20a649a0eb0e18de9379f, type: 3}
     text: G-go away!
     charClip: 
     speedDialogue: 0
-  - sprite: {fileID: 0}
+  - sprite: {fileID: 21300000, guid: b4ea81e937c20a649a0eb0e18de9379f, type: 3}
     text: G-get away ff-from me!
     charClip: 
     speedDialogue: 0
-  - sprite: {fileID: 0}
+  - sprite: {fileID: 21300000, guid: b4ea81e937c20a649a0eb0e18de9379f, type: 3}
     text: '*aaaaggh*'
     charClip: 
     speedDialogue: 0

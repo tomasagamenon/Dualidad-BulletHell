@@ -127,19 +127,25 @@ MonoBehaviour:
     speed: 5
   - life: 9
     speed: 5
+  - life: 10
+    speed: 5
   offensive:
   - cooldown: 1
     damage: 1
     parry_duration: 0.5
     bullet_speed: 0
-  - cooldown: 0.75
+  - cooldown: 0.85
     damage: 1
     parry_duration: 0.5
-    bullet_speed: 0
-  - cooldown: 0.5
+    bullet_speed: 1
+  - cooldown: 0.7
     damage: 1
     parry_duration: 0.5
-    bullet_speed: 0
+    bullet_speed: 1.5
+  - cooldown: 0.55
+    damage: 1
+    parry_duration: 0.5
+    bullet_speed: 2
   visual: {fileID: 351270912069686234}
   score_damage: 500
 --- !u!58 &513282368370110542
