@@ -17,8 +17,16 @@ public class MenuManager : MonoBehaviour
     void Start()
     {
         if (screen == TypeScreen.Gameplay)
+        {
             TimerSystem.main.Play();
-        else TimerSystem.main.Stop();
+            FindObjectOfType<ParryShield>().enabled = true;
+            FindObjectOfType<Visual_Player>().ParryState(!false);
+        }
+        else
+        {
+            FindObjectOfType<ParryShield>().enabled = false;
+            TimerSystem.main.Stop();
+        }
     }
 
     void Update()
@@ -45,6 +53,7 @@ public class MenuManager : MonoBehaviour
         TimerSystem.main.Play();
         Visual_UImanager.main.SetScreen(TypeScreen.Gameplay);
         screen = TypeScreen.Gameplay;
+        FindObjectOfType<Visual_Player>().ParryState(!false);
         FindObjectOfType<ParryShield>().enabled = true;
     }
 

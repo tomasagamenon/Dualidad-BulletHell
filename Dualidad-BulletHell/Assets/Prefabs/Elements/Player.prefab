@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 7
-  max_life: 8
+  max_life: 7
   rotation_speed: 720
   defensive:
   - life: 7

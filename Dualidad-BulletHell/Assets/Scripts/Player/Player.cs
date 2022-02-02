@@ -12,8 +12,10 @@ public class Player : Entity
     private int static_life;
     public int score_damage;
 
-    private void Start()
+    protected override void Start()
     {
+        life = defensive[LevelSystem.main.GetLv_Defensive()].life;
+        max_life = defensive[LevelSystem.main.GetLv_Defensive()].life;
         visual = GetComponent<Visual_Player>();
         Visual_UImanager.main.SetLife(life, static_life);
     }
