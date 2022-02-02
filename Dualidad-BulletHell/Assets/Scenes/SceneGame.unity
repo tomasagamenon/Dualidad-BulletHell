@@ -187,7 +187,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.7927928, y: 1}
+    m_SensorSize: {x: 0.1672355, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1043,13 +1043,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - sprite: {fileID: 21300000, guid: 3e0b5f24d21045046aab7426c25ae522, type: 3}
-    text: 
-    charClip: 
-    speedDialogue: 0
+    text: Whoa buddy, you're gonna get lost in space if you keep going that way
+    charClip: UI_Dialogue_Char_Friend
+    speedDialogue: 0.1
   - sprite: {fileID: 21300000, guid: 3e0b5f24d21045046aab7426c25ae522, type: 3}
-    text: 
-    charClip: 
-    speedDialogue: 0
+    text: Don't go there, you're getting out of reach of our comms
+    charClip: UI_Dialogue_Char_Friend
+    speedDialogue: 0.1
   - sprite: {fileID: 21300000, guid: 3e0b5f24d21045046aab7426c25ae522, type: 3}
     text: 
     charClip: 
@@ -2127,46 +2127,34 @@ MonoBehaviour:
       - {x: 0, y: -5}
     - name: Fourth wave
       enemies:
-      - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
       spawns:
-      - {x: 0, y: 4}
-      - {x: 0, y: -4}
-      - {x: -4, y: -3.5}
-      - {x: 4, y: -3.5}
+      - {x: 0, y: 5}
+      - {x: 5, y: -4.5}
+      - {x: -5, y: -4.5}
     - name: Fifth wave
       enemies:
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
-      - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
-      - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
-      - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
-      - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
-      - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
       spawns:
-      - {x: 5, y: 0}
-      - {x: 5, y: 5}
-      - {x: 5, y: -5}
-      - {x: -5, y: 5}
-      - {x: -5, y: -5}
       - {x: -5, y: 0}
-      - {x: 0, y: 5}
+      - {x: 5, y: 0}
       - {x: 0, y: -5}
     - name: Sixth wave
       enemies:
       - {fileID: -8975188249946522581, guid: f0e4ba1e40c578f4b9534f5c0cafb9b0, type: 3}
       - {fileID: -8975188249946522581, guid: f0e4ba1e40c578f4b9534f5c0cafb9b0, type: 3}
       spawns:
-      - {x: 0, y: 4}
-      - {x: 0, y: -4}
+      - {x: 0, y: 5}
+      - {x: 0, y: -5}
     - name: The brute
       enemies:
       - {fileID: 2965310142944442976, guid: c555a37403f1d6c4c8a473bd9290eb6e, type: 3}
       spawns:
-      - {x: 0, y: 4}
+      - {x: 0, y: 5}
   - waves:
     - name: First wave
       enemies:
@@ -2174,31 +2162,25 @@ MonoBehaviour:
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
       - {fileID: -8975188249946522581, guid: f0e4ba1e40c578f4b9534f5c0cafb9b0, type: 3}
       spawns:
-      - {x: -4, y: 4}
-      - {x: 4, y: 4}
-      - {x: 0, y: -4}
+      - {x: -5, y: 5}
+      - {x: 5, y: 5}
+      - {x: 0, y: -5}
     - name: Second wave
       enemies:
       - {fileID: -8975188249946522581, guid: f0e4ba1e40c578f4b9534f5c0cafb9b0, type: 3}
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
-      - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
-      - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
       spawns:
-      - {x: 0, y: 4}
-      - {x: -4, y: -4}
-      - {x: 0, y: -4}
-      - {x: 4, y: -4}
+      - {x: 0, y: 5}
+      - {x: 0, y: -5}
     - name: Third wave
       enemies:
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
       - {fileID: -8975188249946522581, guid: f0e4ba1e40c578f4b9534f5c0cafb9b0, type: 3}
       - {fileID: -8975188249946522581, guid: f0e4ba1e40c578f4b9534f5c0cafb9b0, type: 3}
-      - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
       spawns:
-      - {x: -4, y: 4}
-      - {x: 4, y: 4}
-      - {x: -4, y: -4}
-      - {x: 4, y: -4}
+      - {x: 0, y: 5}
+      - {x: 5, y: 0}
+      - {x: -5, y: 0}
     - name: Fourth wave
       enemies:
       - {fileID: -8975188249946522581, guid: 42c9a0eaeaae2f7428a581d2f35ae21b, type: 3}
@@ -2212,9 +2194,9 @@ MonoBehaviour:
       - {fileID: -8975188249946522581, guid: 42c9a0eaeaae2f7428a581d2f35ae21b, type: 3}
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
       spawns:
-      - {x: -5, y: -4}
-      - {x: 5, y: 4}
-      - {x: 0, y: 4}
+      - {x: -6, y: -5}
+      - {x: 6, y: 5}
+      - {x: 0, y: 5}
     - name: Sixth wave
       enemies:
       - {fileID: -8975188249946522581, guid: 42c9a0eaeaae2f7428a581d2f35ae21b, type: 3}
@@ -2222,10 +2204,10 @@ MonoBehaviour:
       - {fileID: -8975188249946522581, guid: a515fae436fb04148ae1c33271505c43, type: 3}
       - {fileID: -8975188249946522581, guid: ec8a1e8734394774a8f91218d1ba9714, type: 3}
       spawns:
-      - {x: 0, y: 4}
-      - {x: -5, y: -3.5}
-      - {x: 5, y: -3.5}
-      - {x: 0, y: -4}
+      - {x: 0, y: 5}
+      - {x: -5, y: -4.5}
+      - {x: 6, y: -4.5}
+      - {x: 0, y: -5}
     - name: The commander
       enemies:
       - {fileID: 2965310142944442976, guid: 011d27738b80a0d409f0547ab85f285a, type: 3}
@@ -2411,7 +2393,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 428648552, guid: 84e5c55605fcc7245923b28235e4d60b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 4.999998
+      value: 4.999996
       objectReference: {fileID: 0}
     - target: {fileID: 707192389985167240, guid: 84e5c55605fcc7245923b28235e4d60b, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2520,6 +2502,10 @@ PrefabInstance:
     - target: {fileID: 3291619306893046493, guid: 84e5c55605fcc7245923b28235e4d60b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3291619306912339727, guid: 84e5c55605fcc7245923b28235e4d60b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 27.50003
       objectReference: {fileID: 0}
     - target: {fileID: 3291619307082494393, guid: 84e5c55605fcc7245923b28235e4d60b, type: 3}
       propertyPath: m_IsActive
