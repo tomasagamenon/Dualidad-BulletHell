@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Novato : Enemy
 {
-    public List<Dialogue> dialogues;
+    public Dialogue[] dialogues;
     public float time;
     private bool enemy;
 
@@ -41,4 +41,11 @@ public class Novato : Enemy
         Visual_UImanager.main.SetLevelup(true);
         base.Death();
     }
+}
+
+[System.Serializable]
+public class Character
+{
+    public Dialogue dialogue;
+    public Sprite face;
 }
