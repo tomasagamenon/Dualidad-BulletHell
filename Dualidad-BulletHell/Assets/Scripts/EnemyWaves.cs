@@ -18,7 +18,11 @@ public class EnemyWaves : MonoBehaviour
 
     void Update()
     {
-
+        if (general_score < 0)
+        {
+            general_score = 0;
+            Visual_UImanager.main.SetScore(general_score);
+        }
     }
 
     IEnumerator Level()

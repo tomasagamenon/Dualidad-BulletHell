@@ -18,6 +18,7 @@ public class ParryShield : MonoBehaviour
     {
         offensive = GetComponentInParent<Player>().offensive;
         visual = GetComponentInParent<Visual_Player>();
+        FindObjectOfType<Visual_UImouse>().SetState(true);
     }
 
     void Update()
@@ -38,9 +39,11 @@ public class ParryShield : MonoBehaviour
 
     IEnumerator InCooldown()
     {
+        FindObjectOfType<Visual_UImouse>().SetState(false);
         yield return new WaitForSeconds(offensive[LevelSystem.main.GetLv_Offensive()].cooldown);
         _is_in_cooldown = false;
         visual.ParryState(!_is_in_cooldown);
+        FindObjectOfType<Visual_UImouse>().SetState(true);
     }
 
     IEnumerator Parry()

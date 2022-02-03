@@ -60,9 +60,9 @@ public class MenuManager : MonoBehaviour
 
     public void Retry()
     {
+        Time.timeScale = 1;
         TimerSystem.main.Stop();
         screen = TypeScreen.Gameplay;
-        Time.timeScale = 1;
         TimerSystem.main.Play();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
     }
