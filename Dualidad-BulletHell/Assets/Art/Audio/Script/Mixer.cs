@@ -8,7 +8,7 @@ public class Mixer : MonoBehaviour
     [SerializeField] AudioMixer mixer;
     [SerializeField] string nameVarVolume;
     [SerializeField, Range(0.0001f, 1f)] float minVolume, maxVolume;
-    [SerializeField, Range(0, 1f)] float volume;
+    [Range(0, 1f)] public float volume;
 
     private void Start() { SetVolume(volume); }
 

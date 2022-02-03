@@ -1876,6 +1876,10 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1536197384}
+    - target: {fileID: 860216883152089659, guid: 84e5c55605fcc7245923b28235e4d60b, type: 3}
+      propertyPath: nameVolume
+      value: MASTER
+      objectReference: {fileID: 0}
     - target: {fileID: 1224407924886875164, guid: 84e5c55605fcc7245923b28235e4d60b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2059,6 +2063,14 @@ PrefabInstance:
     - target: {fileID: 3291619307242493610, guid: 84e5c55605fcc7245923b28235e4d60b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3426754810842088022, guid: 84e5c55605fcc7245923b28235e4d60b, type: 3}
+      propertyPath: nameVolume
+      value: SFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 3426754811791627228, guid: 84e5c55605fcc7245923b28235e4d60b, type: 3}
+      propertyPath: nameVolume
+      value: MUSIC
       objectReference: {fileID: 0}
     - target: {fileID: 4356446974978240726, guid: 84e5c55605fcc7245923b28235e4d60b, type: 3}
       propertyPath: m_AnchorMax.y

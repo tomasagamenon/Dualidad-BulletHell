@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Visual_UIslider : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] Slider slider;
+    [SerializeField] string nameVolume;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        slider.value = AudioManager.main.GetVolume(nameVolume);
     }
 }

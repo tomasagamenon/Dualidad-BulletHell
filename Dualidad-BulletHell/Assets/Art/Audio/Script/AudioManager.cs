@@ -65,6 +65,7 @@ public class AudioManager : MonoBehaviour
     public void ChangeSnapshot(string nameEffect, string nameSnapshot) { Array.Find(effects, effect => effect.name == nameEffect).SetActive(nameSnapshot); }
     #endregion
     #region VOLUME
+    public float GetVolume(string volume) { return Array.Find(mixers, mixer => mixer.nameMixer == volume).volume; }
     public void SetVolume(Mixer mixerToModify, float volume) { if (mixerToModify) mixerToModify.SetVolume(volume); }
     public void SetVolume_MASTER(float volume)
     {
