@@ -38,8 +38,13 @@ public class Novato : Enemy
 
     protected override void Death()
     {
-        Visual_UImanager.main.SetLevelup(true);
+        visual.Hit(true);
+        Visual_UImanager.main.SetLevelup(true); 
+        GetComponent<CircleCollider2D>().enabled = false;
         base.Death();
+        FindObjectOfType<EnemyWaves>().EnemyDeath(score);
+        Effect_Manager.main.InstantiateEffect_PopUp(transform.position, "+" + score.ToString(), Color.white);
+        enabled = false;
     }
 }
 

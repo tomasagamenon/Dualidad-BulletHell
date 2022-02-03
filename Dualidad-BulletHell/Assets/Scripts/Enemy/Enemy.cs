@@ -175,10 +175,11 @@ public class Enemy : Entity
 
     protected override void Death()
     {
+        visual.Hit(true);
         GetComponent<CircleCollider2D>().enabled = false;
         base.Death();
         FindObjectOfType<EnemyWaves>().EnemyDeath(score);
-        Effect_Manager.main.InstantiateEffect_PopUp(transform.position, score.ToString(), Color.white);
+        Effect_Manager.main.InstantiateEffect_PopUp(transform.position, "+" + score.ToString(), Color.white);
         enabled = false;
     }
 
