@@ -148,7 +148,7 @@ MonoBehaviour:
     bullet_speed: 2
   visual: {fileID: 351270912069686234}
   score_damage: 500
-  score_heal: 500
+  score_heal: 1250
 --- !u!58 &513282368370110542
 CircleCollider2D:
   m_ObjectHideFlags: 0
