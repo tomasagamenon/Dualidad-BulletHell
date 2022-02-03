@@ -249,7 +249,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.5102389, y: 1}
+    m_SensorSize: {x: 0.24744028, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2672,7 +2672,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.3
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4900,7 +4900,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
+  m_fontSize: 36.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6814,6 +6814,7 @@ MonoBehaviour:
   scrScore: {fileID: 1054904846}
   scrDialogue: {fileID: 1054904845}
   scrMision: {fileID: 1054904847}
+  scrTimer: {fileID: 0}
   scrNotification: {fileID: 1240157168}
   scrLevelUp: {fileID: 1054904849}
   scrScreen: {fileID: 1154632695}
@@ -8233,11 +8234,27 @@ MonoBehaviour:
   - waves: []
   - waves: []
   end:
-  - {fileID: 4822682417543345127, guid: 862d41039dd723f4b9ca245eb59d8eba, type: 3}
-  - {fileID: 3007107998505304900, guid: 0f78113939dc0d7428b66252535584e0, type: 3}
-  end_pos: []
-  end_name: 
-  num_of_enemies: 0
+  - name: Level complete
+    objects:
+    - {fileID: 4822682417543345127, guid: 862d41039dd723f4b9ca245eb59d8eba, type: 3}
+    - {fileID: 3007107998505304900, guid: 0f78113939dc0d7428b66252535584e0, type: 3}
+    spawns:
+    - {x: -3, y: 3}
+    - {x: 3, y: 3}
+  - name: Level complete
+    objects:
+    - {fileID: 5371829422359492389, guid: 7fd39f1934412c042b5a9250fd1e3abf, type: 3}
+    - {fileID: 3007107998505304900, guid: 0f78113939dc0d7428b66252535584e0, type: 3}
+    spawns:
+    - {x: -3, y: 3}
+    - {x: 3, y: 3}
+  - name: Level complete
+    objects:
+    - {fileID: 4523456289438134573, guid: e9cbaea9e9085cb4090da749f1edbca5, type: 3}
+    - {fileID: 3007107998505304900, guid: 0f78113939dc0d7428b66252535584e0, type: 3}
+    spawns:
+    - {x: -3, y: 3}
+    - {x: 3, y: 3}
   general_score: 0
   notification_time: 0.75
   next_level: 0
