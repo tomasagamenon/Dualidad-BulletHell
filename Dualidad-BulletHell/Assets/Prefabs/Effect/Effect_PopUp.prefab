@@ -69,7 +69,7 @@ MonoBehaviour:
   anim: {fileID: 7323495078018568836}
   scaleBase: 1
   speedAnimation: 2
-  correctionSpeed: 1
+  correctionSpeed: 2.5
   offset: {x: 0, y: 0.25, z: 0}
   offsetRandom: {x: 0.1, y: 0.3, z: 0}
   scaleRandom: 0.1

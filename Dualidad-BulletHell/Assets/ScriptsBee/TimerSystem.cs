@@ -24,7 +24,7 @@ public class TimerSystem : MonoBehaviour
             timer += milisecondTimer;
 
             milisecond = (int)timer % 60;
-            second = (int)timer / 60;
+            second = ((int)timer / 60) % 60;
             min = (int)timer / 3600;
 
             Visual_UImanager.main.SetTimer(min, second, milisecond);
