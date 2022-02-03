@@ -306,6 +306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2629642495709072009}
   - component: {fileID: 2629642495709072008}
+  - component: {fileID: 153237877985423190}
   m_Layer: 0
   m_Name: SliderMaster
   m_TagString: Untagged
@@ -399,6 +400,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &153237877985423190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2629642495709072014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e91416189b1ddd4fb444d5f4bb0bbdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2629642496230204982
 GameObject:
   m_ObjectHideFlags: 0
