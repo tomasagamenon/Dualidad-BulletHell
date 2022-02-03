@@ -210,6 +210,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a0ab97011e4a7439f79ffd9c6075ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score_novato: 2000
+  spawn: {x: 0, y: 0, z: 0}
+  dist_from_player: 16
 --- !u!58 &2038159690857336307
 CircleCollider2D:
   m_ObjectHideFlags: 0
