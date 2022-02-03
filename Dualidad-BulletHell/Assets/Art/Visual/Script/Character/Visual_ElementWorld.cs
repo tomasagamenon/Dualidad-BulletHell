@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Visual_ElementWorld : MonoBehaviour
 {
-    [SerializeField] Animator anim;
+    [SerializeField] public Animator anim;
 
     [SerializeField] SFX_sound[] sfxClip;
 

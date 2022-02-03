@@ -54,6 +54,7 @@ public class Visual_Enemy : Visual_ElementWorld
     }
     public void Hit(bool isDeath)
     {
+        anim.ResetTrigger("Action");
         SetAnimator("Hit");
         PlaySFX("Hit");
 
