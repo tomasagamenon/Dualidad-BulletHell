@@ -23,7 +23,7 @@ public class Player : Entity
 
     void Update()
     {
-        if (FindObjectOfType<EnemyWaves>().general_score % score_heal == 0 && life < max_life && _virtual_score != FindObjectOfType<EnemyWaves>().general_score)
+        if (FindObjectOfType<EnemyWaves>().general_score % score_heal == 0 && life < max_life && _virtual_score < FindObjectOfType<EnemyWaves>().general_score)
         {
             life++;
             Visual_UImanager.main.SetLife(life, max_life);
