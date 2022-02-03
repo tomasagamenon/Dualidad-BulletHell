@@ -11,7 +11,7 @@ public class Player : Entity
     public Visual_Player visual;
     public int score_damage;
     public int score_heal;
-    private int _virtual_score;
+    private int _trigger = 1;
 
     protected override void Start()
     {
@@ -23,11 +23,12 @@ public class Player : Entity
 
     void Update()
     {
-        if (FindObjectOfType<EnemyWaves>().general_score % score_heal == 0 && life < max_life && _virtual_score < FindObjectOfType<EnemyWaves>().general_score)
+        Debug.Log(_trigger);
+        if (Mathf.RoundToInt(FindObjectOfType<EnemyWaves>().general_score / score_heal) >= _trigger && life < max_life)
         {
+            _trigger++;
             life++;
             Visual_UImanager.main.SetLife(life, max_life);
-            _virtual_score = FindObjectOfType<EnemyWaves>().general_score;
         }
 
         float translationy = Input.GetAxis("Vertical");
