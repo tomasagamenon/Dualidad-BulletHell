@@ -187,7 +187,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.2377778, y: 1}
+    m_SensorSize: {x: 0.32593855, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -825,11 +825,11 @@ MonoBehaviour:
   - sprite: {fileID: 21300000, guid: 3e0b5f24d21045046aab7426c25ae522, type: 3}
     text: Whoa buddy, you're gonna get lost in space if you keep going that way
     charClip: UI_Dialogue_Char_Friend
-    speedDialogue: 0.07
+    speedDialogue: 0.03
   - sprite: {fileID: 21300000, guid: 3e0b5f24d21045046aab7426c25ae522, type: 3}
     text: Don't go there, you're getting out of reach of our comms
     charClip: UI_Dialogue_Char_Friend
-    speedDialogue: 0.07
+    speedDialogue: 0.03
 --- !u!4 &671103874
 Transform:
   m_ObjectHideFlags: 0
@@ -1695,12 +1695,27 @@ MonoBehaviour:
       spawns:
       - {x: 0, y: 4}
   end:
-  - name: 
-    objects: []
-    spawns: []
-  - name: 
-    objects: []
-    spawns: []
+  - name: Level Complete
+    objects:
+    - {fileID: 4822682417543345127, guid: 862d41039dd723f4b9ca245eb59d8eba, type: 3}
+    - {fileID: 3007107998505304900, guid: 0f78113939dc0d7428b66252535584e0, type: 3}
+    spawns:
+    - {x: -3, y: 3}
+    - {x: 3, y: 3}
+  - name: Level Complete
+    objects:
+    - {fileID: 5371829422359492389, guid: 7fd39f1934412c042b5a9250fd1e3abf, type: 3}
+    - {fileID: 3007107998505304900, guid: 0f78113939dc0d7428b66252535584e0, type: 3}
+    spawns:
+    - {x: -3, y: 3}
+    - {x: 3, y: 3}
+  - name: Level Complete
+    objects:
+    - {fileID: 4523456289438134573, guid: e9cbaea9e9085cb4090da749f1edbca5, type: 3}
+    - {fileID: 3007107998505304900, guid: 0f78113939dc0d7428b66252535584e0, type: 3}
+    spawns:
+    - {x: -3, y: 3}
+    - {x: 3, y: 3}
   general_score: 0
   notification_time: 0.75
   next_level: 0
@@ -1982,7 +1997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3291619306912339727, guid: 84e5c55605fcc7245923b28235e4d60b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 27.500038
+      value: 27.50003
       objectReference: {fileID: 0}
     - target: {fileID: 3291619307082494393, guid: 84e5c55605fcc7245923b28235e4d60b, type: 3}
       propertyPath: m_IsActive
