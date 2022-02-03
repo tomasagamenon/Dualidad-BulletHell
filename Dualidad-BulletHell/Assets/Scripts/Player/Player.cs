@@ -10,6 +10,8 @@ public class Player : Entity
     public Offensive[] offensive;
     public Visual_Player visual;
     public int score_damage;
+    public int score_heal;
+    private int _virtual_score;
 
     protected override void Start()
     {
@@ -21,6 +23,13 @@ public class Player : Entity
 
     void Update()
     {
+        if (FindObjectOfType<EnemyWaves>().general_score % score_heal == 0 && life < max_life && _virtual_score != FindObjectOfType<EnemyWaves>().general_score)
+        {
+            life++;
+            Visual_UImanager.main.SetLife(life, max_life);
+            _virtual_score = FindObjectOfType<EnemyWaves>().general_score;
+        }
+
         float translationy = Input.GetAxis("Vertical");
         float translationx = Input.GetAxis("Horizontal");
 
