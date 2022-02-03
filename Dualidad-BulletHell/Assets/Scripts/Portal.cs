@@ -5,9 +5,19 @@ using UnityEngine;
 public class Portal : MonoBehaviour
 {
     public int score_novato;
+    public Vector3 spawn;
+    public float dist_from_player;
     private void Start()
     {
         GetComponent<Visual_Portal>().Spawn();
+    }
+    private void Update()
+    {
+        if ((FindObjectOfType<Player>().transform.position - transform.position).magnitude > dist_from_player)
+        {
+            var pos = FindObjectOfType<Player>().transform.position + spawn;
+            transform.position = pos;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

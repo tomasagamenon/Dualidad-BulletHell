@@ -58,7 +58,9 @@ public class EnemyWaves : MonoBehaviour
                 for (int x = 0; x < end[levels.IndexOf(level)].objects.Count; x++)
                 {
                     var pos = FindObjectOfType<Player>().transform.position + new Vector3(end[levels.IndexOf(level)].spawns[x].x, end[levels.IndexOf(level)].spawns[x].y, 0);
-                    Instantiate(end[levels.IndexOf(level)].objects[x], pos, transform.rotation);
+                    var a = Instantiate(end[levels.IndexOf(level)].objects[x], pos, transform.rotation);
+                    if (a.GetComponent<Portal>())
+                        a.GetComponent<Portal>().spawn = new Vector3(end[levels.IndexOf(level)].spawns[x].x, end[levels.IndexOf(level)].spawns[x].y, 0);
                 }
             }
         }
