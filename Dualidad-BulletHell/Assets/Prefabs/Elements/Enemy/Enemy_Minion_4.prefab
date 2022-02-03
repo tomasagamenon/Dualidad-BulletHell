@@ -267,7 +267,7 @@ MonoBehaviour:
     distance_between_bullets: 0
     rot_per_shoot: 45
     ofset_player: 0
-    mirrored: 1
+    mirrored: 0
     repeatPaterns:
       time_inter_paterns: 0
       paterns: []

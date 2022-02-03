@@ -165,26 +165,27 @@ public class Enemy : Entity
 
     public override void GetDamage(int damage)
     {
-        base.GetDamage(damage);
-        visual.SetLife(life);
-        if (life <= 0)
-            visual.Hit(true);
-        else
+        if (life > 0)
+        {
             visual.Hit(false);
+            base.GetDamage(damage);
+            visual.SetLife(life);
+        }
     }
 
     protected override void Death()
     {
+        StopAllCoroutines();
         visual.Hit(true);
         GetComponent<CircleCollider2D>().enabled = false;
         base.Death();
-        FindObjectOfType<EnemyWaves>().EnemyDeath(score);
-        Effect_Manager.main.InstantiateEffect_PopUp(transform.position, "+" + score.ToString(), Color.white);
-        enabled = false;
     }
 
     public void Destroy()
     {
+        FindObjectOfType<EnemyWaves>().EnemyDeath(score);
+        Effect_Manager.main.InstantiateEffect_PopUp(transform.position, "+" + score.ToString(), Color.white);
+        enabled = false;
         Destroy(gameObject);
     }
 }

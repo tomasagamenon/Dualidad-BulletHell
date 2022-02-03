@@ -59,6 +59,7 @@ public class Visual_Enemy : Visual_ElementWorld
         PlaySFX("Hit");
 
         if (isDeath) {
+            anim.ResetTrigger("Hit");
             SetAnimator("Death"); PlaySFX("Death");
             Effect_Manager.main.InstantiateEffect_Explosion(transf.position, 1.25F);
         } else {
