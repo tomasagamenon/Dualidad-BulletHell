@@ -30,6 +30,8 @@ public class Player : Entity
             life++;
             Visual_UImanager.main.SetLife(life, max_life);
         }
+        if (life > max_life)
+            life = max_life;
 
         float translationy = Input.GetAxis("Vertical");
         float translationx = Input.GetAxis("Horizontal");
