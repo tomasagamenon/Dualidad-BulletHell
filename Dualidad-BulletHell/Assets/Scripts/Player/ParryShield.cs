@@ -66,7 +66,7 @@ public class ParryShield : MonoBehaviour
             _is_in_cooldown = false;
             _colision = true;
             FindObjectOfType<EnemyWaves>().general_score += score;
-            Effect_Manager.main.InstantiateEffect_PopUp(transform.position, score.ToString(), Color.white);
+            Effect_Manager.main.InstantiateEffect_PopUp(transform.position, "+" + score.ToString(), Color.white);
             Visual_UImanager.main.SetScore(FindObjectOfType<EnemyWaves>().general_score);
             var v3 = Input.mousePosition;
             v3 = Camera.main.ScreenToWorldPoint(v3);

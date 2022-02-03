@@ -55,6 +55,7 @@ public class MenuManager : MonoBehaviour
         screen = TypeScreen.Gameplay;
         FindObjectOfType<Visual_Player>().ParryState(!false);
         FindObjectOfType<ParryShield>().enabled = true;
+        public_screen = screen;
     }
 
     public void Retry()
@@ -82,11 +83,13 @@ public class MenuManager : MonoBehaviour
     {
         screen = TypeScreen.GameOver;
         Visual_UImanager.main.SetScreen(TypeScreen.GameOver);
+        public_screen = screen;
     }
 
     public void Win()
     {
         screen = TypeScreen.Win;
         Visual_UImanager.main.SetScreen(TypeScreen.Win);
+        public_screen = screen;
     }
 }
